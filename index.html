@@ -1,0 +1,1233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dealex - Transport & Logistics Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&family=Space+Grotesk:wght@300..700&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Schibsted Grotesk"', 'sans-serif'],
+                        display: ['"Space Grotesk"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+    </style>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="p-4 md:p-6 min-h-screen flex flex-col items-center justify-center bg-[#2D2D2D] text-white">
+
+    <section id="hero-section"
+        class="hero-container relative w-full max-w-[1440px] lg:max-w-[96%] xl:max-w-[98%] min-h-[780px] lg:min-h-[85vh] xl:min-h-[90vh] rounded-[32px] overflow-hidden bg-cover bg-center flex flex-col justify-between p-6 md:p-12 transition-all duration-[2000ms] ease-in-out"
+        style="background-image: url('./images/herobg1.jpg');">
+
+        <header
+            class="relative z-30 w-full bg-[#1A1A1C] border border-white/10 rounded-full px-6 py-3 flex items-center justify-between shadow-xl">
+            <div class="flex items-center space-x-3">
+                <div class="w-9 h-9 bg-white/10 rounded-lg flex items-center justify-center border border-white/10">
+                    <span class="text-white font-black text-xl">D</span>
+                </div>
+                <span class="text-white font-bold text-xl tracking-wide">DEALEX</span>
+            </div>
+
+            <nav
+                class="hidden lg:flex items-center space-x-7 text-xs font-semibold tracking-wider text-white/90 uppercase">
+                <a href="#" class="text-white hover:text-[#F04B14] transition-colors">Home</a>
+                <a href="#" class="hover:text-[#F04B14] transition-colors">Pages</a>
+                <a href="#" class="hover:text-[#F04B14] transition-colors">Services</a>
+                <a href="#" class="hover:text-[#F04B14] transition-colors">Blog</a>
+                <a href="#" class="hover:text-[#F04B14] transition-colors">Contact</a>
+            </nav>
+
+            <div class="flex items-center space-x-4">
+                <div class="hidden md:flex items-center space-x-3 text-white/70 text-sm mr-2">
+                    <a href="#" class="hover:text-[#F04B14] transition-colors"> Facebook </a>
+                    <a href="#" class="hover:text-[#F04B14] transition-colors"> X </a>
+                    <a href="#" class="hover:text-[#F04B14] transition-colors"> Instagram </a>
+                    <a href="#" class="hover:text-[#F04B14] transition-colors"> Youtube </a>
+                </div>
+
+                <button
+                    class="relative w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white text-sm hover:border-[#F04B14] transition-colors">
+                    🛒
+                    <span
+                        class="absolute -top-1 -right-1 bg-[#F04B14] text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center">0</span>
+                </button>
+
+                <a href="#"
+                    class="bg-[#F04B14] hover:bg-[#d83c0c] text-white px-5 py-2.5 rounded-full text-xs font-bold tracking-wide transition-all flex items-center gap-2 shadow-lg shadow-[#F04B14]/20 border border-[#F04B14]">
+                    Get In Touch <span class="text-xs font-normal">↗</span>
+                </a>
+            </div>
+        </header>
+
+        <div class="relative z-20 w-full mt-auto pt-24 grid lg:grid-cols-12 gap-8 items-end">
+            <div class="lg:col-span-8 space-y-4">
+                <div class="inline-flex items-center border border-white/20 bg-white/5 rounded-full px-4 py-1">
+                    <span class="text-[10px] text-white font-bold tracking-widest uppercase">Dealex Own Terminal</span>
+                </div>
+                <h1
+                    class="text-white text-4xl sm:text-5xl md:text-6xl lg:text-[68px] font-extrabold tracking-tight leading-[1.05]">
+                    Your Cold Chain Gateway<br>
+                    to Global Markets
+                </h1>
+            </div>
+
+            <div class="lg:col-span-4 space-y-6 lg:max-w-sm lg:justify-self-end">
+                <p class="text-gray-300 text-sm leading-relaxed border-l-2 border-white/20 pl-4">
+                    Dealex Own Terminal (DOT) - Reefer & Cold Chain HUB.
+                </p>
+                <div>
+                    <a href="#"
+                        class="inline-flex items-center justify-between bg-[#F04B14] hover:bg-[#d83c0c] text-white font-semibold text-sm px-6 py-3.5 rounded-xl transition-all w-full sm:w-auto min-w-[160px]">
+                        <span>Get In Touch</span>
+                        <span class="ml-4 text-xs">↗</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute right-6 top-1/2 -translate-y-1/2 z-30 flex flex-col space-y-3">
+            <span
+                class="w-2.5 h-2.5 rounded-full bg-white opacity-40 hover:opacity-100 cursor-pointer transition-opacity"></span>
+            <span class="w-2.5 h-2.5 rounded-full bg-white cursor-pointer transition-opacity"></span>
+            <span
+                class="w-2.5 h-2.5 rounded-full bg-white opacity-40 hover:opacity-100 cursor-pointer transition-opacity"></span>
+        </div>
+    </section>
+
+    <!-- Vision & Mission Section -->
+    <section class="bg-[#2D2D2D] py-6 md:py-8 px-6 md:px-12 w-full select-none overflow-hidden"
+        id="vision-mission-section">
+        <div class="max-w-[1440px] mx-auto grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+
+            <!-- Left Column: Text & Cards -->
+            <div class="space-y-6 md:space-y-8">
+
+                <!-- Heading Area -->
+                <div class="space-y-3">
+                    <div class="flex items-center space-x-3">
+                        <span class="w-3.5 h-3.5 rounded-full bg-[#F04B14]"></span>
+                        <span class="text-gray-400 font-medium text-sm tracking-widest uppercase">Dealex Transport &
+                            Logistics</span>
+                    </div>
+
+                    <h2 class="text-4xl sm:text-5xl lg:text-[54px] font-medium tracking-tight leading-[1.2]">
+                        <span class="text-white">We Provide</span>
+                        <span class="text-[#F04B14]">End-to-end<br>Logistics Services</span>
+                        <span class="text-white">for Timely,<br>Secure Delivery.</span>
+                    </h2>
+                </div>
+
+                <!-- Cards Container -->
+                <div class="space-y-4">
+                    <!-- Vision Card -->
+                    <div
+                        class="bg-[#1A1A1C] rounded-[24px] p-5 lg:p-6 flex flex-col sm:flex-row gap-4 lg:gap-6 items-start">
+                        <div class="flex-shrink-0 w-24">
+                            <div class="text-[#F04B14] font-bold text-lg mb-1">01</div>
+                            <div class="text-[#F04B14] font-medium text-base">Vision</div>
+                        </div>
+                        <p class="text-gray-400 text-[14px] lg:text-[15px] leading-relaxed">
+                            To be Pakistan’s leading road transportation and logistics provider, delivering safe,
+                            reliable, and efficient solutions that are environmentally responsible and create lasting
+                            value for all stakeholders.
+                        </p>
+                    </div>
+
+                    <!-- Mission Card -->
+                    <div
+                        class="bg-[#1A1A1C] rounded-[24px] p-5 lg:p-6 flex flex-col sm:flex-row gap-4 lg:gap-6 items-start">
+                        <div class="flex-shrink-0 w-24">
+                            <div class="text-[#F04B14] font-bold text-lg mb-1">02</div>
+                            <div class="text-[#F04B14] font-medium text-base">Mission</div>
+                        </div>
+                        <p class="text-gray-400 text-[14px] lg:text-[15px] leading-relaxed">
+                            To deliver excellence in road transportation and logistics solutions at competitive costs,
+                            helping our valued customers achieve their business goals through reliable, timely, and
+                            customer-focused services.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Animated Truck & Background -->
+            <div class="relative h-full min-h-[300px] lg:min-h-[400px] flex items-center justify-end mt-4 lg:mt-0">
+                <!-- Animated Truck Image -->
+                <div class="relative z-10 w-full h-full flex items-center justify-start -ml-[20%] lg:-ml-[30%]">
+                    <img id="about-truck" src="./assets/images/truck_about.png" alt="Logistics Truck"
+                        class="w-[180%] sm:w-[200%] lg:w-[220%] max-w-none h-auto object-cover drop-shadow-[0_20px_50px_rgba(0,0,0,0.3)] transform translate-x-[100%] transition-transform duration-[1200ms] ease-out">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- New About Us Section (Redesigned) -->
+    <section class="w-full bg-[#2D2D2D] py-20 px-6 md:px-12 select-none font-sans" id="about-us-section">
+        <div class="max-w-[1440px] mx-auto space-y-16">
+
+            <!-- Top Area: Label + Big Text -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
+                <!-- Left: Label -->
+                <div class="lg:col-span-3 flex items-start pt-2">
+                    <div class="flex items-center space-x-2 font-bold text-white text-sm tracking-wide">
+                        <svg class="w-4 h-4 text-[#F04B14]" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2l8 4.5v11L12 22l-8-4.5v-11L12 2z" />
+                        </svg>
+                        <span>About Us</span>
+                    </div>
+                </div>
+
+                <!-- Right: Big Text -->
+                <div class="lg:col-span-9">
+                    <h2 class="text-3xl md:text-5xl lg:text-[42px] font-medium text-white leading-[1.2] tracking-tight">
+                        We provide seamless and reliable logistics solutions that help businesses move goods efficiently
+                        through smart transportation and streamlined supply chain management.
+                    </h2>
+                </div>
+            </div>
+
+            <!-- Bottom Area: Two Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+                <!-- Left Card -->
+                <div
+                    class="md:col-span-5 bg-[#1A1A1C] rounded-[8px] p-8 lg:p-12 flex flex-col justify-between min-h-[350px]">
+                    <h3 class="text-xl md:text-2xl font-medium text-white leading-snug">
+                        Smart Logistics Solutions<br>That Deliver
+                    </h3>
+
+                    <div class="mt-12 lg:mt-24">
+                        <button
+                            class="inline-flex items-center bg-[#F04B14] text-white rounded-[4px] overflow-hidden group hover:bg-[#d83c0c] transition-colors">
+                            <span class="px-6 py-4 text-[13px] font-semibold tracking-wide">Get A Quote</span>
+                            <span class="px-5 py-4 border-l border-white/20 flex items-center justify-center">
+                                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                    stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M13 5l7 7-7 7M5 5l7 7-7 7" />
+                                </svg>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Right Card (Image with Text Overlay) -->
+                <div
+                    class="md:col-span-7 relative rounded-[8px] overflow-hidden min-h-[350px] group cursor-pointer shadow-lg">
+                    <img src="./assets/images/about_video_thumb_1782206878231.png" alt="Logistics Team"
+                        class="absolute inset-0 w-full h-full object-cover">
+
+                    <!-- Gradient Overlay -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+
+                    <div
+                        class="absolute bottom-0 left-0 p-8 lg:p-10 w-full flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+                        <div class="text-white">
+                            <div class="text-6xl lg:text-[80px] font-bold leading-none mb-1 tracking-tight">200%</div>
+                            <div class="text-sm font-medium text-white/90">Remote & Global Team</div>
+                        </div>
+
+                        <!-- Pause Icon -->
+                        <div class="text-white">
+                            <svg class="w-10 h-10 drop-shadow-md" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const truck = document.getElementById('about-truck');
+            const section = document.getElementById('about-us-section');
+            if (!truck || !section) return;
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Trigger animation: slide in from right to its correct slightly-left overlapping position
+                        truck.classList.remove('translate-x-[120%]');
+                        truck.classList.add('translate-x-0');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.3 });
+
+            observer.observe(section);
+        });
+    </script>
+    <!-- moving divs -->
+    <!-- x shapes moving rope -->
+    <section class="relative bg-[#2D2D2D] py-24 overflow-hidden w-full select-none flex items-center justify-center">
+
+        <div class="relative w-[110%] md:w-[105%] h-[150px] flex items-center justify-center">
+
+            <!-- Blue Banner (Bottom Layer in intersection, angled up-right) -->
+            <div
+                class="absolute w-full bg-white -rotate-2 py-4 shadow-lg flex overflow-hidden z-0 border-y border-transparent translate-y-5">
+                <div
+                    class="flex flex-shrink-0 items-center min-w-full animate-marquee-reverse text-[#2D2D2D] font-semibold text-lg sm:text-xl tracking-wide">
+                    <!-- Repetition 1 -->
+                    <span class="whitespace-nowrap ml-8">Oil transport</span> <svg
+                        class="w-5 h-5 mx-8 text-[#050B14] inline-block" fill="none" stroke="currentColor"
+                        stroke-width="2.5" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
+                    </svg>
+                    <span class="whitespace-nowrap">Offshore drilling</span> <svg
+                        class="w-5 h-5 mx-8 text-[#050B14] inline-block" fill="none" stroke="currentColor"
+                        stroke-width="2.5" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
+                    </svg>
+                    <span class="whitespace-nowrap">Crude oil extraction</span> <svg
+                        class="w-5 h-5 mx-8 text-[#050B14] inline-block" fill="none" stroke="currentColor"
+                        stroke-width="2.5" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
+                    </svg>
+                    <!-- Repetition 2 -->
+                    <span class="whitespace-nowrap">Oil transport</span> <svg
+                        class="w-5 h-5 mx-8 text-[#050B14] inline-block" fill="none" stroke="currentColor"
+                        stroke-width="2.5" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
+                    </svg>
+                    <span class="whitespace-nowrap">Offshore drilling</span> <svg
+                        class="w-5 h-5 mx-8 text-[#050B14] inline-block" fill="none" stroke="currentColor"
+                        stroke-width="2.5" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
+                    </svg>
+                    <span class="whitespace-nowrap">Crude oil extraction</span> <svg
+                        class="w-5 h-5 mx-8 text-[#050B14] inline-block" fill="none" stroke="currentColor"
+                        stroke-width="2.5" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
+                    </svg>
+                </div>
+                <div class="flex flex-shrink-0 items-center min-w-full animate-marquee-reverse text-[#2D2D2D] font-semibold text-lg sm:text-xl tracking-wide"
+                    aria-hidden="true">
+                    <!-- Repetition 3 -->
+                    <span class="whitespace-nowrap ml-8">Oil transport</span> <svg
+                        class="w-5 h-5 mx-8 text-[#050B14] inline-block" fill="none" stroke="currentColor"
+                        stroke-width="2.5" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
+                    </svg>
+                    <span class="whitespace-nowrap">Offshore drilling</span> <svg
+                        class="w-5 h-5 mx-8 text-[#050B14] inline-block" fill="none" stroke="currentColor"
+                        stroke-width="2.5" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
+                    </svg>
+                    <span class="whitespace-nowrap">Crude oil extraction</span> <svg
+                        class="w-5 h-5 mx-8 text-[#050B14] inline-block" fill="none" stroke="currentColor"
+                        stroke-width="2.5" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
+                    </svg>
+                    <!-- Repetition 4 -->
+                    <span class="whitespace-nowrap">Oil transport</span> <svg
+                        class="w-5 h-5 mx-8 text-[#050B14] inline-block" fill="none" stroke="currentColor"
+                        stroke-width="2.5" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
+                    </svg>
+                    <span class="whitespace-nowrap">Offshore drilling</span> <svg
+                        class="w-5 h-5 mx-8 text-[#050B14] inline-block" fill="none" stroke="currentColor"
+                        stroke-width="2.5" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
+                    </svg>
+                    <span class="whitespace-nowrap">Crude oil extraction</span> <svg
+                        class="w-5 h-5 mx-8 text-[#050B14] inline-block" fill="none" stroke="currentColor"
+                        stroke-width="2.5" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Dark Banner (Top Layer in intersection, angled down-right) -->
+            <div
+                class="absolute w-full bg-[#F04B14] rotate-2 py-4 shadow-2xl flex overflow-hidden z-10 border-y border-[#050B14] -translate-y-5">
+                <div
+                    class="flex flex-shrink-0 items-center min-w-full animate-marquee-forward text-white font-semibold text-lg sm:text-xl tracking-wide">
+                    <!-- Repetition 1 -->
+                    <span class="whitespace-nowrap ml-8">Crude oil extraction</span> <svg
+                        class="w-5 h-5 mx-8 text-white inline-block" fill="none" stroke="currentColor"
+                        stroke-width="2.5" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
+                    </svg>
+                    <span class="whitespace-nowrap">Oil transport</span> <svg
+                        class="w-5 h-5 mx-8 text-white inline-block" fill="none" stroke="currentColor"
+                        stroke-width="2.5" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
+                    </svg>
+                    <span class="whitespace-nowrap">Offshore drilling</span> <svg
+                        class="w-5 h-5 mx-8 text-white inline-block" fill="none" stroke="currentColor"
+                        stroke-width="2.5" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
+                    </svg>
+                    <!-- Repetition 2 -->
+                    <span class="whitespace-nowrap">Crude oil extraction</span> <svg
+                        class="w-5 h-5 mx-8 text-white inline-block" fill="none" stroke="currentColor"
+                        stroke-width="2.5" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
+                    </svg>
+                    <span class="whitespace-nowrap">Oil transport</span> <svg
+                        class="w-5 h-5 mx-8 text-white inline-block" fill="none" stroke="currentColor"
+                        stroke-width="2.5" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
+                    </svg>
+                    <span class="whitespace-nowrap">Offshore drilling</span> <svg
+                        class="w-5 h-5 mx-8 text-white inline-block" fill="none" stroke="currentColor"
+                        stroke-width="2.5" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
+                    </svg>
+                </div>
+                <div class="flex flex-shrink-0 items-center min-w-full animate-marquee-forward text-white font-semibold text-lg sm:text-xl tracking-wide"
+                    aria-hidden="true">
+                    <!-- Repetition 3 -->
+                    <span class="whitespace-nowrap ml-8">Crude oil extraction</span> <svg
+                        class="w-5 h-5 mx-8 text-white inline-block" fill="none" stroke="currentColor"
+                        stroke-width="2.5" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
+                    </svg>
+                    <span class="whitespace-nowrap">Oil transport</span> <svg
+                        class="w-5 h-5 mx-8 text-white inline-block" fill="none" stroke="currentColor"
+                        stroke-width="2.5" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
+                    </svg>
+                    <span class="whitespace-nowrap">Offshore drilling</span> <svg
+                        class="w-5 h-5 mx-8 text-white inline-block" fill="none" stroke="currentColor"
+                        stroke-width="2.5" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
+                    </svg>
+                    <!-- Repetition 4 -->
+                    <span class="whitespace-nowrap">Crude oil extraction</span> <svg
+                        class="w-5 h-5 mx-8 text-white inline-block" fill="none" stroke="currentColor"
+                        stroke-width="2.5" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
+                    </svg>
+                    <span class="whitespace-nowrap">Oil transport</span> <svg
+                        class="w-5 h-5 mx-8 text-white inline-block" fill="none" stroke="currentColor"
+                        stroke-width="2.5" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
+                    </svg>
+                    <span class="whitespace-nowrap">Offshore drilling</span> <svg
+                        class="w-5 h-5 mx-8 text-white inline-block" fill="none" stroke="currentColor"
+                        stroke-width="2.5" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
+                    </svg>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- Dealex Own Terminal Services -->
+    <section class="bg-[#2D2D2D] py-24 px-6 md:px-12 w-full select-none relative overflow-visible">
+        <div class="max-w-[1440px] mx-auto space-y-12 relative z-10">
+            <!-- Header -->
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-6">
+                <h2 class="text-4xl md:text-5xl lg:text-[54px] font-bold text-white leading-[1.1] tracking-tight">
+                    Logistics Solutions<br>Built for Business</h2>
+                <div class="flex flex-col md:items-end gap-5">
+                    <p class="text-gray-400 text-sm md:text-base text-left md:text-right">Efficient logistics
+                        solutions<br>for global movement.</p>
+                    <button
+                        class="bg-[#F04B14] text-white px-6 py-3 rounded-md font-semibold flex items-center gap-2 border border-transparent hover:bg-[#d83c0c] transition-all">
+                        Get A Quote
+                        <span class="text-lg leading-none">&raquo;</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Card 1 -->
+                <div
+                    class="relative group h-[420px] rounded-[24px] p-8 bg-[#18181B] text-white transition-all duration-500 hover:bg-[#F04B14] hover:-translate-y-6 hover:-rotate-3 hover:scale-[1.02] hover:shadow-2xl hover:shadow-[#F04B14]/30 hover:z-10 cursor-pointer flex flex-col border border-transparent hover:border-[#F04B14] origin-bottom-left">
+                    <h3 class="text-[20px] font-bold leading-snug mb-4">Key Features</h3>
+                    <ul
+                        class="text-[13px] text-gray-400 group-hover:text-white transition-colors leading-relaxed list-disc pl-4 space-y-2">
+                        <li>Strategically located with quick access to major ports and logistics corridors</li>
+                        <li>Large-scale reefer stacking capacity with modern yard layout</li>
+                        <li>Dedicated reefer monitoring room equipped with digital control systems</li>
+                    </ul>
+                </div>
+
+                <!-- Card 2 -->
+                <div
+                    class="relative group h-[420px] rounded-[24px] p-8 bg-[#18181B] text-white transition-all duration-500 hover:bg-[#F04B14] hover:-translate-y-6 hover:rotate-2 hover:scale-[1.02] hover:shadow-2xl hover:shadow-[#F04B14]/30 hover:z-10 cursor-pointer flex flex-col border border-transparent hover:border-[#F04B14] origin-bottom-right">
+                    <h3 class="text-[20px] font-bold leading-snug mb-4">Operations & Security</h3>
+                    <ul
+                        class="text-[13px] text-gray-400 group-hover:text-white transition-colors leading-relaxed list-disc pl-4 space-y-2">
+                        <li>Backup power generation ensuring uninterrupted operations</li>
+                        <li>Secured facility with CCTV surveillance and controlled access points</li>
+                        <li>Skilled operational team and certified reefer technicians</li>
+                        <li>Infrastructure designed for high-efficiency reefer turnaround</li>
+                    </ul>
+                </div>
+
+                <!-- Card 3 -->
+                <div
+                    class="relative group h-[420px] rounded-[24px] p-8 bg-[#18181B] text-white transition-all duration-500 hover:bg-[#F04B14] hover:-translate-y-6 hover:-rotate-2 hover:scale-[1.02] hover:shadow-2xl hover:shadow-[#F04B14]/30 hover:z-10 cursor-pointer flex flex-col border border-transparent hover:border-[#F04B14] origin-bottom-left">
+                    <h3 class="text-[20px] font-bold leading-snug mb-4">Target Customers</h3>
+                    <ul
+                        class="text-[13px] text-gray-400 group-hover:text-white transition-colors leading-relaxed list-disc pl-4 space-y-2">
+                        <li>Shipping lines</li>
+                        <li>Freight forwarders</li>
+                        <li>Cold chain logistics providers</li>
+                        <li>Perishable cargo exporters and importers</li>
+                        <li>Retail, food, and distribution companies</li>
+                    </ul>
+                </div>
+
+                <!-- Card 4 -->
+                <div
+                    class="relative group h-[420px] rounded-[24px] p-8 bg-[#18181B] text-white transition-all duration-500 hover:bg-[#F04B14] hover:-translate-y-6 hover:rotate-3 hover:scale-[1.02] hover:shadow-2xl hover:shadow-[#F04B14]/30 hover:z-10 cursor-pointer flex flex-col border border-transparent hover:border-[#F04B14] origin-bottom-right">
+                    <h3 class="text-[20px] font-bold leading-snug mb-4">Our Commitment</h3>
+                    <ul
+                        class="text-[13px] text-gray-400 group-hover:text-white transition-colors leading-relaxed list-none space-y-3 font-semibold uppercase tracking-wider">
+                        <li class="border-b border-gray-700/50 group-hover:border-white/20 pb-2">TRANSPORT & LOGISTICS
+                            SERVICES</li>
+                        <li class="border-b border-gray-700/50 group-hover:border-white/20 pb-2">MISSION STATEMENTS</li>
+                        <li class="pt-1">CONTACT INFORMATION</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Services Scroll Animation Script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const imageElement = document.getElementById('services-sticky-image');
+            const items = document.querySelectorAll('.service-scroll-item');
+
+            if (!imageElement || items.length === 0) return;
+
+            const observerOptions = {
+                root: null,
+                rootMargin: '-30% 0px -30% 0px',
+                threshold: 0
+            };
+
+            let currentImage = imageElement.src;
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const newImage = entry.target.getAttribute('data-image');
+                        if (newImage && currentImage !== newImage) {
+                            currentImage = newImage;
+                            imageElement.style.opacity = '0';
+                            setTimeout(() => {
+                                imageElement.src = newImage;
+                                imageElement.style.opacity = '1';
+                            }, 300);
+                        }
+                    }
+                });
+            }, observerOptions);
+
+            items.forEach(item => observer.observe(item));
+        });
+    </script>
+    <!-- Services Scroll Animation Section -->
+    <section class="bg-[#2D2D2D] w-full text-white relative font-sans">
+        <!-- Container for sticky grid -->
+        <div class="max-w-[1440px] mx-auto px-6 md:px-12 relative flex flex-col md:flex-row items-start">
+
+            <!-- Sticky Image Area (Left) -->
+            <div
+                class="w-full md:w-1/2 md:sticky md:top-0 h-[40vh] md:h-screen flex items-center justify-center p-4 md:p-8 z-10 pt-16 md:pt-0">
+                <div class="relative w-full h-full max-h-[600px] flex items-center justify-center">
+                    <img id="services-sticky-image" src="./assets/images/excavator_orange_1782155036653.png"
+                        alt="Service Equipment"
+                        class="max-w-full max-h-full object-contain transition-opacity duration-300 ease-in-out opacity-100">
+                </div>
+            </div>
+
+            <!-- Scrollable Content Area (Right) -->
+            <div class="w-full md:w-1/2 flex flex-col py-12 md:py-32 space-y-[20vh] md:space-y-[40vh] relative z-20">
+
+                <!-- Item 1: Excavator -->
+                <div class="service-scroll-item min-h-[40vh] md:min-h-[60vh] flex flex-col justify-center"
+                    data-image="./assets/images/excavator_orange_1782155036653.png">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <span class="w-3 h-3 rounded-full bg-[#F04B14]"></span>
+                        <span class="font-bold text-sm tracking-[0.1em] uppercase text-white/90">Our Products</span>
+                    </div>
+                    <h2 class="text-4xl md:text-5xl lg:text-[56px] font-medium tracking-tight mb-6">Excavator</h2>
+                    <p class="text-white/80 text-base md:text-lg leading-relaxed mb-8 max-w-md">
+                        Built for maximum digging power and control, our excavators are ideal for trenching, foundation
+                        work, demolition, and more.
+                    </p>
+                    <div>
+                        <a href="#"
+                            class="inline-flex items-center justify-center bg-[#F04B14] hover:bg-[#d83c0c] text-white font-medium px-8 py-3.5 rounded-lg transition-colors text-sm md:text-base tracking-wide shadow-lg shadow-[#F04B14]/20">
+                            Get Fast Quote
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Item 2: Maersk Truck -->
+                <div class="service-scroll-item min-h-[40vh] md:min-h-[60vh] flex flex-col justify-center"
+                    data-image="./assets/images/truck_maersk_1782155048143.png">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <span class="w-3 h-3 rounded-full bg-[#F04B14]"></span>
+                        <span class="font-bold text-sm tracking-[0.1em] uppercase text-white/90">Our Fleet</span>
+                    </div>
+                    <h2 class="text-4xl md:text-5xl lg:text-[56px] font-medium tracking-tight mb-6">MAERSK</h2>
+                    <p class="text-white/80 text-base md:text-lg leading-relaxed mb-8 max-w-md">
+                        Global shipping logistics connected directly to our road transport network. Reliable cold chain
+                        and dry cargo handling.
+                    </p>
+                    <div>
+                        <a href="#"
+                            class="inline-flex items-center justify-center bg-[#F04B14] hover:bg-[#d83c0c] text-white font-medium px-8 py-3.5 rounded-lg transition-colors text-sm md:text-base tracking-wide shadow-lg shadow-[#F04B14]/20">
+                            Get Fast Quote
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Item 3: CMA CGM Truck -->
+                <div class="service-scroll-item min-h-[40vh] md:min-h-[60vh] flex flex-col justify-center"
+                    data-image="./assets/images/truck_cma_1782155059239.png">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <span class="w-3 h-3 rounded-full bg-[#F04B14]"></span>
+                        <span class="font-bold text-sm tracking-[0.1em] uppercase text-white/90">Our Fleet</span>
+                    </div>
+                    <h2 class="text-4xl md:text-5xl lg:text-[56px] font-medium tracking-tight mb-6">CMA CGM</h2>
+                    <p class="text-white/80 text-base md:text-lg leading-relaxed mb-8 max-w-md">
+                        Efficient inland transportation for major shipping lines. Providing seamless port-to-door
+                        delivery with modern tracking.
+                    </p>
+                    <div>
+                        <a href="#"
+                            class="inline-flex items-center justify-center bg-[#F04B14] hover:bg-[#d83c0c] text-white font-medium px-8 py-3.5 rounded-lg transition-colors text-sm md:text-base tracking-wide shadow-lg shadow-[#F04B14]/20">
+                            Get Fast Quote
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Item 4: UNIFEEDER Truck -->
+                <div class="service-scroll-item min-h-[40vh] md:min-h-[60vh] flex flex-col justify-center"
+                    data-image="./assets/images/truck_unifeeder_1782155351619.png">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <span class="w-3 h-3 rounded-full bg-[#F04B14]"></span>
+                        <span class="font-bold text-sm tracking-[0.1em] uppercase text-white/90">Our Fleet</span>
+                    </div>
+                    <h2 class="text-4xl md:text-5xl lg:text-[56px] font-medium tracking-tight mb-6">UNIFEEDER</h2>
+                    <p class="text-white/80 text-base md:text-lg leading-relaxed mb-8 max-w-md">
+                        Fast and efficient regional logistics connecting smaller ports to major hubs. Uninterrupted
+                        supply chain flow.
+                    </p>
+                    <div>
+                        <a href="#"
+                            class="inline-flex items-center justify-center bg-[#F04B14] hover:bg-[#d83c0c] text-white font-medium px-8 py-3.5 rounded-lg transition-colors text-sm md:text-base tracking-wide shadow-lg shadow-[#F04B14]/20">
+                            Get Fast Quote
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Item 5: WAN HAI LINES Truck -->
+                <div class="service-scroll-item min-h-[40vh] md:min-h-[60vh] flex flex-col justify-center"
+                    data-image="./assets/images/truck_wanhai_1782155360753.png">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <span class="w-3 h-3 rounded-full bg-[#F04B14]"></span>
+                        <span class="font-bold text-sm tracking-[0.1em] uppercase text-white/90">Our Fleet</span>
+                    </div>
+                    <h2 class="text-4xl md:text-5xl lg:text-[56px] font-medium tracking-tight mb-6">WAN HAI LINES</h2>
+                    <p class="text-white/80 text-base md:text-lg leading-relaxed mb-8 max-w-md">
+                        Comprehensive freight solutions handling intra-Asia trade connections and global transit
+                        logistics safely and securely.
+                    </p>
+                    <div>
+                        <a href="#"
+                            class="inline-flex items-center justify-center bg-[#F04B14] hover:bg-[#d83c0c] text-white font-medium px-8 py-3.5 rounded-lg transition-colors text-sm md:text-base tracking-wide shadow-lg shadow-[#F04B14]/20">
+                            Get Fast Quote
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Item 6: OOCL Truck -->
+                <div class="service-scroll-item min-h-[40vh] md:min-h-[60vh] flex flex-col justify-center"
+                    data-image="./assets/images/truck_oocl_1782155372762.png">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <span class="w-3 h-3 rounded-full bg-[#F04B14]"></span>
+                        <span class="font-bold text-sm tracking-[0.1em] uppercase text-white/90">Our Fleet</span>
+                    </div>
+                    <h2 class="text-4xl md:text-5xl lg:text-[56px] font-medium tracking-tight mb-6">OOCL</h2>
+                    <p class="text-white/80 text-base md:text-lg leading-relaxed mb-8 max-w-md">
+                        World-class shipping logistics with advanced IT systems connecting our road freight seamlessly
+                        to global networks.
+                    </p>
+                    <div>
+                        <a href="#"
+                            class="inline-flex items-center justify-center bg-[#F04B14] hover:bg-[#d83c0c] text-white font-medium px-8 py-3.5 rounded-lg transition-colors text-sm md:text-base tracking-wide shadow-lg shadow-[#F04B14]/20">
+                            Get Fast Quote
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Item 7: Hapag-Lloyd Truck -->
+                <div class="service-scroll-item min-h-[40vh] md:min-h-[60vh] flex flex-col justify-center"
+                    data-image="./assets/images/truck_hapaglloyd_1782155384381.png">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <span class="w-3 h-3 rounded-full bg-[#F04B14]"></span>
+                        <span class="font-bold text-sm tracking-[0.1em] uppercase text-white/90">Our Fleet</span>
+                    </div>
+                    <h2 class="text-4xl md:text-5xl lg:text-[56px] font-medium tracking-tight mb-6">Hapag-Lloyd</h2>
+                    <p class="text-white/80 text-base md:text-lg leading-relaxed mb-8 max-w-md">
+                        Reliable container shipping services backed by a robust truck fleet dedicated to punctual
+                        deliveries across regions.
+                    </p>
+                    <div>
+                        <a href="#"
+                            class="inline-flex items-center justify-center bg-[#F04B14] hover:bg-[#d83c0c] text-white font-medium px-8 py-3.5 rounded-lg transition-colors text-sm md:text-base tracking-wide shadow-lg shadow-[#F04B14]/20">
+                            Get Fast Quote
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Item 8: ONE Truck -->
+                <div class="service-scroll-item min-h-[40vh] md:min-h-[60vh] flex flex-col justify-center"
+                    data-image="./assets/images/truck_one_1782155414392.png">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <span class="w-3 h-3 rounded-full bg-[#F04B14]"></span>
+                        <span class="font-bold text-sm tracking-[0.1em] uppercase text-white/90">Our Fleet</span>
+                    </div>
+                    <h2 class="text-4xl md:text-5xl lg:text-[56px] font-medium tracking-tight mb-6">ONE</h2>
+                    <p class="text-white/80 text-base md:text-lg leading-relaxed mb-8 max-w-md">
+                        Ocean Network Express inland transport services. Innovative approaches to container freight and
+                        temperature control.
+                    </p>
+                    <div>
+                        <a href="#"
+                            class="inline-flex items-center justify-center bg-[#F04B14] hover:bg-[#d83c0c] text-white font-medium px-8 py-3.5 rounded-lg transition-colors text-sm md:text-base tracking-wide shadow-lg shadow-[#F04B14]/20">
+                            Get Fast Quote
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Item 9: EVERGREEN Truck -->
+                <div class="service-scroll-item min-h-[40vh] md:min-h-[60vh] flex flex-col justify-center"
+                    data-image="./assets/images/truck_evergreen_1782155429041.png">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <span class="w-3 h-3 rounded-full bg-[#F04B14]"></span>
+                        <span class="font-bold text-sm tracking-[0.1em] uppercase text-white/90">Our Fleet</span>
+                    </div>
+                    <h2 class="text-4xl md:text-5xl lg:text-[56px] font-medium tracking-tight mb-6">EVERGREEN</h2>
+                    <p class="text-white/80 text-base md:text-lg leading-relaxed mb-8 max-w-md">
+                        Eco-friendly and sustainable logistics solutions integrating ocean shipping and road
+                        transportation seamlessly.
+                    </p>
+                    <div>
+                        <a href="#"
+                            class="inline-flex items-center justify-center bg-[#F04B14] hover:bg-[#d83c0c] text-white font-medium px-8 py-3.5 rounded-lg transition-colors text-sm md:text-base tracking-wide shadow-lg shadow-[#F04B14]/20">
+                            Get Fast Quote
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Item 10: FEEDER Truck -->
+                <div class="service-scroll-item min-h-[40vh] md:min-h-[60vh] flex flex-col justify-center"
+                    data-image="./assets/images/truck_feeder_1782155442270.png">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <span class="w-3 h-3 rounded-full bg-[#F04B14]"></span>
+                        <span class="font-bold text-sm tracking-[0.1em] uppercase text-white/90">Our Fleet</span>
+                    </div>
+                    <h2 class="text-4xl md:text-5xl lg:text-[56px] font-medium tracking-tight mb-6">FEEDER</h2>
+                    <p class="text-white/80 text-base md:text-lg leading-relaxed mb-8 max-w-md">
+                        Agile short-sea and feeder services backed by robust inland transportation for maximum
+                        flexibility.
+                    </p>
+                    <div>
+                        <a href="#"
+                            class="inline-flex items-center justify-center bg-[#F04B14] hover:bg-[#d83c0c] text-white font-medium px-8 py-3.5 rounded-lg transition-colors text-sm md:text-base tracking-wide shadow-lg shadow-[#F04B14]/20">
+                            Get Fast Quote
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Item 11: MSC Truck -->
+                <div class="service-scroll-item min-h-[40vh] md:min-h-[60vh] flex flex-col justify-center"
+                    data-image="./assets/images/truck_msc_1782155454542.png">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <span class="w-3 h-3 rounded-full bg-[#F04B14]"></span>
+                        <span class="font-bold text-sm tracking-[0.1em] uppercase text-white/90">Our Fleet</span>
+                    </div>
+                    <h2 class="text-4xl md:text-5xl lg:text-[56px] font-medium tracking-tight mb-6">MSC</h2>
+                    <p class="text-white/80 text-base md:text-lg leading-relaxed mb-8 max-w-md">
+                        Global reach with local expertise. Moving dry cargo and perishables swiftly through
+                        Mediterranean Shipping Company's network.
+                    </p>
+                    <div>
+                        <a href="#"
+                            class="inline-flex items-center justify-center bg-[#F04B14] hover:bg-[#d83c0c] text-white font-medium px-8 py-3.5 rounded-lg transition-colors text-sm md:text-base tracking-wide shadow-lg shadow-[#F04B14]/20">
+                            Get Fast Quote
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Item 12: valdetron Truck -->
+                <div class="service-scroll-item min-h-[40vh] md:min-h-[60vh] flex flex-col justify-center"
+                    data-image="./assets/images/truck_valdetron_1782155465360.png">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <span class="w-3 h-3 rounded-full bg-[#F04B14]"></span>
+                        <span class="font-bold text-sm tracking-[0.1em] uppercase text-white/90">Our Fleet</span>
+                    </div>
+                    <h2 class="text-4xl md:text-5xl lg:text-[56px] font-medium tracking-tight mb-6">valdetron</h2>
+                    <p class="text-white/80 text-base md:text-lg leading-relaxed mb-8 max-w-md">
+                        Our premium Pakistan fleet. State-of-the-art vehicles equipped with tracking and reefer
+                        monitoring systems.
+                    </p>
+                    <div>
+                        <a href="#"
+                            class="inline-flex items-center justify-center bg-[#F04B14] hover:bg-[#d83c0c] text-white font-medium px-8 py-3.5 rounded-lg transition-colors text-sm md:text-base tracking-wide shadow-lg shadow-[#F04B14]/20">
+                            Get Fast Quote
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Our Process -->
+    <!-- Why Choose Us -->
+    <section class="bg-[#2D2D2D] py-24 px-6 md:px-12 w-full select-none relative overflow-hidden">
+        <div class="max-w-[1440px] mx-auto space-y-16">
+            <div class="text-center space-y-4 max-w-2xl mx-auto">
+                <div class="inline-flex items-center justify-center space-x-2">
+                    <span class="text-[#F04B14] text-sm">⭐</span>
+                    <span class="text-white font-bold text-xs uppercase tracking-wider">Why Choose Us</span>
+                </div>
+                <h2 class="text-white text-3xl sm:text-4xl lg:text-[44px] font-extrabold tracking-tight leading-[1.15]">
+                    Here's why clients across Pakistan <span class="text-[#F04B14]">trust us.</span>
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-16">
+                <!-- Item 1 -->
+                <div class="relative flex flex-col items-center text-center px-4 group overflow-visible">
+                    <h3 class="text-white font-bold text-xl mb-3 relative z-10">Specialized Fleet</h3>
+                    <p class="text-gray-400 text-[14px] leading-relaxed relative z-10">We operate a modern fleet of containerized and refrigerated vehicles, suitable for a wide range of cargo types.</p>
+                    <div class="mt-4 text-[100px] font-black text-white/[0.04] leading-none transition-transform duration-500 group-hover:-translate-y-3 group-hover:text-[#F04B14]/20 select-none">01.</div>
+                </div>
+                <!-- Item 2 -->
+                <div class="relative flex flex-col items-center text-center px-4 group overflow-visible">
+                    <h3 class="text-white font-bold text-xl mb-3 relative z-10">Nationwide Coverage</h3>
+                    <p class="text-gray-400 text-[14px] leading-relaxed relative z-10">Extensive road network and strategic hubs across Pakistan, providing reliable transport to remote locations.</p>
+                    <div class="mt-4 text-[100px] font-black text-white/[0.04] leading-none transition-transform duration-500 group-hover:-translate-y-3 group-hover:text-[#F04B14]/20 select-none">02.</div>
+                </div>
+                <!-- Item 3 -->
+                <div class="relative flex flex-col items-center text-center px-4 group overflow-visible">
+                    <h3 class="text-white font-bold text-xl mb-3 relative z-10">On-Time, Every Time</h3>
+                    <p class="text-gray-400 text-[14px] leading-relaxed relative z-10">Our proven track record of timely deliveries ensures that your supply chain remains uninterrupted.</p>
+                    <div class="mt-4 text-[100px] font-black text-white/[0.04] leading-none transition-transform duration-500 group-hover:-translate-y-3 group-hover:text-[#F04B14]/20 select-none">03.</div>
+                </div>
+                <!-- Item 4 -->
+                <div class="relative flex flex-col items-center text-center px-4 group overflow-visible">
+                    <h3 class="text-white font-bold text-xl mb-3 relative z-10">Advanced Tracking</h3>
+                    <p class="text-gray-400 text-[14px] leading-relaxed relative z-10">State-of-the-art GPS technology so you can monitor your shipment in real-time for full transparency.</p>
+                    <div class="mt-4 text-[100px] font-black text-white/[0.04] leading-none transition-transform duration-500 group-hover:-translate-y-3 group-hover:text-[#F04B14]/20 select-none">04.</div>
+                </div>
+                <!-- Item 5 -->
+                <div class="relative flex flex-col items-center text-center px-4 group overflow-visible">
+                    <h3 class="text-white font-bold text-xl mb-3 relative z-10">Cost-Effective</h3>
+                    <p class="text-gray-400 text-[14px] leading-relaxed relative z-10">We tailor our services to meet your needs while offering competitive rates to reduce logistics costs.</p>
+                    <div class="mt-4 text-[100px] font-black text-white/[0.04] leading-none transition-transform duration-500 group-hover:-translate-y-3 group-hover:text-[#F04B14]/20 select-none">05.</div>
+                </div>
+                <!-- Item 6 -->
+                <div class="relative flex flex-col items-center text-center px-4 group overflow-visible">
+                    <h3 class="text-white font-bold text-xl mb-3 relative z-10">Safety & Compliance</h3>
+                    <p class="text-gray-400 text-[14px] leading-relaxed relative z-10">Strict safety protocols and regulatory compliance, ensuring the protection of your cargo.</p>
+                    <div class="mt-4 text-[100px] font-black text-white/[0.04] leading-none transition-transform duration-500 group-hover:-translate-y-3 group-hover:text-[#F04B14]/20 select-none">06.</div>
+                </div>
+                <!-- Item 7 -->
+                <div class="relative flex flex-col items-center text-center px-4 group overflow-visible">
+                    <h3 class="text-white font-bold text-xl mb-3 relative z-10">Experienced Team</h3>
+                    <p class="text-gray-400 text-[14px] leading-relaxed relative z-10">Our professional drivers and logistics experts are trained to handle a wide variety of challenges.</p>
+                    <div class="mt-4 text-[100px] font-black text-white/[0.04] leading-none transition-transform duration-500 group-hover:-translate-y-3 group-hover:text-[#F04B14]/20 select-none">07.</div>
+                </div>
+                <!-- Item 8 -->
+                <div class="relative flex flex-col items-center text-center px-4 group overflow-visible">
+                    <h3 class="text-white font-bold text-xl mb-3 relative z-10">Eco-Friendly</h3>
+                    <p class="text-gray-400 text-[14px] leading-relaxed relative z-10">Committed to reducing environmental impact through fuel-efficient vehicles and sustainable practices.</p>
+                    <div class="mt-4 text-[100px] font-black text-white/[0.04] leading-none transition-transform duration-500 group-hover:-translate-y-3 group-hover:text-[#F04B14]/20 select-none">08.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Statistics Badge & FAQ Accordion Section -->
+    <section class="bg-[#2D2D2D] pt-0 pb-24 px-6 md:px-12 w-full select-none relative overflow-visible text-white z-20">
+        <div
+            class="absolute right-0 top-1/4 w-96 h-96 opacity-10 pointer-events-none bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:16px_16px]">
+        </div>
+
+        <div class="max-w-[1440px] mx-auto relative">
+
+            <div
+                class="bg-[#F04B14] rounded-3xl p-8 md:p-10 lg:p-12 grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-4 relative -translate-y-16 shadow-2xl shadow-[#F04B14]/20 z-30">
+                <div class="space-y-3 border-b md:border-b-0 md:border-r border-white/20 pb-6 md:pb-0 md:pr-4">
+                    <div class="text-4xl lg:text-[54px] font-black tracking-tight flex items-center gap-2">
+                        <span class="text-2xl font-light text-white/70">↑</span> 245+
+                    </div>
+                    <p class="text-white/80 text-xs font-medium leading-relaxed max-w-[280px]">
+                        Successful Project Completion Sed utperspiciatis unde omnis
+                    </p>
+                </div>
+                <div class="space-y-3 border-b md:border-b-0 md:border-r border-white/20 pb-6 md:pb-0 md:px-8">
+                    <div class="text-4xl lg:text-[54px] font-black tracking-tight flex items-center gap-2">
+                        <span class="text-2xl font-light text-white/70">↑</span> 30k
+                    </div>
+                    <p class="text-white/80 text-xs font-medium leading-relaxed max-w-[280px]">
+                        Successful Project Completion Sed utperspiciatis unde omnis
+                    </p>
+                </div>
+                <div class="space-y-3 md:pl-8">
+                    <div class="text-4xl lg:text-[54px] font-black tracking-tight flex items-center gap-2">
+                        <span class="text-2xl font-light text-white/70">↑</span> 10m
+                    </div>
+                    <p class="text-white/80 text-xs font-medium leading-relaxed max-w-[280px]">
+                        Successful Project Completion Sed utperspiciatis unde omnis
+                    </p>
+                </div>
+            </div>
+
+                        <!-- FAQ Layout Restructure -->
+            <div class="mt-24 pb-8 w-full">
+                <!-- Top Header & Button -->
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-10 space-y-6 md:space-y-0">
+                    <p class="text-white/80 text-lg md:text-xl max-w-xl leading-relaxed font-light">
+                        We combine efficient transport, technology, and communication for seamless logistics.
+                    </p>
+                    <a href="#" class="inline-flex items-center space-x-3 bg-[#F04B14] hover:bg-[#d83c0c] text-white font-medium px-8 py-4 rounded-full transition-colors text-sm md:text-base tracking-wide shadow-lg shadow-[#F04B14]/20 group">
+                        <span>Ask Us a Question</span>
+                        <span class="text-xl leading-none transition-transform group-hover:translate-x-1">&rarr;</span>
+                    </a>
+                </div>
+
+                <!-- Main Divider -->
+                <div class="w-full h-px bg-white/10 mb-8"></div>
+
+                <!-- FAQ Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-0">
+                    <!-- Column 1 -->
+                    <div class="flex flex-col divide-y divide-white/10">
+                        <div class="faq-item group py-6 cursor-pointer transition-all">
+                            <div class="flex items-center justify-between w-full text-left">
+                                <span class="faq-heading text-white font-bold text-base sm:text-lg tracking-wide group-hover:text-[#F04B14] transition-colors pr-4">Where can I find the FAQ section?</span>
+                                <span class="arrow-icon text-xl font-bold text-gray-400 transition-transform duration-300">&#x2198;</span>
+                            </div>
+                            <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                                <p class="text-gray-400 text-sm leading-relaxed pt-4 max-w-md">Our FAQ section provides answers to the most commonly asked questions regarding our transport, technology, and tracking services.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item group py-6 cursor-pointer transition-all">
+                            <div class="flex items-center justify-between w-full text-left">
+                                <span class="faq-heading text-white font-bold text-base sm:text-lg tracking-wide group-hover:text-[#F04B14] transition-colors pr-4">How can I contact customer support?</span>
+                                <span class="arrow-icon text-xl font-bold text-gray-400 transition-transform duration-300">&#x2198;</span>
+                            </div>
+                            <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                                <p class="text-gray-400 text-sm leading-relaxed pt-4 max-w-md">You can reach out to our dedicated support team 24/7 via phone, email, or through the "Ask Us a Question" button.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item group py-6 cursor-pointer transition-all">
+                            <div class="flex items-center justify-between w-full text-left">
+                                <span class="faq-heading text-white font-bold text-base sm:text-lg tracking-wide group-hover:text-[#F04B14] transition-colors pr-4">What should I do if there is an issue with my order?</span>
+                                <span class="arrow-icon text-xl font-bold text-gray-400 transition-transform duration-300">&#x2198;</span>
+                            </div>
+                            <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                                <p class="text-gray-400 text-sm leading-relaxed pt-4 max-w-md">If you experience any issues, please contact our support team immediately with your tracking number.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item group py-6 cursor-pointer transition-all">
+                            <div class="flex items-center justify-between w-full text-left">
+                                <span class="faq-heading text-white font-bold text-base sm:text-lg tracking-wide group-hover:text-[#F04B14] transition-colors pr-4">What should I do if I receive a damaged item?</span>
+                                <span class="arrow-icon text-xl font-bold text-gray-400 transition-transform duration-300">&#x2198;</span>
+                            </div>
+                            <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                                <p class="text-gray-400 text-sm leading-relaxed pt-4 max-w-md">Document the damage with photographs immediately and contact our claims department for swift resolution.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item group py-6 cursor-pointer transition-all border-b border-white/10">
+                            <div class="flex items-center justify-between w-full text-left">
+                                <span class="faq-heading text-white font-bold text-base sm:text-lg tracking-wide group-hover:text-[#F04B14] transition-colors pr-4">What payment methods do you accept?</span>
+                                <span class="arrow-icon text-xl font-bold text-gray-400 transition-transform duration-300">&#x2198;</span>
+                            </div>
+                            <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                                <p class="text-gray-400 text-sm leading-relaxed pt-4 max-w-md">We accept all major credit cards, wire transfers, and verified digital payment platforms for international clients.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Column 2 -->
+                    <div class="flex flex-col divide-y divide-white/10">
+                        <div class="faq-item group py-6 cursor-pointer transition-all">
+                            <div class="flex items-center justify-between w-full text-left">
+                                <span class="faq-heading text-white font-bold text-base sm:text-lg tracking-wide group-hover:text-[#F04B14] transition-colors pr-4">Can I cancel my order?</span>
+                                <span class="arrow-icon text-xl font-bold text-gray-400 transition-transform duration-300">&#x2198;</span>
+                            </div>
+                            <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                                <p class="text-gray-400 text-sm leading-relaxed pt-4 max-w-md">Orders can be cancelled before dispatch. Please check our cancellation terms for specific timeframes.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item group py-6 cursor-pointer transition-all">
+                            <div class="flex items-center justify-between w-full text-left">
+                                <span class="faq-heading text-white font-bold text-base sm:text-lg tracking-wide group-hover:text-[#F04B14] transition-colors pr-4">How can I track my order?</span>
+                                <span class="arrow-icon text-xl font-bold text-gray-400 transition-transform duration-300">&#x2198;</span>
+                            </div>
+                            <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                                <p class="text-gray-400 text-sm leading-relaxed pt-4 max-w-md">You can use the 14-digit tracking number provided in your confirmation email on our portal for real-time updates.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item group py-6 cursor-pointer transition-all">
+                            <div class="flex items-center justify-between w-full text-left">
+                                <span class="faq-heading text-white font-bold text-base sm:text-lg tracking-wide group-hover:text-[#F04B14] transition-colors pr-4">Do you offer international shipping?</span>
+                                <span class="arrow-icon text-xl font-bold text-gray-400 transition-transform duration-300">&#x2198;</span>
+                            </div>
+                            <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                                <p class="text-gray-400 text-sm leading-relaxed pt-4 max-w-md">Yes, our global network allows us to provide shipping services to over 150 countries worldwide.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item group py-6 cursor-pointer transition-all">
+                            <div class="flex items-center justify-between w-full text-left">
+                                <span class="faq-heading text-white font-bold text-base sm:text-lg tracking-wide group-hover:text-[#F04B14] transition-colors pr-4">What is your return policy?</span>
+                                <span class="arrow-icon text-xl font-bold text-gray-400 transition-transform duration-300">&#x2198;</span>
+                            </div>
+                            <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                                <p class="text-gray-400 text-sm leading-relaxed pt-4 max-w-md">Our return policy allows items to be returned within 30 days of receipt, subject to terms and conditions.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item group py-6 cursor-pointer transition-all border-b border-white/10">
+                            <div class="flex items-center justify-between w-full text-left">
+                                <span class="faq-heading text-white font-bold text-base sm:text-lg tracking-wide group-hover:text-[#F04B14] transition-colors pr-4">What is your shipping policy?</span>
+                                <span class="arrow-icon text-xl font-bold text-gray-400 transition-transform duration-300">&#x2198;</span>
+                            </div>
+                            <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                                <p class="text-gray-400 text-sm leading-relaxed pt-4 max-w-md">We offer a variety of shipping methods depending on the destination, size, and urgency of the freight.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    </section>
+    <!-- foooter "" -->
+    <!-- FOOTER GLOBAL COMPONENT SECTION -->
+    <footer class="bg-[#2D2D2D] pt-6 pb-12 px-4 sm:px-6 md:px-12 w-full select-none font-sans text-white">
+        <!-- Main Capsule Wrapper Body Frame matching the layout of image_8ff5e2.png -->
+        <div
+            class="max-w-[1440px] mx-auto bg-[#1A1A1C] rounded-[32px] pt-16 pb-8 px-8 md:px-16 relative overflow-hidden">
+
+            <!-- Subtle abstract design waves overlaying background trailing right lines -->
+            <div
+                class="absolute right-0 bottom-0 w-80 h-80 opacity-20 pointer-events-none bg-[radial-gradient(#1e293b_1px,transparent_1px)] [background-size:12px_12px] z-0">
+            </div>
+
+            <!-- TOP MATRIX ROW: Brand Identity, Newsletter Pitch Header, Input Control Badge -->
+            <div
+                class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center border-b border-white/10 pb-12 relative z-10">
+                <!-- Brand Logo Mark Layer -->
+                <div class="lg:col-span-3 flex flex-col space-y-4">
+                    <div class="flex items-center space-x-3">
+                        <!-- Brand Geometric Box Hexagon Logo -->
+                        <div class="w-9 h-9 relative flex items-center justify-center">
+                            <svg class="w-full h-full text-white" fill="none" stroke="currentColor" stroke-width="2"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z" />
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3.27 6.96L12 12.01l8.73-5.05M12 22.08V12" class="text-[#F04B14]" />
+                            </svg>
+                        </div>
+                        <span class="text-2xl font-black tracking-tight text-white">DEALEX</span>
+                    </div>
+                </div>
+
+                <!-- Pitch Callout Header Title Text -->
+                <div class="lg:col-span-4">
+                    <h3 class="text-white text-3xl sm:text-[34px] font-extrabold tracking-tight leading-tight">
+                        Subscribe to <br>Our Newsletter
+                    </h3>
+                </div>
+
+                <!-- Split Capsule Newsletter Input Form -->
+                <div class="lg:col-span-5 w-full">
+                    <form
+                        class="bg-white rounded-2xl p-1.5 flex items-center justify-between shadow-xl w-full max-w-md lg:ml-auto">
+                        <input type="email" placeholder="Enter Your Email Address" required
+                            class="bg-transparent pl-4 pr-2 py-3 w-full text-gray-800 text-xs sm:text-sm font-medium placeholder-gray-400 focus:outline-none">
+                        <button type="submit"
+                            class="bg-[#F04B14] hover:bg-[#d83c0c] text-white font-bold text-xs px-6 py-3.5 rounded-xl transition-all whitespace-nowrap tracking-wide shadow-md shadow-[#F04B14]/10">
+                            Subscribe Now
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- MIDDLE ROW COMPONENT MATRIX: Links, Schedules, and Contacts -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-y-12 gap-x-8 pt-12 pb-16 relative z-10">
+
+                <!-- Column Block 1: World Map Watermark & Social Platform Circular Icons Grid -->
+                <div class="lg:col-span-4 flex flex-col space-y-8">
+                    <!-- World Map Underlay with Pin Badge Drop Component -->
+                    <div class="w-full max-w-[240px] relative aspect-[2/1] opacity-40 bg-contain bg-no-repeat"
+                        style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3pyiBfnwuikWCxaH0uV4JY_1hjjjrIkXqDjJUSaEtTcXYXE9EqPuk0R5R&s=10'); filter: invert(1) brightness(0.4);">
+                        <!-- Glowing Blue Route Pointer Pin Point -->
+                        <div class="absolute top-[35%] left-[20%] text-[#F04B14] font-bold text-base animate-bounce">📍
+                        </div>
+                    </div>
+
+                    <!-- Circular Outline Action Button Rows for Social Platform Profiles -->
+                    <div class="flex items-center space-x-3">
+                        <!-- Facebook Circle -->
+                        <a href="#"
+                            class="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center text-white/70 hover:text-white hover:border-white transition-all text-sm">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c4.56-.93 8-4.96 8-9.8z" />
+                            </svg>
+                        </a>
+                        <!-- X (Twitter alternative vector layout profile) -->
+                        <a href="#"
+                            class="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center text-white/70 hover:text-white hover:border-white transition-all text-xs font-mono font-bold">
+                            X
+                        </a>
+                        <!-- Instagram Circle -->
+                        <a href="#"
+                            class="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center text-white/70 hover:text-white hover:border-white transition-all text-sm">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zM17.5 6.5h.01" />
+                            </svg>
+                        </a>
+                        <!-- YouTube Circle -->
+                        <a href="#"
+                            class="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center text-white/70 hover:text-white hover:border-white transition-all text-sm">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Column Block 2: Useful Link Split Dual Columns Directory Row -->
+                <div class="lg:col-span-4 flex flex-col space-y-6">
+                    <h4 class="text-[#F04B14] font-extrabold text-sm tracking-wide">Useful Link</h4>
+                    <div class="grid grid-cols-2 gap-x-4 gap-y-3.5">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors text-xs font-semibold">About
+                            us</a>
+                        <a href="#"
+                            class="text-gray-400 hover:text-white transition-colors text-xs font-semibold">Licenses</a>
+                        <a href="#"
+                            class="text-gray-400 hover:text-white transition-colors text-xs font-semibold">Appointment</a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors text-xs font-semibold">Style
+                            Guide</a>
+                        <a href="#"
+                            class="text-gray-400 hover:text-white transition-colors text-xs font-semibold">Experts</a>
+                        <a href="#"
+                            class="text-gray-400 hover:text-white transition-colors text-xs font-semibold">Change
+                            Log</a>
+                        <a href="#"
+                            class="text-gray-400 hover:text-white transition-colors text-xs font-semibold">Contact
+                            Us</a>
+                    </div>
+                </div>
+
+                <!-- Column Block 3: Operational Working Hours Group -->
+                <div class="lg:col-span-4 flex flex-col space-y-6">
+                    <h4 class="text-[#F04B14] font-extrabold text-sm tracking-wide">Working Hours</h4>
+                    <div class="space-y-3.5 text-gray-400 text-xs font-semibold">
+                        <p class="flex items-center justify-between">
+                            <span>Mon to Fri :</span>
+                            <span class="text-white">9:00 AM - 5:00 PM</span>
+                        </p>
+                        <p class="flex items-center justify-between">
+                            <span>Saturday :</span>
+                            <span class="text-white">10:00 AM - 6:00 PM</span>
+                        </p>
+                        <p class="flex items-center justify-between text-gray-400">
+                            <span>Sunday Closed</span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Column Block 4: Contact Core Communication Links Layout -->
+                <div class="lg:col-span-4 flex flex-col space-y-6">
+                    <h4 class="text-[#F04B14] font-extrabold text-sm tracking-wide">Say Hello</h4>
+                    <div class="space-y-3.5">
+                        <a href="mailto:info@dealex.pk"
+                            class="block text-gray-400 hover:text-[#F04B14] transition-colors text-xs font-semibold underline underline-offset-4">
+                            info@dealex.pk
+                        </a>
+                        <a href="tel:+02574328301"
+                            class="block text-white text-lg font-extrabold tracking-tight hover:text-[#F04B14] transition-colors">
+                            +92 303 8244428
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- BASE LOWER ROW BAR: Intellectual Property Copyright Layout Anchor Points -->
+            <div
+                class="border-t border-white/5 pt-6 flex flex-col sm:flex-row items-center justify-between text-[11px] text-gray-400 font-medium tracking-wide gap-4 relative z-10">
+                <a href="#" class="hover:text-white transition-colors">Terms and conditions</a>
+                <p>© 2024 Dealex Transport & Logistics Services</p>
+                <a href="#" class="hover:text-white transition-colors">Privacy policy</a>
+            </div>
+
+        </div>
+    </footer>
+    <script src="script.js" defer></script>
+</body>
+
+</html>

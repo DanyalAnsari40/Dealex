@@ -1,0 +1,69 @@
+body {
+    background-color: #ffffff;
+}
+
+/* Custom bottom right diagonal cutout for the hero frame */
+.hero-container {
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 40px), calc(100% - 40px) 100%, 0 100%);
+}
+
+/* Canvas interaction prevention */
+#three-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    pointer-events: none;
+    mix-blend-mode: screen;
+}
+
+/* Continuous Left to Right Loop configuration */
+@keyframes marqueeForward {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Continuous Right to Left Loop configuration */
+@keyframes marqueeReverse {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+.animate-marquee-forward {
+    animation: marqueeForward 28s linear infinite;
+}
+
+.animate-marquee-reverse {
+    animation: marqueeReverse 28s linear infinite;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.animate-marquee {
+    animation: marquee 35s linear infinite;
+}
+
+/* Optional: Pause carousel when mouse hovers over it */
+.animate-marquee:hover {
+    animation-play-state: paused;
+}
