@@ -266,14 +266,14 @@
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const truck = document.getElementById('about-truck');
-            const section = document.getElementById('about-us-section');
+            const section = document.getElementById('vision-mission-section');
             if (!truck || !section) return;
 
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         // Trigger animation: slide in from right to its correct slightly-left overlapping position
-                        truck.classList.remove('translate-x-[120%]');
+                        truck.classList.remove('translate-x-[100%]');
                         truck.classList.add('translate-x-0');
                         observer.unobserve(entry.target);
                     }
