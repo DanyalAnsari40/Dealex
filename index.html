@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dealex - Transport & Logistics Services</title>
+    <link rel="icon" type="image/png" href="./images/favicon.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 
@@ -667,19 +668,19 @@
                 threshold: 0
             };
 
-            let currentImage = imageElement.src;
-
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         const newImage = entry.target.getAttribute('data-image');
-                        if (newImage && currentImage !== newImage) {
-                            currentImage = newImage;
-                            imageElement.style.opacity = '0';
-                            setTimeout(() => {
-                                imageElement.src = newImage;
-                                imageElement.style.opacity = '1';
-                            }, 300);
+                        if (newImage) {
+                            const absoluteNewImage = new URL(newImage, document.baseURI).href;
+                            if (imageElement.src !== absoluteNewImage) {
+                                imageElement.style.opacity = '0';
+                                setTimeout(() => {
+                                    imageElement.src = absoluteNewImage;
+                                    imageElement.style.opacity = '1';
+                                }, 300);
+                            }
                         }
                     }
                 });
