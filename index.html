@@ -127,12 +127,6 @@
                     <a href="#" class="hover:text-[#00A1FF] transition-colors"> Youtube </a>
                 </div>
 
-                <button
-                    class="relative w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white text-sm hover:border-[#00A1FF] transition-colors">
-                    🛒
-                    <span
-                        class="absolute -top-1 -right-1 bg-[#00A1FF] text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center">0</span>
-                </button>
 
                 <a href="#"
                     class="bg-[#00A1FF] hover:bg-[#0090E0] text-white px-5 py-2.5 rounded-full text-xs font-bold tracking-wide transition-all hidden sm:flex items-center gap-2 shadow-lg shadow-[#00A1FF]/20 border border-[#00A1FF]">
@@ -768,7 +762,7 @@
 
             <!-- Sticky Image Area (Left) -->
             <div
-                class="w-full md:w-1/2 sticky top-0 h-[35vh] md:h-screen flex items-center justify-center p-4 md:p-8 z-30 pt-4 md:pt-0 bg-[#000000]/95 md:bg-transparent backdrop-blur-md md:backdrop-blur-none border-b border-white/5 md:border-none">
+                class="hidden md:flex w-1/2 sticky top-0 h-screen items-center justify-center p-8 z-30">
                 <div class="relative w-full h-full max-h-[600px] flex items-center justify-center">
                     <img id="services-sticky-image" src="./images/excavator_orange_1782155036653.png"
                         alt="Service Equipment"
@@ -777,11 +771,15 @@
             </div>
 
             <!-- Scrollable Content Area (Right) -->
-            <div class="w-full md:w-1/2 flex flex-col py-12 md:py-32 space-y-[20vh] md:space-y-[40vh] relative z-20">
+            <div class="w-full md:w-1/2 flex flex-col py-12 md:py-32 space-y-16 md:space-y-[40vh] relative z-20">
 
                 <!-- Item 1: Excavator -->
-                <div class="service-scroll-item min-h-[40vh] md:min-h-[60vh] flex flex-col justify-center"
+                <div class="service-scroll-item min-h-0 md:min-h-[60vh] flex flex-col justify-center"
                     data-image="./images/excavator_orange_1782155036653.png">
+                    <!-- Mobile Image -->
+                    <div class="md:hidden w-full h-[250px] sm:h-[300px] mb-6 bg-white/5 rounded-2xl p-4 flex items-center justify-center shadow-lg border border-white/5">
+                        <img src="./images/excavator_orange_1782155036653.png" alt="Fleet Image" class="max-w-full max-h-full object-contain">
+                    </div>
                     <div class="flex items-center space-x-3 mb-4">
                         <span class="w-3 h-3 rounded-full bg-[#00A1FF]"></span>
                         <span class="font-bold text-sm tracking-[0.1em] uppercase text-white/90">Our Products</span>
@@ -800,8 +798,12 @@
                 </div>
 
                 <!-- Item 2: Maersk Truck -->
-                <div class="service-scroll-item min-h-[40vh] md:min-h-[60vh] flex flex-col justify-center"
+                <div class="service-scroll-item min-h-0 md:min-h-[60vh] flex flex-col justify-center"
                     data-image="./images/truck_maersk_1782155048143.png">
+                    <!-- Mobile Image -->
+                    <div class="md:hidden w-full h-[250px] sm:h-[300px] mb-6 bg-white/5 rounded-2xl p-4 flex items-center justify-center shadow-lg border border-white/5">
+                        <img src="./images/truck_maersk_1782155048143.png" alt="Fleet Image" class="max-w-full max-h-full object-contain">
+                    </div>
                     <div class="flex items-center space-x-3 mb-4">
                         <span class="w-3 h-3 rounded-full bg-[#00A1FF]"></span>
                         <span class="font-bold text-sm tracking-[0.1em] uppercase text-white/90">Our Fleet</span>
@@ -820,8 +822,12 @@
                 </div>
 
                 <!-- Item 3: CMA CGM Truck -->
-                <div class="service-scroll-item min-h-[40vh] md:min-h-[60vh] flex flex-col justify-center"
+                <div class="service-scroll-item min-h-0 md:min-h-[60vh] flex flex-col justify-center"
                     data-image="./images/truck_cma_1782155059239.png">
+                    <!-- Mobile Image -->
+                    <div class="md:hidden w-full h-[250px] sm:h-[300px] mb-6 bg-white/5 rounded-2xl p-4 flex items-center justify-center shadow-lg border border-white/5">
+                        <img src="./images/truck_cma_1782155059239.png" alt="Fleet Image" class="max-w-full max-h-full object-contain">
+                    </div>
                     <div class="flex items-center space-x-3 mb-4">
                         <span class="w-3 h-3 rounded-full bg-[#00A1FF]"></span>
                         <span class="font-bold text-sm tracking-[0.1em] uppercase text-white/90">Our Fleet</span>
@@ -840,8 +846,12 @@
                 </div>
 
                 <!-- Item 4: UNIFEEDER Truck -->
-                <div class="service-scroll-item min-h-[40vh] md:min-h-[60vh] flex flex-col justify-center"
+                <div class="service-scroll-item min-h-0 md:min-h-[60vh] flex flex-col justify-center"
                     data-image="./images/truck_unifeeder_1782155351619.png">
+                    <!-- Mobile Image -->
+                    <div class="md:hidden w-full h-[250px] sm:h-[300px] mb-6 bg-white/5 rounded-2xl p-4 flex items-center justify-center shadow-lg border border-white/5">
+                        <img src="./images/truck_unifeeder_1782155351619.png" alt="Fleet Image" class="max-w-full max-h-full object-contain">
+                    </div>
                     <div class="flex items-center space-x-3 mb-4">
                         <span class="w-3 h-3 rounded-full bg-[#00A1FF]"></span>
                         <span class="font-bold text-sm tracking-[0.1em] uppercase text-white/90">Our Fleet</span>
@@ -860,8 +870,12 @@
                 </div>
 
                 <!-- Item 5: WAN HAI LINES Truck -->
-                <div class="service-scroll-item min-h-[40vh] md:min-h-[60vh] flex flex-col justify-center"
+                <div class="service-scroll-item min-h-0 md:min-h-[60vh] flex flex-col justify-center"
                     data-image="./images/truck_wanhai_1782155360753.png">
+                    <!-- Mobile Image -->
+                    <div class="md:hidden w-full h-[250px] sm:h-[300px] mb-6 bg-white/5 rounded-2xl p-4 flex items-center justify-center shadow-lg border border-white/5">
+                        <img src="./images/truck_wanhai_1782155360753.png" alt="Fleet Image" class="max-w-full max-h-full object-contain">
+                    </div>
                     <div class="flex items-center space-x-3 mb-4">
                         <span class="w-3 h-3 rounded-full bg-[#00A1FF]"></span>
                         <span class="font-bold text-sm tracking-[0.1em] uppercase text-white/90">Our Fleet</span>
@@ -880,8 +894,12 @@
                 </div>
 
                 <!-- Item 6: OOCL Truck -->
-                <div class="service-scroll-item min-h-[40vh] md:min-h-[60vh] flex flex-col justify-center"
+                <div class="service-scroll-item min-h-0 md:min-h-[60vh] flex flex-col justify-center"
                     data-image="./images/truck_oocl_1782155372762.png">
+                    <!-- Mobile Image -->
+                    <div class="md:hidden w-full h-[250px] sm:h-[300px] mb-6 bg-white/5 rounded-2xl p-4 flex items-center justify-center shadow-lg border border-white/5">
+                        <img src="./images/truck_oocl_1782155372762.png" alt="Fleet Image" class="max-w-full max-h-full object-contain">
+                    </div>
                     <div class="flex items-center space-x-3 mb-4">
                         <span class="w-3 h-3 rounded-full bg-[#00A1FF]"></span>
                         <span class="font-bold text-sm tracking-[0.1em] uppercase text-white/90">Our Fleet</span>
@@ -900,8 +918,12 @@
                 </div>
 
                 <!-- Item 7: Hapag-Lloyd Truck -->
-                <div class="service-scroll-item min-h-[40vh] md:min-h-[60vh] flex flex-col justify-center"
+                <div class="service-scroll-item min-h-0 md:min-h-[60vh] flex flex-col justify-center"
                     data-image="./images/truck_hapaglloyd_1782155384381.png">
+                    <!-- Mobile Image -->
+                    <div class="md:hidden w-full h-[250px] sm:h-[300px] mb-6 bg-white/5 rounded-2xl p-4 flex items-center justify-center shadow-lg border border-white/5">
+                        <img src="./images/truck_hapaglloyd_1782155384381.png" alt="Fleet Image" class="max-w-full max-h-full object-contain">
+                    </div>
                     <div class="flex items-center space-x-3 mb-4">
                         <span class="w-3 h-3 rounded-full bg-[#00A1FF]"></span>
                         <span class="font-bold text-sm tracking-[0.1em] uppercase text-white/90">Our Fleet</span>
@@ -920,8 +942,12 @@
                 </div>
 
                 <!-- Item 8: ONE Truck -->
-                <div class="service-scroll-item min-h-[40vh] md:min-h-[60vh] flex flex-col justify-center"
+                <div class="service-scroll-item min-h-0 md:min-h-[60vh] flex flex-col justify-center"
                     data-image="./images/truck_one_1782155414392.png">
+                    <!-- Mobile Image -->
+                    <div class="md:hidden w-full h-[250px] sm:h-[300px] mb-6 bg-white/5 rounded-2xl p-4 flex items-center justify-center shadow-lg border border-white/5">
+                        <img src="./images/truck_one_1782155414392.png" alt="Fleet Image" class="max-w-full max-h-full object-contain">
+                    </div>
                     <div class="flex items-center space-x-3 mb-4">
                         <span class="w-3 h-3 rounded-full bg-[#00A1FF]"></span>
                         <span class="font-bold text-sm tracking-[0.1em] uppercase text-white/90">Our Fleet</span>
@@ -940,8 +966,12 @@
                 </div>
 
                 <!-- Item 9: EVERGREEN Truck -->
-                <div class="service-scroll-item min-h-[40vh] md:min-h-[60vh] flex flex-col justify-center"
+                <div class="service-scroll-item min-h-0 md:min-h-[60vh] flex flex-col justify-center"
                     data-image="./images/truck_evergreen_1782155429041.png">
+                    <!-- Mobile Image -->
+                    <div class="md:hidden w-full h-[250px] sm:h-[300px] mb-6 bg-white/5 rounded-2xl p-4 flex items-center justify-center shadow-lg border border-white/5">
+                        <img src="./images/truck_evergreen_1782155429041.png" alt="Fleet Image" class="max-w-full max-h-full object-contain">
+                    </div>
                     <div class="flex items-center space-x-3 mb-4">
                         <span class="w-3 h-3 rounded-full bg-[#00A1FF]"></span>
                         <span class="font-bold text-sm tracking-[0.1em] uppercase text-white/90">Our Fleet</span>
@@ -960,8 +990,12 @@
                 </div>
 
                 <!-- Item 10: FEEDER Truck -->
-                <div class="service-scroll-item min-h-[40vh] md:min-h-[60vh] flex flex-col justify-center"
+                <div class="service-scroll-item min-h-0 md:min-h-[60vh] flex flex-col justify-center"
                     data-image="./images/truck_feeder_1782155442270.png">
+                    <!-- Mobile Image -->
+                    <div class="md:hidden w-full h-[250px] sm:h-[300px] mb-6 bg-white/5 rounded-2xl p-4 flex items-center justify-center shadow-lg border border-white/5">
+                        <img src="./images/truck_feeder_1782155442270.png" alt="Fleet Image" class="max-w-full max-h-full object-contain">
+                    </div>
                     <div class="flex items-center space-x-3 mb-4">
                         <span class="w-3 h-3 rounded-full bg-[#00A1FF]"></span>
                         <span class="font-bold text-sm tracking-[0.1em] uppercase text-white/90">Our Fleet</span>
@@ -980,8 +1014,12 @@
                 </div>
 
                 <!-- Item 11: MSC Truck -->
-                <div class="service-scroll-item min-h-[40vh] md:min-h-[60vh] flex flex-col justify-center"
+                <div class="service-scroll-item min-h-0 md:min-h-[60vh] flex flex-col justify-center"
                     data-image="./images/truck_msc_1782155454542.png">
+                    <!-- Mobile Image -->
+                    <div class="md:hidden w-full h-[250px] sm:h-[300px] mb-6 bg-white/5 rounded-2xl p-4 flex items-center justify-center shadow-lg border border-white/5">
+                        <img src="./images/truck_msc_1782155454542.png" alt="Fleet Image" class="max-w-full max-h-full object-contain">
+                    </div>
                     <div class="flex items-center space-x-3 mb-4">
                         <span class="w-3 h-3 rounded-full bg-[#00A1FF]"></span>
                         <span class="font-bold text-sm tracking-[0.1em] uppercase text-white/90">Our Fleet</span>
@@ -1000,8 +1038,12 @@
                 </div>
 
                 <!-- Item 12: valdetron Truck -->
-                <div class="service-scroll-item min-h-[40vh] md:min-h-[60vh] flex flex-col justify-center"
+                <div class="service-scroll-item min-h-0 md:min-h-[60vh] flex flex-col justify-center"
                     data-image="./images/truck_valdetron_1782155465360.png">
+                    <!-- Mobile Image -->
+                    <div class="md:hidden w-full h-[250px] sm:h-[300px] mb-6 bg-white/5 rounded-2xl p-4 flex items-center justify-center shadow-lg border border-white/5">
+                        <img src="./images/truck_valdetron_1782155465360.png" alt="Fleet Image" class="max-w-full max-h-full object-contain">
+                    </div>
                     <div class="flex items-center space-x-3 mb-4">
                         <span class="w-3 h-3 rounded-full bg-[#00A1FF]"></span>
                         <span class="font-bold text-sm tracking-[0.1em] uppercase text-white/90">Our Fleet</span>
@@ -1022,6 +1064,101 @@
             </div>
         </div>
     </section>
+    
+    <!-- Partners / Get a Quote Section -->
+    <section class="bg-[#000000] py-24 px-6 md:px-12 w-full select-none relative overflow-hidden">
+        <div class="max-w-[1440px] mx-auto space-y-16 relative z-10">
+            <div class="text-center space-y-4 max-w-2xl mx-auto">
+                <div class="inline-flex items-center justify-center space-x-2">
+                    <span class="text-[#00A1FF] text-sm">⚓</span>
+                    <span class="text-white font-bold text-xs uppercase tracking-wider">Our Shipping Partners</span>
+                </div>
+                <h2 class="text-white text-3xl sm:text-4xl lg:text-[44px] font-extrabold tracking-tight leading-[1.15]">
+                    Get a Quote from <span class="text-[#00A1FF]">Top Carriers</span>
+                </h2>
+                <p class="text-gray-400 text-sm md:text-base">
+                    Choose your preferred shipping line and request a specialized quote tailored to your cargo needs.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+
+                <!-- CMA CGM -->
+                <div class="relative group rounded-2xl bg-[#0D0D12] border border-white/5 hover:border-[#00A1FF]/50 p-4 sm:p-6 flex flex-col items-center justify-between transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#00A1FF]/20 cursor-pointer h-[240px]">
+                    <div class="h-[120px] w-full flex items-center justify-center mb-4 bg-white rounded-xl p-4 transition-colors duration-500">
+                        <img src="./partners/CMA-CGM-logo.png" alt="CMA CGM" class="max-w-[90%] max-h-full object-contain transition-all duration-500 group-hover:scale-110">
+                    </div>
+                    <button class="w-full py-3 rounded-xl bg-white/5 text-white/80 font-medium text-sm border border-white/10 group-hover:bg-[#00A1FF] group-hover:text-white group-hover:border-transparent transition-all duration-300">
+                        Request Quote
+                    </button>
+                </div>
+                <!-- Cosco -->
+                <div class="relative group rounded-2xl bg-[#0D0D12] border border-white/5 hover:border-[#00A1FF]/50 p-4 sm:p-6 flex flex-col items-center justify-between transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#00A1FF]/20 cursor-pointer h-[240px]">
+                    <div class="h-[120px] w-full flex items-center justify-center mb-4 bg-white rounded-xl p-4 transition-colors duration-500">
+                        <img src="./partners/Cosco-logo.png" alt="Cosco" class="max-w-[90%] max-h-full object-contain transition-all duration-500 group-hover:scale-110">
+                    </div>
+                    <button class="w-full py-3 rounded-xl bg-white/5 text-white/80 font-medium text-sm border border-white/10 group-hover:bg-[#00A1FF] group-hover:text-white group-hover:border-transparent transition-all duration-300">
+                        Request Quote
+                    </button>
+                </div>
+                <!-- Feeder -->
+                <div class="relative group rounded-2xl bg-[#0D0D12] border border-white/5 hover:border-[#00A1FF]/50 p-4 sm:p-6 flex flex-col items-center justify-between transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#00A1FF]/20 cursor-pointer h-[240px]">
+                    <div class="h-[120px] w-full flex items-center justify-center mb-4 bg-white rounded-xl p-4 transition-colors duration-500">
+                        <img src="./partners/Feeder-logo.jpg" alt="Feeder" class="max-w-[90%] max-h-full object-contain transition-all duration-500 group-hover:scale-110">
+                    </div>
+                    <button class="w-full py-3 rounded-xl bg-white/5 text-white/80 font-medium text-sm border border-white/10 group-hover:bg-[#00A1FF] group-hover:text-white group-hover:border-transparent transition-all duration-300">
+                        Request Quote
+                    </button>
+                </div>
+                <!-- Hapag Lloyd -->
+                <div class="relative group rounded-2xl bg-[#0D0D12] border border-white/5 hover:border-[#00A1FF]/50 p-4 sm:p-6 flex flex-col items-center justify-between transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#00A1FF]/20 cursor-pointer h-[240px]">
+                    <div class="h-[120px] w-full flex items-center justify-center mb-4 bg-white rounded-xl p-4 transition-colors duration-500">
+                        <img src="./partners/Hapag LIoyd-logo" alt="Hapag Lloyd" class="max-w-[90%] max-h-full object-contain transition-all duration-500 group-hover:scale-110">
+                    </div>
+                    <button class="w-full py-3 rounded-xl bg-white/5 text-white/80 font-medium text-sm border border-white/10 group-hover:bg-[#00A1FF] group-hover:text-white group-hover:border-transparent transition-all duration-300">
+                        Request Quote
+                    </button>
+                </div>
+                <!-- Maersk -->
+                <div class="relative group rounded-2xl bg-[#0D0D12] border border-white/5 hover:border-[#00A1FF]/50 p-4 sm:p-6 flex flex-col items-center justify-between transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#00A1FF]/20 cursor-pointer h-[240px]">
+                    <div class="h-[120px] w-full flex items-center justify-center mb-4 bg-white rounded-xl p-4 transition-colors duration-500">
+                        <img src="./partners/Maersk-logo.png" alt="Maersk" class="max-w-[90%] max-h-full object-contain transition-all duration-500 group-hover:scale-110">
+                    </div>
+                    <button class="w-full py-3 rounded-xl bg-white/5 text-white/80 font-medium text-sm border border-white/10 group-hover:bg-[#00A1FF] group-hover:text-white group-hover:border-transparent transition-all duration-300">
+                        Request Quote
+                    </button>
+                </div>
+                <!-- OOCL -->
+                <div class="relative group rounded-2xl bg-[#0D0D12] border border-white/5 hover:border-[#00A1FF]/50 p-4 sm:p-6 flex flex-col items-center justify-between transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#00A1FF]/20 cursor-pointer h-[240px]">
+                    <div class="h-[120px] w-full flex items-center justify-center mb-4 bg-white rounded-xl p-4 transition-colors duration-500">
+                        <img src="./partners/OOCL-logo.png" alt="OOCL" class="max-w-[90%] max-h-full object-contain transition-all duration-500 group-hover:scale-110">
+                    </div>
+                    <button class="w-full py-3 rounded-xl bg-white/5 text-white/80 font-medium text-sm border border-white/10 group-hover:bg-[#00A1FF] group-hover:text-white group-hover:border-transparent transition-all duration-300">
+                        Request Quote
+                    </button>
+                </div>
+                <!-- Unifeeder -->
+                <div class="relative group rounded-2xl bg-[#0D0D12] border border-white/5 hover:border-[#00A1FF]/50 p-4 sm:p-6 flex flex-col items-center justify-between transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#00A1FF]/20 cursor-pointer h-[240px]">
+                    <div class="h-[120px] w-full flex items-center justify-center mb-4 bg-white rounded-xl p-4 transition-colors duration-500">
+                        <img src="./partners/Unifeeder-logo.jpg" alt="Unifeeder" class="max-w-[90%] max-h-full object-contain transition-all duration-500 group-hover:scale-110">
+                    </div>
+                    <button class="w-full py-3 rounded-xl bg-white/5 text-white/80 font-medium text-sm border border-white/10 group-hover:bg-[#00A1FF] group-hover:text-white group-hover:border-transparent transition-all duration-300">
+                        Request Quote
+                    </button>
+                </div>
+                <!-- Wan Hai -->
+                <div class="relative group rounded-2xl bg-[#0D0D12] border border-white/5 hover:border-[#00A1FF]/50 p-4 sm:p-6 flex flex-col items-center justify-between transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#00A1FF]/20 cursor-pointer h-[240px]">
+                    <div class="h-[120px] w-full flex items-center justify-center mb-4 bg-white rounded-xl p-4 transition-colors duration-500">
+                        <img src="./partners/Wan Hai Lines lt-logo.png" alt="Wan Hai" class="max-w-[90%] max-h-full object-contain transition-all duration-500 group-hover:scale-110">
+                    </div>
+                    <button class="w-full py-3 rounded-xl bg-white/5 text-white/80 font-medium text-sm border border-white/10 group-hover:bg-[#00A1FF] group-hover:text-white group-hover:border-transparent transition-all duration-300">
+                        Request Quote
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
     <!-- Our Process -->
     <!-- Why Choose Us -->
     <section class="bg-[#000000] pt-24 pb-40 lg:pb-48 px-6 md:px-12 w-full select-none relative overflow-hidden">
