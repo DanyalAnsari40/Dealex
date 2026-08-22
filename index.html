@@ -27,6 +27,25 @@
         }
     </script>
     <style>
+        #preloader {
+            position: fixed;
+            inset: 0;
+            background-color: #000000;
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 4px solid rgba(255, 255, 255, 0.1);
+            border-left-color: #00A1FF;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin { 100% { transform: rotate(360deg); } }
         h1,
         h2,
         h3,
@@ -40,7 +59,43 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="p-4 md:p-6 min-h-screen flex flex-col items-center justify-center bg-[#000000] text-white">
+<body class="p-4 md:p-6 min-h-screen flex flex-col items-center justify-center bg-[#000000] text-white overflow-hidden">
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="flex flex-col items-center">
+            <div class="spinner mb-4"></div>
+            <div class="text-[#00A1FF] font-bold tracking-widest uppercase text-xs">DEALEX</div>
+        </div>
+    </div>
+
+    <script>
+        // Preload images for the services section so they appear instantly on scroll
+        document.addEventListener("DOMContentLoaded", () => {
+            const items = document.querySelectorAll('.service-scroll-item');
+            items.forEach(item => {
+                const src = item.getAttribute('data-image');
+                if (src) {
+                    const img = new Image();
+                    img.src = src;
+                }
+            });
+        });
+
+        // Hide preloader when everything is fully loaded
+        window.addEventListener('load', () => {
+            const preloader = document.getElementById('preloader');
+            if (preloader) {
+                preloader.style.opacity = '0';
+                preloader.style.visibility = 'hidden';
+                setTimeout(() => {
+                    document.body.classList.remove('overflow-hidden');
+                    preloader.remove();
+                }, 500);
+            } else {
+                document.body.classList.remove('overflow-hidden');
+            }
+        });
+    </script>
 
     <section id="hero-section"
         class="hero-container relative w-full max-w-[1440px] lg:max-w-[96%] xl:max-w-[98%] min-h-[550px] md:min-h-[780px] lg:min-h-[85vh] xl:min-h-[90vh] rounded-[32px] overflow-hidden bg-cover bg-center flex flex-col justify-between p-6 md:p-12 transition-all duration-[2000ms] ease-in-out"
@@ -132,11 +187,11 @@
         id="vision-mission-section">
         <div class="max-w-[1440px] mx-auto grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
 
-            <!-- Left Column: Text & Cards -->
-            <div class="space-y-6 md:space-y-8">
+            <!-- Mobile Flex Wrapper / Desktop Grid Contents -->
+            <div class="flex flex-col lg:contents">
 
                 <!-- Heading Area -->
-                <div class="space-y-3">
+                <div class="space-y-3 order-1 lg:col-start-1 lg:row-start-1 lg:self-end">
                     <div class="flex items-center space-x-3">
                         <span class="w-3.5 h-3.5 rounded-full bg-[#00A1FF]"></span>
                         <span class="text-gray-400 font-medium text-sm tracking-widest uppercase">Dealex Transport &
@@ -150,16 +205,27 @@
                     </h2>
                 </div>
 
+                <!-- Animated Truck Image -->
+                <div class="relative lg:h-full lg:min-h-[400px] flex items-center justify-center lg:justify-end mt-2 mb-4 lg:mt-0 lg:mb-0 overflow-hidden lg:overflow-visible order-2 lg:col-start-2 lg:row-start-1 lg:row-span-2">
+                    <div class="relative z-10 w-full flex items-center justify-center lg:justify-start lg:-ml-[30%]">
+                        <picture class="w-full flex justify-center lg:block">
+                            <source media="(min-width: 1024px)" srcset="./images/truck_about.png">
+                            <img id="about-truck" src="./images/truck_about -mobile.png" alt="Logistics Truck"
+                                class="w-[90%] sm:w-[80%] max-w-[350px] lg:max-w-none lg:w-[220%] h-auto object-contain lg:object-cover drop-shadow-[0_20px_50px_rgba(0,0,0,0.3)] transform translate-x-[100%] transition-transform duration-[1200ms] ease-out">
+                        </picture>
+                    </div>
+                </div>
+
                 <!-- Cards Container -->
-                <div class="space-y-4">
+                <div class="grid grid-cols-2 gap-3 sm:gap-4 lg:flex lg:flex-col lg:gap-0 lg:space-y-4 order-3 lg:col-start-1 lg:row-start-2 lg:self-start lg:mt-8">
                     <!-- Vision Card -->
                     <div
-                        class="bg-[#0A0A0F] rounded-[24px] p-5 lg:p-6 flex flex-col sm:flex-row gap-4 lg:gap-6 items-start">
-                        <div class="flex-shrink-0 w-24">
+                        class="bg-[#0A0A0F] rounded-[24px] p-4 lg:p-6 flex flex-col sm:flex-row gap-3 lg:gap-6 items-start">
+                        <div class="flex-shrink-0 sm:w-24">
                             <div class="text-[#00A1FF] font-bold text-lg mb-1">01</div>
-                            <div class="text-[#00A1FF] font-medium text-base">Vision</div>
+                            <div class="text-[#00A1FF] font-medium text-sm sm:text-base">Vision</div>
                         </div>
-                        <p class="text-gray-400 text-[14px] lg:text-[15px] leading-relaxed">
+                        <p class="text-gray-400 text-[11px] sm:text-[14px] lg:text-[15px] leading-relaxed">
                             To be Pakistan’s leading road transportation and logistics provider, delivering safe,
                             reliable, and efficient solutions that are environmentally responsible and create lasting
                             value for all stakeholders.
@@ -168,26 +234,17 @@
 
                     <!-- Mission Card -->
                     <div
-                        class="bg-[#0A0A0F] rounded-[24px] p-5 lg:p-6 flex flex-col sm:flex-row gap-4 lg:gap-6 items-start">
-                        <div class="flex-shrink-0 w-24">
+                        class="bg-[#0A0A0F] rounded-[24px] p-4 lg:p-6 flex flex-col sm:flex-row gap-3 lg:gap-6 items-start">
+                        <div class="flex-shrink-0 sm:w-24">
                             <div class="text-[#00A1FF] font-bold text-lg mb-1">02</div>
-                            <div class="text-[#00A1FF] font-medium text-base">Mission</div>
+                            <div class="text-[#00A1FF] font-medium text-sm sm:text-base">Mission</div>
                         </div>
-                        <p class="text-gray-400 text-[14px] lg:text-[15px] leading-relaxed">
+                        <p class="text-gray-400 text-[11px] sm:text-[14px] lg:text-[15px] leading-relaxed">
                             To deliver excellence in road transportation and logistics solutions at competitive costs,
                             helping our valued customers achieve their business goals through reliable, timely, and
                             customer-focused services.
                         </p>
                     </div>
-                </div>
-            </div>
-
-            <!-- Right Column: Animated Truck & Background -->
-            <div class="relative h-full min-h-[300px] lg:min-h-[400px] flex items-center justify-end mt-4 lg:mt-0">
-                <!-- Animated Truck Image -->
-                <div class="relative z-10 w-full h-full flex items-center justify-start -ml-[20%] lg:-ml-[30%]">
-                    <img id="about-truck" src="./images/truck_about.png" alt="Logistics Truck"
-                        class="w-[180%] sm:w-[200%] lg:w-[220%] max-w-none h-auto object-cover drop-shadow-[0_20px_50px_rgba(0,0,0,0.3)] transform translate-x-[100%] transition-transform duration-[1200ms] ease-out">
                 </div>
             </div>
 
@@ -602,7 +659,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <!-- Card 1 -->
                 <div
-                    class="relative group h-[420px] rounded-[24px] p-8 bg-[#0D0D12] text-white transition-all duration-500 hover:bg-[#00A1FF] hover:-translate-y-6 hover:-rotate-3 hover:scale-[1.02] hover:shadow-2xl hover:shadow-[#00A1FF]/30 hover:z-10 cursor-pointer flex flex-col border border-transparent hover:border-[#00A1FF] origin-bottom-left opacity-0 -translate-x-[50px] terminal-card" style="transition-delay: 100ms;">
+                    class="relative group h-full rounded-[24px] p-8 bg-[#0D0D12] text-white transition-all duration-500 hover:bg-[#00A1FF] hover:-translate-y-6 hover:-rotate-3 hover:scale-[1.02] hover:shadow-2xl hover:shadow-[#00A1FF]/30 hover:z-10 cursor-pointer flex flex-col border border-transparent hover:border-[#00A1FF] origin-bottom-left opacity-0 -translate-x-[50px] terminal-card" style="transition-delay: 100ms;">
                     <h3 class="text-[20px] font-bold leading-snug mb-4">Key Features</h3>
                     <ul
                         class="text-[13px] text-gray-400 group-hover:text-white transition-colors leading-relaxed list-disc pl-4 space-y-2">
@@ -614,7 +671,7 @@
 
                 <!-- Card 2 -->
                 <div
-                    class="relative group h-[420px] rounded-[24px] p-8 bg-[#0D0D12] text-white transition-all duration-500 hover:bg-[#00A1FF] hover:-translate-y-6 hover:rotate-2 hover:scale-[1.02] hover:shadow-2xl hover:shadow-[#00A1FF]/30 hover:z-10 cursor-pointer flex flex-col border border-transparent hover:border-[#00A1FF] origin-bottom-right opacity-0 translate-x-[50px] terminal-card" style="transition-delay: 200ms;">
+                    class="relative group h-full rounded-[24px] p-8 bg-[#0D0D12] text-white transition-all duration-500 hover:bg-[#00A1FF] hover:-translate-y-6 hover:rotate-2 hover:scale-[1.02] hover:shadow-2xl hover:shadow-[#00A1FF]/30 hover:z-10 cursor-pointer flex flex-col border border-transparent hover:border-[#00A1FF] origin-bottom-right opacity-0 translate-x-[50px] terminal-card" style="transition-delay: 200ms;">
                     <h3 class="text-[20px] font-bold leading-snug mb-4">Operations & Security</h3>
                     <ul
                         class="text-[13px] text-gray-400 group-hover:text-white transition-colors leading-relaxed list-disc pl-4 space-y-2">
@@ -627,7 +684,7 @@
 
                 <!-- Card 3 -->
                 <div
-                    class="relative group h-[420px] rounded-[24px] p-8 bg-[#0D0D12] text-white transition-all duration-500 hover:bg-[#00A1FF] hover:-translate-y-6 hover:-rotate-2 hover:scale-[1.02] hover:shadow-2xl hover:shadow-[#00A1FF]/30 hover:z-10 cursor-pointer flex flex-col border border-transparent hover:border-[#00A1FF] origin-bottom-left opacity-0 -translate-x-[50px] terminal-card" style="transition-delay: 300ms;">
+                    class="relative group h-full rounded-[24px] p-8 bg-[#0D0D12] text-white transition-all duration-500 hover:bg-[#00A1FF] hover:-translate-y-6 hover:-rotate-2 hover:scale-[1.02] hover:shadow-2xl hover:shadow-[#00A1FF]/30 hover:z-10 cursor-pointer flex flex-col border border-transparent hover:border-[#00A1FF] origin-bottom-left opacity-0 -translate-x-[50px] terminal-card" style="transition-delay: 300ms;">
                     <h3 class="text-[20px] font-bold leading-snug mb-4">Target Customers</h3>
                     <ul
                         class="text-[13px] text-gray-400 group-hover:text-white transition-colors leading-relaxed list-disc pl-4 space-y-2">
@@ -641,7 +698,7 @@
 
                 <!-- Card 4 -->
                 <div
-                    class="relative group h-[420px] rounded-[24px] p-8 bg-[#0D0D12] text-white transition-all duration-500 hover:bg-[#00A1FF] hover:-translate-y-6 hover:rotate-3 hover:scale-[1.02] hover:shadow-2xl hover:shadow-[#00A1FF]/30 hover:z-10 cursor-pointer flex flex-col border border-transparent hover:border-[#00A1FF] origin-bottom-right opacity-0 translate-x-[50px] terminal-card" style="transition-delay: 400ms;">
+                    class="relative group h-full rounded-[24px] p-8 bg-[#0D0D12] text-white transition-all duration-500 hover:bg-[#00A1FF] hover:-translate-y-6 hover:rotate-3 hover:scale-[1.02] hover:shadow-2xl hover:shadow-[#00A1FF]/30 hover:z-10 cursor-pointer flex flex-col border border-transparent hover:border-[#00A1FF] origin-bottom-right opacity-0 translate-x-[50px] terminal-card" style="transition-delay: 400ms;">
                     <h3 class="text-[20px] font-bold leading-snug mb-4">Our Commitment</h3>
                     <ul
                         class="text-[13px] text-gray-400 group-hover:text-white transition-colors leading-relaxed list-none space-y-3 font-semibold uppercase tracking-wider">
