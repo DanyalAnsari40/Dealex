@@ -109,11 +109,11 @@
 
             <nav
                 class="hidden lg:flex items-center space-x-7 text-xs font-semibold tracking-wider text-white/90 uppercase">
-                <a href="#" class="text-white hover:text-[#00A1FF] transition-colors">Home</a>
-                <a href="#" class="hover:text-[#00A1FF] transition-colors">Pages</a>
-                <a href="#" class="hover:text-[#00A1FF] transition-colors">Services</a>
-                <a href="#" class="hover:text-[#00A1FF] transition-colors">Blog</a>
-                <a href="#" class="hover:text-[#00A1FF] transition-colors">Contact</a>
+                <a href="#hero-section" class="text-white hover:text-[#00A1FF] transition-colors">Home</a>
+                <a href="#about-us-section" class="hover:text-[#00A1FF] transition-colors">About Us</a>
+                <a href="#services-section" class="hover:text-[#00A1FF] transition-colors">Services</a>
+                <a href="#faq-section" class="hover:text-[#00A1FF] transition-colors">FAQ</a>
+                <a href="#contact-section" class="hover:text-[#00A1FF] transition-colors">Contact</a>
             </nav>
 
             <div class="flex items-center space-x-4">
@@ -629,7 +629,7 @@
         </div>
     </section>
     <!-- Dealex Own Terminal Services -->
-    <section class="bg-[#000000] py-24 px-6 md:px-12 w-full select-none relative overflow-visible">
+    <section id="services-section" class="bg-[#000000] py-24 px-6 md:px-12 w-full select-none relative overflow-visible">
         <div class="max-w-[1440px] mx-auto space-y-12 relative z-10">
             <!-- Header -->
             <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-6">
@@ -1281,7 +1281,7 @@
 
 
     <!-- Statistics Badge & FAQ Accordion Section -->
-    <section class="bg-[#000000] pt-0 pb-24 px-6 md:px-12 w-full select-none relative overflow-visible text-white z-20">
+    <section id="faq-section" class="bg-[#000000] pt-0 pb-24 px-6 md:px-12 w-full select-none relative overflow-visible text-white z-20">
         <div
             class="absolute right-0 top-1/4 w-96 h-96 opacity-10 pointer-events-none bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:16px_16px]">
         </div>
@@ -1603,11 +1603,11 @@
             </svg>
         </button>
         <nav class="flex flex-col items-center space-y-6 text-xl font-bold tracking-wider text-white uppercase">
-            <a href="#" class="text-[#00A1FF]">Home</a>
-            <a href="#" class="hover:text-[#00A1FF] transition-colors">Pages</a>
-            <a href="#" class="hover:text-[#00A1FF] transition-colors">Services</a>
-            <a href="#" class="hover:text-[#00A1FF] transition-colors">Blog</a>
-            <a href="#" class="hover:text-[#00A1FF] transition-colors">Contact</a>
+            <a href="#hero-section" class="text-[#00A1FF] mobile-nav-link">Home</a>
+            <a href="#about-us-section" class="hover:text-[#00A1FF] transition-colors mobile-nav-link">About Us</a>
+            <a href="#services-section" class="hover:text-[#00A1FF] transition-colors mobile-nav-link">Services</a>
+            <a href="#faq-section" class="hover:text-[#00A1FF] transition-colors mobile-nav-link">FAQ</a>
+            <a href="#contact-section" class="hover:text-[#00A1FF] transition-colors mobile-nav-link">Contact</a>
         </nav>
         <div class="flex space-x-6 text-white/70">
             <a href="#" class="hover:text-[#00A1FF] transition-colors">FB</a>
@@ -1625,6 +1625,7 @@
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const closeMenuBtn = document.getElementById('close-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
 
         if(mobileMenuBtn && closeMenuBtn && mobileMenu) {
             mobileMenuBtn.addEventListener('click', () => {
@@ -1632,6 +1633,11 @@
             });
             closeMenuBtn.addEventListener('click', () => {
                 mobileMenu.classList.add('translate-x-full');
+            });
+            mobileNavLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('translate-x-full');
+                });
             });
         }
     </script>

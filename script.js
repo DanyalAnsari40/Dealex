@@ -8,13 +8,13 @@ document.querySelectorAll('.faq-item').forEach(item => {
         const isOpen = content.style.maxHeight && content.style.maxHeight !== '0px';
 
         // Close all items safely
-        document.querySelectorAll('.faq-content').forEach(c => c.style.maxHeight = '0px');
+        document.querySelectorAll('.faq-content').forEach(c => c.style.maxHeight = null);
         document.querySelectorAll('.arrow-icon').forEach(a => {
-            a.classList.remove('rotate-180', 'text-[#F04B14]');
+            a.classList.remove('rotate-180', 'text-[#00A1FF]');
             a.classList.add('text-gray-400');
         });
         document.querySelectorAll('.faq-heading').forEach(h => {
-            h.classList.remove('text-[#F04B14]');
+            h.classList.remove('text-[#00A1FF]');
             if (!h.closest('.group')) {
                 h.classList.add('text-white');
             }
@@ -23,8 +23,8 @@ document.querySelectorAll('.faq-item').forEach(item => {
         // Toggle selected element nodes if it wasn't open
         if (!isOpen) {
             content.style.maxHeight = content.scrollHeight + "px";
-            arrow.classList.add('rotate-180', 'text-[#F04B14]');
-            heading.classList.add('text-[#F04B14]');
+            arrow.classList.add('rotate-180', 'text-[#00A1FF]');
+            heading.classList.add('text-[#00A1FF]');
         }
     });
 });
