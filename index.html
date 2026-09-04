@@ -1243,7 +1243,7 @@
 
 
     <!-- Statistics Badge & FAQ Accordion Section -->
-    <section id="faq-section" class="bg-[#000000] pt-0 pb-24 px-6 md:px-12 w-full select-none relative overflow-visible text-white z-20">
+    <section id="faq-section" class="bg-[#000000] pt-0 pb-2 md:pb-24 px-6 md:px-12 w-full select-none relative overflow-visible text-white z-20">
         <div
             class="absolute right-0 top-1/4 w-96 h-96 opacity-10 pointer-events-none bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:16px_16px]">
         </div>
@@ -1413,10 +1413,14 @@
             <div
                 class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center border-b border-white/10 pb-12 relative z-10">
                 <!-- Brand Logo Mark Layer -->
-                <div class="lg:col-span-3 flex flex-col space-y-4">
-                    <a href="#" class="flex items-center self-start">
-                        <img loading="lazy" src="./images/logo.png" alt="Dealex Logo" class="h-10 md:h-11 w-auto object-contain transition-transform duration-300 hover:scale-105" style="filter: invert(1) hue-rotate(180deg);">
-                    </a>
+                <div class="lg:col-span-3 flex flex-col space-y-4 w-full">
+                    <div class="flex items-center self-start gap-4 w-full">
+                        <a href="#" class="flex items-center shrink-0">
+                            <img loading="lazy" src="./images/logo.png" alt="Dealex Logo" class="h-10 md:h-11 w-auto object-contain transition-transform duration-300 hover:scale-105" style="filter: invert(1) hue-rotate(180deg);">
+                        </a>
+                        <div class="w-[160px] md:w-[240px] shrink-0 relative aspect-[2/1] bg-contain bg-no-repeat bg-center" style="background-image: url('./images/DOT.png');">
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Pitch Callout Header Title Text -->
@@ -1444,9 +1448,9 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-y-12 gap-x-8 pt-12 pb-16 relative z-10">
 
                 <!-- Column Block 1: World Map Watermark & Social Platform Circular Icons Grid -->
-                <div class="md:col-span-6 lg:col-span-3 flex flex-col space-y-8">
+                <div class="md:col-span-6 lg:col-span-3 flex flex-col">
                     <!-- World Map Underlay with Pin Badge Drop Component -->
-                    <div class="w-full max-w-[240px] relative aspect-[2/1] bg-contain bg-no-repeat bg-center"
+                    <div class="hidden md:block w-full max-w-[240px] relative aspect-[2/1] bg-contain bg-no-repeat bg-center mb-8"
                         style="background-image: url('./images/DOT.png');">
                     </div>
 
