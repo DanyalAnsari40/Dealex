@@ -471,13 +471,13 @@
     </script>
     <!-- moving divs -->
     <!-- x shapes moving rope -->
-    <section class="relative bg-[#000000] py-24 overflow-hidden w-full select-none flex items-center justify-center">
+    <section class="relative bg-[#000000] py-8 md:py-24 overflow-hidden w-full select-none flex items-center justify-center">
 
-        <div class="relative w-[110%] md:w-[105%] h-[150px] flex items-center justify-center">
+        <div class="relative w-[110%] md:w-[105%] min-h-[120px] md:min-h-[150px] flex flex-col md:flex-row items-center justify-center gap-4 md:gap-0 py-4 md:py-0">
 
             <!-- Blue Banner (Bottom Layer in intersection, angled up-right) -->
             <div
-                class="absolute w-full bg-white -rotate-2 py-4 shadow-lg flex overflow-hidden z-0 border-y border-transparent translate-y-5">
+                class="relative md:absolute w-full bg-white rotate-0 md:-rotate-2 py-4 shadow-lg flex overflow-hidden z-0 border-y border-transparent translate-y-0 md:translate-y-5">
                 <div
                     class="flex flex-shrink-0 items-center min-w-full animate-marquee-reverse text-[#000000] font-semibold text-lg sm:text-xl tracking-wide">
                     <!-- Repetition 1 -->
@@ -564,7 +564,7 @@
 
             <!-- Dark Banner (Top Layer in intersection, angled down-right) -->
             <div
-                class="absolute w-full bg-[#00A1FF] rotate-2 py-4 shadow-2xl flex overflow-hidden z-10 border-y border-[#050B14] -translate-y-5">
+                class="relative md:absolute w-full bg-[#00A1FF] rotate-0 md:rotate-2 py-4 shadow-2xl flex overflow-hidden z-10 border-y border-[#050B14] translate-y-0 md:-translate-y-5">
                 <div
                     class="flex flex-shrink-0 items-center min-w-full animate-marquee-forward text-white font-semibold text-lg sm:text-xl tracking-wide">
                     <!-- Repetition 1 -->
@@ -778,7 +778,7 @@
     <!-- Services Scroll Animation Section -->
     <section class="bg-[#000000] w-full text-white relative font-sans">
         <!-- Section Header with Main Button -->
-        <div class="max-w-[1440px] mx-auto px-6 md:px-12 pt-24 pb-8 flex flex-col md:flex-row justify-between items-start md:items-end z-40 relative">
+        <div class="max-w-[1440px] mx-auto px-6 md:px-12 pt-0 md:pt-24 pb-8 flex flex-col md:flex-row justify-between items-start md:items-end z-40 relative">
             <div>
                 <h2 class="text-4xl md:text-5xl lg:text-[54px] font-bold tracking-tight">Our Fleet Network</h2>
                 <p class="text-gray-400 mt-4 max-w-xl">Global shipping logistics connected directly to our road transport network.</p>
@@ -1017,7 +1017,7 @@
     </section>
     
     <!-- Partners / Get a Quote Section -->
-    <section class="bg-[#000000] py-24 px-6 md:px-12 w-full select-none relative overflow-hidden">
+    <section class="bg-[#000000] py-4 md:py-24 px-6 md:px-12 w-full select-none relative overflow-hidden">
         <div class="max-w-[1440px] mx-auto space-y-16 relative z-10">
             <div class="text-center space-y-4 max-w-2xl mx-auto">
                 <div class="inline-flex items-center justify-center space-x-2">
