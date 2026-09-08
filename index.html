@@ -1102,132 +1102,204 @@
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 <!-- Item 1 -->
-                <div class="relative flex flex-col rounded-[12px] overflow-hidden group cursor-pointer bg-[#242424] transition-all duration-700 ease-out opacity-0 translate-y-10 why-choose-card border border-white/5" style="transition-delay: 100ms;">
+                <div class="relative flex flex-col rounded-[12px] overflow-hidden cursor-pointer bg-[#242424] transition-all duration-700 ease-out opacity-0 translate-y-10 why-choose-card border border-white/5 group" style="transition-delay: 100ms;">
                     <div class="relative h-[220px] w-full overflow-hidden">
                         <img loading="lazy" src="./images/logistics_truck_fleet.png" alt="Specialized Fleet" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                     </div>
-                    <div class="flex items-center justify-between p-5 bg-[#2A2A2A] transition-colors duration-300 group-hover:bg-[#333333]">
+                    <div class="flex items-center justify-between p-5 bg-[#2A2A2A] transition-colors duration-300 group-hover:bg-[#333333] z-10 relative">
                         <div>
                             <div class="text-white/60 text-[11px] font-semibold mb-1">1. Logistics</div>
                             <h3 class="text-white font-bold text-lg leading-tight">Specialized Fleet</h3>
                         </div>
-                        <button class="bg-white text-black rounded shadow w-8 h-8 flex items-center justify-center font-black text-sm group-hover:bg-[#00A1FF] group-hover:text-white transition-colors">
+                        <button class="why-choose-btn bg-white text-black rounded shadow w-8 h-8 flex items-center justify-center font-black text-sm group-hover:bg-[#00A1FF] group-hover:text-white transition-all duration-300">
                             &raquo;
                         </button>
+                    </div>
+                    <div class="why-choose-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out bg-[#2A2A2A] group-hover:bg-[#333333]">
+                        <p class="px-5 pb-5 text-gray-400 text-sm leading-relaxed border-t border-white/5 pt-3">
+                            State-of-the-art trucks equipped with modern temperature control and tracking systems, ensuring your cargo travels in optimal conditions.
+                        </p>
                     </div>
                 </div>
 
                 <!-- Item 2 -->
-                <div class="relative flex flex-col rounded-[12px] overflow-hidden group cursor-pointer bg-[#242424] transition-all duration-700 ease-out opacity-0 translate-y-10 why-choose-card border border-white/5" style="transition-delay: 200ms;">
+                <div class="relative flex flex-col rounded-[12px] overflow-hidden cursor-pointer bg-[#242424] transition-all duration-700 ease-out opacity-0 translate-y-10 why-choose-card border border-white/5 group" style="transition-delay: 200ms;">
                     <div class="relative h-[220px] w-full overflow-hidden">
                         <img loading="lazy" src="./images/logistics_highway_coverage.png" alt="Nationwide Coverage" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                     </div>
-                    <div class="flex items-center justify-between p-5 bg-[#2A2A2A] transition-colors duration-300 group-hover:bg-[#333333]">
+                    <div class="flex items-center justify-between p-5 bg-[#2A2A2A] transition-colors duration-300 group-hover:bg-[#333333] z-10 relative">
                         <div>
                             <div class="text-white/60 text-[11px] font-semibold mb-1">2. Network</div>
                             <h3 class="text-white font-bold text-lg leading-tight">Nationwide Coverage</h3>
                         </div>
-                        <button class="bg-white text-black rounded shadow w-8 h-8 flex items-center justify-center font-black text-sm group-hover:bg-[#00A1FF] group-hover:text-white transition-colors">
+                        <button class="why-choose-btn bg-white text-black rounded shadow w-8 h-8 flex items-center justify-center font-black text-sm group-hover:bg-[#00A1FF] group-hover:text-white transition-all duration-300">
                             &raquo;
                         </button>
+                    </div>
+                    <div class="why-choose-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out bg-[#2A2A2A] group-hover:bg-[#333333]">
+                        <p class="px-5 pb-5 text-gray-400 text-sm leading-relaxed border-t border-white/5 pt-3">
+                            Extensive network spanning across major cities and remote locations, providing seamless connectivity throughout Pakistan.
+                        </p>
                     </div>
                 </div>
 
                 <!-- Item 3 -->
-                <div class="relative flex flex-col rounded-[12px] overflow-hidden group cursor-pointer bg-[#242424] transition-all duration-700 ease-out opacity-0 translate-y-10 why-choose-card border border-white/5" style="transition-delay: 300ms;">
+                <div class="relative flex flex-col rounded-[12px] overflow-hidden cursor-pointer bg-[#242424] transition-all duration-700 ease-out opacity-0 translate-y-10 why-choose-card border border-white/5 group" style="transition-delay: 300ms;">
                     <div class="relative h-[220px] w-full overflow-hidden">
                         <img loading="lazy" src="./images/logistics_fast_delivery.png" alt="On-Time Delivery" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                     </div>
-                    <div class="flex items-center justify-between p-5 bg-[#2A2A2A] transition-colors duration-300 group-hover:bg-[#333333]">
+                    <div class="flex items-center justify-between p-5 bg-[#2A2A2A] transition-colors duration-300 group-hover:bg-[#333333] z-10 relative">
                         <div>
                             <div class="text-white/60 text-[11px] font-semibold mb-1">3. Delivery</div>
                             <h3 class="text-white font-bold text-lg leading-tight">On-Time, Every Time</h3>
                         </div>
-                        <button class="bg-white text-black rounded shadow w-8 h-8 flex items-center justify-center font-black text-sm group-hover:bg-[#00A1FF] group-hover:text-white transition-colors">
+                        <button class="why-choose-btn bg-white text-black rounded shadow w-8 h-8 flex items-center justify-center font-black text-sm group-hover:bg-[#00A1FF] group-hover:text-white transition-all duration-300">
                             &raquo;
                         </button>
+                    </div>
+                    <div class="why-choose-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out bg-[#2A2A2A] group-hover:bg-[#333333]">
+                        <p class="px-5 pb-5 text-gray-400 text-sm leading-relaxed border-t border-white/5 pt-3">
+                            Committed to strict schedules and rapid dispatch times, guaranteeing that your shipments arrive exactly when expected.
+                        </p>
                     </div>
                 </div>
 
                 <!-- Item 4 -->
-                <div class="relative flex flex-col rounded-[12px] overflow-hidden group cursor-pointer bg-[#242424] transition-all duration-700 ease-out opacity-0 translate-y-10 why-choose-card border border-white/5" style="transition-delay: 400ms;">
+                <div class="relative flex flex-col rounded-[12px] overflow-hidden cursor-pointer bg-[#242424] transition-all duration-700 ease-out opacity-0 translate-y-10 why-choose-card border border-white/5 group" style="transition-delay: 400ms;">
                     <div class="relative h-[220px] w-full overflow-hidden">
                         <img loading="lazy" src="./images/logistics_tracking.png" alt="Advanced Tracking" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                     </div>
-                    <div class="flex items-center justify-between p-5 bg-[#2A2A2A] transition-colors duration-300 group-hover:bg-[#333333]">
+                    <div class="flex items-center justify-between p-5 bg-[#2A2A2A] transition-colors duration-300 group-hover:bg-[#333333] z-10 relative">
                         <div>
                             <div class="text-white/60 text-[11px] font-semibold mb-1">4. Technology</div>
                             <h3 class="text-white font-bold text-lg leading-tight">Advanced Tracking</h3>
                         </div>
-                        <button class="bg-white text-black rounded shadow w-8 h-8 flex items-center justify-center font-black text-sm group-hover:bg-[#00A1FF] group-hover:text-white transition-colors">
+                        <button class="why-choose-btn bg-white text-black rounded shadow w-8 h-8 flex items-center justify-center font-black text-sm group-hover:bg-[#00A1FF] group-hover:text-white transition-all duration-300">
                             &raquo;
                         </button>
+                    </div>
+                    <div class="why-choose-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out bg-[#2A2A2A] group-hover:bg-[#333333]">
+                        <p class="px-5 pb-5 text-gray-400 text-sm leading-relaxed border-t border-white/5 pt-3">
+                            Real-time visibility and instant alerts keep you informed about your cargo's location and status at every step of the journey.
+                        </p>
                     </div>
                 </div>
 
                 <!-- Item 5 -->
-                <div class="relative flex flex-col rounded-[12px] overflow-hidden group cursor-pointer bg-[#242424] transition-all duration-700 ease-out opacity-0 translate-y-10 why-choose-card border border-white/5" style="transition-delay: 500ms;">
+                <div class="relative flex flex-col rounded-[12px] overflow-hidden cursor-pointer bg-[#242424] transition-all duration-700 ease-out opacity-0 translate-y-10 why-choose-card border border-white/5 group" style="transition-delay: 500ms;">
                     <div class="relative h-[220px] w-full overflow-hidden">
                         <img loading="lazy" src="./images/logistics_cost_effective.png" alt="Cost-Effective" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                     </div>
-                    <div class="flex items-center justify-between p-5 bg-[#2A2A2A] transition-colors duration-300 group-hover:bg-[#333333]">
+                    <div class="flex items-center justify-between p-5 bg-[#2A2A2A] transition-colors duration-300 group-hover:bg-[#333333] z-10 relative">
                         <div>
                             <div class="text-white/60 text-[11px] font-semibold mb-1">5. Value</div>
                             <h3 class="text-white font-bold text-lg leading-tight">Cost-Effective</h3>
                         </div>
-                        <button class="bg-white text-black rounded shadow w-8 h-8 flex items-center justify-center font-black text-sm group-hover:bg-[#00A1FF] group-hover:text-white transition-colors">
+                        <button class="why-choose-btn bg-white text-black rounded shadow w-8 h-8 flex items-center justify-center font-black text-sm group-hover:bg-[#00A1FF] group-hover:text-white transition-all duration-300">
                             &raquo;
                         </button>
+                    </div>
+                    <div class="why-choose-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out bg-[#2A2A2A] group-hover:bg-[#333333]">
+                        <p class="px-5 pb-5 text-gray-400 text-sm leading-relaxed border-t border-white/5 pt-3">
+                            Optimized routing and efficient fuel management allow us to offer highly competitive rates without compromising on quality.
+                        </p>
                     </div>
                 </div>
 
                 <!-- Item 6 -->
-                <div class="relative flex flex-col rounded-[12px] overflow-hidden group cursor-pointer bg-[#242424] transition-all duration-700 ease-out opacity-0 translate-y-10 why-choose-card border border-white/5" style="transition-delay: 600ms;">
+                <div class="relative flex flex-col rounded-[12px] overflow-hidden cursor-pointer bg-[#242424] transition-all duration-700 ease-out opacity-0 translate-y-10 why-choose-card border border-white/5 group" style="transition-delay: 600ms;">
                     <div class="relative h-[220px] w-full overflow-hidden">
                         <img loading="lazy" src="./images/logistics_safety.png" alt="Safety & Compliance" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                     </div>
-                    <div class="flex items-center justify-between p-5 bg-[#2A2A2A] transition-colors duration-300 group-hover:bg-[#333333]">
+                    <div class="flex items-center justify-between p-5 bg-[#2A2A2A] transition-colors duration-300 group-hover:bg-[#333333] z-10 relative">
                         <div>
                             <div class="text-white/60 text-[11px] font-semibold mb-1">6. Standards</div>
                             <h3 class="text-white font-bold text-lg leading-tight">Safety & Compliance</h3>
                         </div>
-                        <button class="bg-white text-black rounded shadow w-8 h-8 flex items-center justify-center font-black text-sm group-hover:bg-[#00A1FF] group-hover:text-white transition-colors">
+                        <button class="why-choose-btn bg-white text-black rounded shadow w-8 h-8 flex items-center justify-center font-black text-sm group-hover:bg-[#00A1FF] group-hover:text-white transition-all duration-300">
                             &raquo;
                         </button>
+                    </div>
+                    <div class="why-choose-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out bg-[#2A2A2A] group-hover:bg-[#333333]">
+                        <p class="px-5 pb-5 text-gray-400 text-sm leading-relaxed border-t border-white/5 pt-3">
+                            Rigorous adherence to international safety standards and regular fleet maintenance to protect your valuable shipments.
+                        </p>
                     </div>
                 </div>
 
                 <!-- Item 7 -->
-                <div class="relative flex flex-col rounded-[12px] overflow-hidden group cursor-pointer bg-[#242424] transition-all duration-700 ease-out opacity-0 translate-y-10 why-choose-card border border-white/5" style="transition-delay: 700ms;">
+                <div class="relative flex flex-col rounded-[12px] overflow-hidden cursor-pointer bg-[#242424] transition-all duration-700 ease-out opacity-0 translate-y-10 why-choose-card border border-white/5 group" style="transition-delay: 700ms;">
                     <div class="relative h-[220px] w-full overflow-hidden">
                         <img loading="lazy" src="./images/logistics_operations_team.png" alt="Experienced Team" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                     </div>
-                    <div class="flex items-center justify-between p-5 bg-[#2A2A2A] transition-colors duration-300 group-hover:bg-[#333333]">
+                    <div class="flex items-center justify-between p-5 bg-[#2A2A2A] transition-colors duration-300 group-hover:bg-[#333333] z-10 relative">
                         <div>
                             <div class="text-white/60 text-[11px] font-semibold mb-1">7. Expertise</div>
                             <h3 class="text-white font-bold text-lg leading-tight">Experienced Team</h3>
                         </div>
-                        <button class="bg-white text-black rounded shadow w-8 h-8 flex items-center justify-center font-black text-sm group-hover:bg-[#00A1FF] group-hover:text-white transition-colors">
+                        <button class="why-choose-btn bg-white text-black rounded shadow w-8 h-8 flex items-center justify-center font-black text-sm group-hover:bg-[#00A1FF] group-hover:text-white transition-all duration-300">
                             &raquo;
                         </button>
+                    </div>
+                    <div class="why-choose-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out bg-[#2A2A2A] group-hover:bg-[#333333]">
+                        <p class="px-5 pb-5 text-gray-400 text-sm leading-relaxed border-t border-white/5 pt-3">
+                            Dedicated professionals with deep industry knowledge managing complex logistics operations with precision and care.
+                        </p>
                     </div>
                 </div>
 
                 <!-- Item 8 -->
-                <div class="relative flex flex-col rounded-[12px] overflow-hidden group cursor-pointer bg-[#242424] transition-all duration-700 ease-out opacity-0 translate-y-10 why-choose-card border border-white/5" style="transition-delay: 800ms;">
+                <div class="relative flex flex-col rounded-[12px] overflow-hidden cursor-pointer bg-[#242424] transition-all duration-700 ease-out opacity-0 translate-y-10 why-choose-card border border-white/5 group" style="transition-delay: 800ms;">
                     <div class="relative h-[220px] w-full overflow-hidden">
                         <img loading="lazy" src="./images/logistics_eco_friendly.png" alt="Eco-Friendly" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                     </div>
-                    <div class="flex items-center justify-between p-5 bg-[#2A2A2A] transition-colors duration-300 group-hover:bg-[#333333]">
+                    <div class="flex items-center justify-between p-5 bg-[#2A2A2A] transition-colors duration-300 group-hover:bg-[#333333] z-10 relative">
                         <div>
                             <div class="text-white/60 text-[11px] font-semibold mb-1">8. Sustainability</div>
                             <h3 class="text-white font-bold text-lg leading-tight">Eco-Friendly</h3>
                         </div>
-                        <button class="bg-white text-black rounded shadow w-8 h-8 flex items-center justify-center font-black text-sm group-hover:bg-[#00A1FF] group-hover:text-white transition-colors">
+                        <button class="why-choose-btn bg-white text-black rounded shadow w-8 h-8 flex items-center justify-center font-black text-sm group-hover:bg-[#00A1FF] group-hover:text-white transition-all duration-300">
                             &raquo;
                         </button>
                     </div>
+                    <div class="why-choose-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out bg-[#2A2A2A] group-hover:bg-[#333333]">
+                        <p class="px-5 pb-5 text-gray-400 text-sm leading-relaxed border-t border-white/5 pt-3">
+                            Implementing sustainable practices and utilizing fuel-efficient vehicles to minimize our environmental footprint.
+                        </p>
+                    </div>
                 </div>
+            </div>
+
+            <script>
+                document.addEventListener("DOMContentLoaded", () => {
+                    const whyChooseCards = document.querySelectorAll('.why-choose-card');
+                    whyChooseCards.forEach(card => {
+                        card.addEventListener('click', () => {
+                            const content = card.querySelector('.why-choose-content');
+                            const btn = card.querySelector('.why-choose-btn');
+                            
+                            if (content.style.maxHeight && content.style.maxHeight !== '0px') {
+                                content.style.maxHeight = '0px';
+                                btn.style.transform = 'rotate(0deg)';
+                            } else {
+                                // Collapse others (optional, uncomment to enable accordion behavior)
+                                /*
+                                whyChooseCards.forEach(otherCard => {
+                                    if (otherCard !== card) {
+                                        const otherContent = otherCard.querySelector('.why-choose-content');
+                                        const otherBtn = otherCard.querySelector('.why-choose-btn');
+                                        otherContent.style.maxHeight = '0px';
+                                        otherBtn.style.transform = 'rotate(0deg)';
+                                    }
+                                });
+                                */
+                                content.style.maxHeight = content.scrollHeight + "px";
+                                btn.style.transform = 'rotate(90deg)';
+                            }
+                        });
+                    });
+                });
+            </script>
             </div>
         </div>
     </section>
