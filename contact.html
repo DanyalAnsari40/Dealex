@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Dealex</title>
+    <link rel="icon" type="image/png" href="./images/favicon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: { extend: { fontFamily: { sans: ['"Schibsted Grotesk"', 'sans-serif'], display: ['"Space Grotesk"', 'sans-serif'] } } }
+        }
+    </script>
+    <style>
+        #preloader { position: fixed; inset: 0; background-color: #000000; z-index: 9999; display: flex; align-items: center; justify-content: center; transition: opacity 0.5s ease, visibility 0.5s ease; }
+        .spinner { width: 50px; height: 50px; border: 4px solid rgba(255, 255, 255, 0.1); border-left-color: #00A1FF; border-radius: 50%; animation: spin 1s linear infinite; }
+        @keyframes spin { 100% { transform: rotate(360deg); } }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Space Grotesk', sans-serif; }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="p-4 md:p-6 min-h-screen flex flex-col items-center justify-start bg-[#000000] text-white overflow-x-hidden">
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="flex flex-col items-center">
+            <div class="spinner mb-4"></div>
+            <div class="text-[#00A1FF] font-bold tracking-widest uppercase text-xs">DEALEX</div>
+        </div>
+    </div>
+    <script>
+        window.addEventListener('load', () => {
+            const preloader = document.getElementById('preloader');
+            if (preloader) { preloader.style.opacity = '0'; preloader.style.visibility = 'hidden'; setTimeout(() => { preloader.remove(); document.body.classList.remove('overflow-hidden'); }, 500); }
+        });
+    </script>
+
+    <!-- Subpage Hero -->
+    <section class="relative w-full max-w-[1440px] lg:max-w-[96%] xl:max-w-[98%] min-h-[400px] md:min-h-[500px] rounded-[32px] overflow-hidden bg-cover bg-center flex flex-col justify-start px-6 md:px-12 pb-6 pt-3 md:pt-5 mb-16" style="background-image: url('./images/herobg1.jpg');">
+        <header class="relative z-30 w-full bg-transparent border border-white/10 rounded-full px-6 py-3 flex items-center justify-between shadow-xl mt-0">
+            <a href="index.html" class="flex items-center">
+                <img src="./images/logo.png" alt="Dealex Logo" class="h-9 md:h-10 w-auto object-contain transition-transform duration-300 hover:scale-105">
+            </a>
+            <nav class="hidden lg:flex items-center space-x-7 text-xs font-semibold tracking-wider text-black uppercase">
+                <a href="index.html" class="hover:text-[#00A1FF] transition-colors text-white">Home</a>
+                <a href="about.html" class="hover:text-[#00A1FF] transition-colors text-white">About Us</a>
+                <a href="index.html#services-section" class="hover:text-[#00A1FF] transition-colors text-white">Services</a>
+                <a href="blog.html" class="hover:text-[#00A1FF] transition-colors text-white">Blog</a>
+                <a href="contact.html" class="hover:text-[#00A1FF] transition-colors text-white">Contact</a>
+            </nav>
+            <div class="flex items-center space-x-4">
+                <a href="contact.html" class="bg-[#00A1FF] hover:bg-[#0090E0] text-white px-5 py-2.5 rounded-full text-xs font-bold tracking-wide transition-all hidden sm:flex items-center gap-2 shadow-lg shadow-[#00A1FF]/20 border border-[#00A1FF]">
+                    Get In Touch <span class="text-xs font-normal">↗</span>
+                </a>
+                <button id="mobile-menu-btn" class="lg:hidden text-white hover:text-[#00A1FF] transition-colors p-2 ml-2">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+            </div>
+        </header>
+
+        <div id="mobile-menu" class="absolute top-[80px] left-6 right-6 bg-[#0A0A0F]/95 backdrop-blur-xl border border-white/10 rounded-[24px] z-50 transform origin-top scale-y-0 opacity-0 transition-all duration-300 flex flex-col p-6 shadow-2xl pointer-events-none lg:hidden">
+            <nav class="flex flex-col space-y-4 text-base font-semibold tracking-wider text-white uppercase">
+                <a href="index.html" class="hover:text-[#00A1FF] transition-colors mobile-nav-link border-b border-white/5 pb-4">Home</a>
+                <a href="about.html" class="hover:text-[#00A1FF] transition-colors mobile-nav-link border-b border-white/5 pb-4">About Us</a>
+                <a href="index.html#services-section" class="hover:text-[#00A1FF] transition-colors mobile-nav-link border-b border-white/5 pb-4">Services</a>
+                <a href="blog.html" class="hover:text-[#00A1FF] transition-colors mobile-nav-link border-b border-white/5 pb-4">Blog</a>
+                <a href="contact.html" class="hover:text-[#00A1FF] transition-colors mobile-nav-link pb-2">Contact</a>
+            </nav>
+        </div>
+
+        <div class="flex-grow flex flex-col items-center justify-center text-center mt-16 z-10 relative">
+            <h1 class="text-4xl md:text-5xl lg:text-7xl font-black tracking-tight mb-4 text-white drop-shadow-2xl">Get in Touch</h1>
+            <p class="text-white/90 text-sm md:text-base lg:text-lg max-w-2xl font-medium px-4">We are here to help. Reach out to our team for inquiries, quotes, or support.</p>
+        </div>
+        <div class="absolute inset-0 bg-black/50 z-0"></div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="w-full max-w-[1440px] px-6 md:px-12 mb-24 flex-grow text-white z-10 relative">
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+            <div class="bg-[#0A0A0F] rounded-3xl p-8 border border-white/5">
+                <h2 class="text-2xl font-bold mb-8 text-white">Send Us A Message</h2>
+                <form class="space-y-6">
+                    <div class="grid grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">First Name</label>
+                            <input type="text" class="w-full bg-[#111118] border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[#00A1FF] transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Last Name</label>
+                            <input type="text" class="w-full bg-[#111118] border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[#00A1FF] transition-colors">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Email Address</label>
+                        <input type="email" class="w-full bg-[#111118] border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[#00A1FF] transition-colors">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Message</label>
+                        <textarea rows="4" class="w-full bg-[#111118] border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[#00A1FF] transition-colors"></textarea>
+                    </div>
+                    <button type="button" class="w-full bg-[#00A1FF] hover:bg-[#0090E0] text-white font-bold py-4 rounded-xl transition-colors tracking-wide">Send Message</button>
+                </form>
+            </div>
+            <div class="flex flex-col space-y-12 justify-center">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 flex items-center gap-3"><span class="text-[#00A1FF]">📍</span> Dealex Transport (HQ)</h3>
+                    <p class="text-gray-400 leading-relaxed">Suite #309, 3rd Floor, Landmark Plaza,<br>I.I. Chundrigar Road, Karachi – 74200</p>
+                    <div class="mt-4 space-y-2">
+                        <p class="text-sm text-gray-400"><strong class="text-white">Phone:</strong> +92 303 2555145</p>
+                        <p class="text-sm text-gray-400"><strong class="text-white">Email:</strong> logistics@dealex.pk</p>
+                    </div>
+                </div>
+                <div class="w-full h-px bg-white/10"></div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4 flex items-center gap-3"><span class="text-[#00A1FF]">📍</span> Dealex Own Terminal (DOT)</h3>
+                    <p class="text-gray-400 leading-relaxed">31-Km Sunder Stop,<br>Multan Road, Lahore, Pakistan</p>
+                    <div class="mt-4 space-y-2">
+                        <p class="text-sm text-gray-400"><strong class="text-white">Phone:</strong> +92 302 8244428</p>
+                        <p class="text-sm text-gray-400"><strong class="text-white">Email:</strong> dot@dealex.pk</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    
+    <!-- FOOTER GLOBAL COMPONENT SECTION -->
+    <footer class="bg-[#000000] pt-6 pb-12 px-4 sm:px-6 md:px-12 w-full select-none font-sans text-white">
+        <div class="max-w-[1440px] mx-auto bg-[#0A0A0F] rounded-[32px] pt-16 pb-8 px-8 md:px-16 relative overflow-hidden">
+            <div class="absolute right-0 top-0 w-96 h-96 opacity-10 pointer-events-none bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:16px_16px]"></div>
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-8 relative z-10 pb-16">
+                <!-- Column 1 -->
+                <div class="col-span-1 md:col-span-12 lg:col-span-3 flex flex-col space-y-6">
+                    <img src="./images/logo.png" alt="Dealex Logo" class="w-32 h-auto opacity-90">
+                    <p class="text-gray-400 text-xs sm:text-sm leading-relaxed max-w-sm">Leading the future of transport and logistics through innovation, reliability, and unparalleled service excellence.</p>
+                </div>
+                <!-- Column 2 -->
+                <div class="col-span-1 md:col-span-6 lg:col-span-2 flex flex-col space-y-6">
+                    <h4 class="text-[#00A1FF] font-extrabold text-sm tracking-wide">Useful Link</h4>
+                    <div class="grid grid-cols-1 gap-x-4 gap-y-3.5">
+                        <a href="about.html" class="text-gray-400 hover:text-white transition-colors text-xs font-semibold">About us</a>
+                        <a href="team.html" class="text-gray-400 hover:text-white transition-colors text-xs font-semibold">Our Team</a>
+                        <a href="blog.html" class="text-gray-400 hover:text-white transition-colors text-xs font-semibold">Blog</a>
+                        <a href="dot-terminal.html" class="text-gray-400 hover:text-white transition-colors text-xs font-semibold">DOT Terminal</a>
+                        <a href="contact.html" class="text-gray-400 hover:text-white transition-colors text-xs font-semibold">Contact Us</a>
+                    </div>
+                </div>
+                <!-- Column 3 -->
+                <div class="col-span-1 md:col-span-6 lg:col-span-3 flex flex-col space-y-6">
+                    <h4 class="text-[#00A1FF] font-extrabold text-sm tracking-wide">Working Hours</h4>
+                    <div class="space-y-3.5 text-gray-400 text-xs font-semibold">
+                        <p class="flex items-center justify-between"><span>Mon to Fri :</span><span class="text-white text-right">9:00 AM - 5:00 PM</span></p>
+                        <p class="flex items-center justify-between"><span>Saturday :</span><span class="text-white text-right">10:00 AM - 6:00 PM</span></p>
+                        <p class="flex items-center justify-between text-gray-400"><span>Sunday Closed</span></p>
+                    </div>
+                </div>
+                <!-- Column 4 -->
+                <div class="col-span-2 md:col-span-6 lg:col-span-4 flex flex-col space-y-6">
+                    <h4 class="text-[#00A1FF] font-extrabold text-sm tracking-wide">Contact Us</h4>
+                    <div class="space-y-2">
+                        <h5 class="text-white text-xs font-bold uppercase tracking-wider">Dealex Transport & Logistics Services</h5>
+                        <p class="text-gray-400 text-[11px] font-semibold">Email: <a href="mailto:logistics@dealex.pk" class="hover:text-[#00A1FF] transition-colors underline underline-offset-2">logistics@dealex.pk</a></p>
+                        <p class="text-gray-400 text-[11px] font-semibold">Phone: <a href="tel:+923032555145" class="hover:text-[#00A1FF] transition-colors">+92 303 2555145</a></p>
+                    </div>
+                </div>
+            </div>
+            <!-- Base row -->
+            <div class="border-t border-white/5 pt-6 flex flex-col sm:flex-row items-center justify-between text-[11px] text-gray-400 font-medium tracking-wide gap-4 relative z-10">
+                <a href="#" class="hover:text-white transition-colors">Terms and conditions</a>
+                <p>© 2024 Dealex Transport & Logistics Services</p>
+                <a href="#" class="hover:text-white transition-colors">Privacy policy</a>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js" defer></script>
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if(mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('scale-y-0');
+                mobileMenu.classList.toggle('opacity-0');
+                mobileMenu.classList.toggle('pointer-events-none');
+            });
+        }
+    </script>
+</body>
+</html>
