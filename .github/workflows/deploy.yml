@@ -21,8 +21,8 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           port: 21
-          # Root of the FTP account (since FTP account root is set to public_html in cPanel)
-          server-dir: ./
+          # Deploy directly to public_html using primary cPanel FTP account
+          server-dir: ./public_html/
           # Exclude git & metadata files from being uploaded to server
           exclude: |
             **/.git*
