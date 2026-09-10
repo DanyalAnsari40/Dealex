@@ -1,0 +1,33 @@
+name: Deploy Website via FTP
+
+on:
+  push:
+    branches:
+      - main
+      - master
+
+jobs:
+  web-deploy:
+    name: Sync to cPanel
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🚚 Checkout latest code
+        uses: actions/checkout@v4
+
+      - name: 📁 Upload files via FTP
+        uses: SamKirsch/ftp-deploy@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          port: 21
+          # Root of the FTP account (since FTP account root is set to public_html in cPanel)
+          server-dir: ./
+          # Exclude git & metadata files from being uploaded to server
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/.github/**
+            **/node_modules/**
+            .vscode/**
+            *.pdf
