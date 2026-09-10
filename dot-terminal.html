@@ -3,13 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DOT Terminal - Dealex</title>
+    <title>DOT Terminal - Dealex Transport & Logistics Services</title>
     <link rel="icon" type="image/png" href="./images/favicon.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
-            theme: { extend: { fontFamily: { sans: ['"Schibsted Grotesk"', 'sans-serif'], display: ['"Space Grotesk"', 'sans-serif'] } } }
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Schibsted Grotesk"', 'sans-serif'],
+                        display: ['"Space Grotesk"', 'sans-serif']
+                    }
+                }
+            }
         }
     </script>
     <style>
@@ -17,6 +24,13 @@
         .spinner { width: 50px; height: 50px; border: 4px solid rgba(255, 255, 255, 0.1); border-left-color: #00A1FF; border-radius: 50%; animation: spin 1s linear infinite; }
         @keyframes spin { 100% { transform: rotate(360deg); } }
         h1, h2, h3, h4, h5, h6 { font-family: 'Space Grotesk', sans-serif; }
+
+        /* Programmatic angled parallelogram cutout for desktop view */
+        @media (min-width: 1024px) {
+            .angled-image-container {
+                clip-path: polygon(14% 0%, 100% 0%, 86% 100%, 0% 100%);
+            }
+        }
     </style>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -35,7 +49,7 @@
         });
     </script>
 
-    <!-- Subpage Hero -->
+    <!-- Subpage Hero (Standard across all Dealex subpages) -->
     <section class="relative w-full max-w-[1440px] lg:max-w-[96%] xl:max-w-[98%] min-h-[400px] md:min-h-[500px] rounded-[32px] overflow-hidden bg-cover bg-center flex flex-col justify-start px-6 md:px-12 pb-6 pt-1 md:pt-2 mb-16" style="background-image: url('./images/herobg2.jpg');">
         <header class="relative z-30 w-full bg-transparent pt-1 pb-2 flex items-center justify-between mt-0">
             <a href="index.html" class="flex items-center">
@@ -46,6 +60,7 @@
                 <a href="about.html" class="hover:text-[#00A1FF] transition-colors text-black font-extrabold">About Us</a>
                 <a href="index.html#services-section" class="hover:text-[#00A1FF] transition-colors text-black font-extrabold">Services</a>
                 <a href="blog.html" class="hover:text-[#00A1FF] transition-colors text-black font-extrabold">Blog</a>
+                <a href="dot-terminal.html" class="text-[#00A1FF] transition-colors font-black">DOT Terminal</a>
                 <a href="contact.html" class="hover:text-[#00A1FF] transition-colors text-black font-extrabold">Contact</a>
             </nav>
             <div class="flex items-center space-x-4">
@@ -64,6 +79,7 @@
                 <a href="about.html" class="hover:text-[#00A1FF] transition-colors mobile-nav-link border-b border-white/5 pb-4">About Us</a>
                 <a href="index.html#services-section" class="hover:text-[#00A1FF] transition-colors mobile-nav-link border-b border-white/5 pb-4">Services</a>
                 <a href="blog.html" class="hover:text-[#00A1FF] transition-colors mobile-nav-link border-b border-white/5 pb-4">Blog</a>
+                <a href="dot-terminal.html" class="text-[#00A1FF] transition-colors mobile-nav-link border-b border-white/5 pb-4 font-bold">DOT Terminal</a>
                 <a href="contact.html" class="hover:text-[#00A1FF] transition-colors mobile-nav-link pb-2">Contact</a>
             </nav>
         </div>
@@ -74,38 +90,123 @@
         </div>
     </section>
 
-    <!-- Main Content -->
-    <main class="w-full max-w-[1440px] px-6 md:px-12 mb-24 flex-grow text-white z-10 relative">
+    <!-- Main DOT Terminal Showcase Presentation Banner -->
+    <main class="w-full max-w-[1440px] mx-auto bg-[#000000] border border-white/10 rounded-[24px] md:rounded-[32px] overflow-hidden p-6 md:p-10 lg:p-12 mb-16 shadow-2xl relative">
         
-        <div class="space-y-16">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-4 items-stretch relative z-10">
+            
+            <!-- Left Column: Branding, DOT Logo, Title & Overview -->
+            <div class="lg:col-span-5 flex flex-col justify-between pr-0 lg:pr-6 z-20">
                 <div>
-                    <h2 class="text-3xl font-bold mb-6 text-white">Dealex Own Terminal (DOT)</h2>
-                    <p class="text-gray-400 leading-relaxed mb-6">Located strategically at 31-Km Sunder Stop, Multan Road, Lahore, the DOT Terminal is our flagship operational hub. It is equipped to handle complex logistics, large scale warehousing, and temperature-controlled storage.</p>
-                    <ul class="space-y-4 text-gray-400 mb-8">
-                        <li class="flex items-center gap-3"><span class="text-[#00A1FF]">✓</span> State-of-the-art cold chain facilities</li>
-                        <li class="flex items-center gap-3"><span class="text-[#00A1FF]">✓</span> 24/7 security and surveillance</li>
-                        <li class="flex items-center gap-3"><span class="text-[#00A1FF]">✓</span> Rapid dispatch and loading zones</li>
-                        <li class="flex items-center gap-3"><span class="text-[#00A1FF]">✓</span> Extensive parking for the heavy fleet</li>
-                    </ul>
-                    <a href="contact.html" class="inline-block bg-[#00A1FF] hover:bg-[#0090E0] text-white px-8 py-4 rounded-full font-bold transition-colors">Inquire About Storage</a>
-                </div>
-                <div class="bg-[#0A0A0F] rounded-3xl h-[400px] border border-white/5 relative overflow-hidden">
-                    <img src="./images/logistics_truck_fleet.png" class="absolute inset-0 w-full h-full object-cover" alt="Terminal">
+                    <!-- Top Dealex Logo -->
+                    <div class="mb-8">
+                        <img src="./images/logo_preview_on_dark.png" alt="Dealex Transport & Logistics Services" class="h-12 md:h-14 w-auto object-contain">
+                    </div>
+
+                    <!-- DOT Terminal Logo Graphic -->
+                    <div class="my-6 flex justify-center lg:justify-start">
+                        <img src="./images/DOT.png" alt="DOT Dealex Own Terminal" class="max-w-[280px] md:max-w-[320px] lg:max-w-[340px] w-full h-auto object-contain drop-shadow-[0_0_25px_rgba(0,161,255,0.25)]">
+                    </div>
+
+                    <!-- Heading with Cyan Vertical Accent Bar -->
+                    <div class="flex items-stretch gap-4 mt-8 mb-6">
+                        <div class="w-3 md:w-3.5 bg-[#00A1FF] rounded-sm shrink-0"></div>
+                        <div>
+                            <h2 class="text-2xl md:text-3xl lg:text-3xl xl:text-4xl font-extrabold text-white leading-tight">
+                                Dealex Own Terminal (DOT)<br>
+                                <span class="text-white">Reefer & Cold Chain HUB</span>
+                            </h2>
+                        </div>
+                    </div>
+
+                    <!-- Description Text -->
+                    <p class="text-gray-300 text-sm md:text-base leading-relaxed font-normal pl-7 lg:pl-8 max-w-xl">
+                        Dealex Own Terminal (DOT) is a purpose-built Reefer & Cold Chain logistics hub designed to handle, store, monitor, and service temperature-controlled containers with the highest standards of efficiency, safety, and reliability. Developed to meet the growing needs of perishable cargo movement, DOT ensures end-to-end cold chain integrity from container arrival to final dispatch.
+                    </p>
                 </div>
             </div>
+
+            <!-- Middle Column: Angled Container Crane Photo Section -->
+            <div class="lg:col-span-3 relative flex items-center justify-center -mx-0 lg:-mx-6 my-6 lg:my-0 min-h-[350px] lg:min-h-[620px] overflow-hidden rounded-2xl lg:rounded-none">
+                <div class="w-full h-full angled-image-container relative overflow-hidden bg-black flex items-center justify-center">
+                    <img src="./images/dot_terminal_crane_hero.jpg" alt="DOT Terminal Reefer Container Crane Yard" class="w-full h-full object-cover min-h-[350px] lg:min-h-[620px] transform hover:scale-105 transition-transform duration-700">
+                </div>
+            </div>
+
+            <!-- Right Column: Cold Chain Feature List & Accent Blocks -->
+            <div class="lg:col-span-4 flex flex-col justify-between pl-0 lg:pl-6 pt-2 lg:pt-0 z-20">
+                <div class="space-y-5">
+                    
+                    <!-- Feature 1 -->
+                    <div class="border-b border-[#00A1FF] pb-4">
+                        <h3 class="font-bold text-white text-base lg:text-base mb-1">Reefer Container Stacking & Storage</h3>
+                        <p class="text-gray-300 text-xs lg:text-xs leading-relaxed">
+                            Secure and organized stacking solutions supported by efficient yard planning for both short-term and long-term storage requirements.
+                        </p>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="border-b border-[#00A1FF] pb-4">
+                        <h3 class="font-bold text-white text-base lg:text-base mb-1">Reefer Plug-in & Power Supply Facilities</h3>
+                        <p class="text-gray-300 text-xs lg:text-xs leading-relaxed">
+                            High-capacity plug-in points providing uninterrupted power supply to maintain precise temperature control at all times.
+                        </p>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="border-b border-[#00A1FF] pb-4">
+                        <h3 class="font-bold text-white text-base lg:text-base mb-1">24/7 Reefer Monitoring</h3>
+                        <p class="text-gray-300 text-xs lg:text-xs leading-relaxed">
+                            Round-the-clock monitoring of temperature, humidity, and container performance by trained and certified reefer technicians.
+                        </p>
+                    </div>
+
+                    <!-- Feature 4 -->
+                    <div class="border-b border-[#00A1FF] pb-4">
+                        <h3 class="font-bold text-white text-base lg:text-base mb-1">Pre-Trip Inspection (PTI)</h3>
+                        <p class="text-gray-300 text-xs lg:text-xs leading-relaxed">
+                            Comprehensive PTI services to ensure reefer containers are fully compliant and ready for loading and onward transit.
+                        </p>
+                    </div>
+
+                    <!-- Feature 5 -->
+                    <div class="border-b border-[#00A1FF] pb-4">
+                        <h3 class="font-bold text-white text-base lg:text-base mb-1">Technical Support & Repairs</h3>
+                        <p class="text-gray-300 text-xs lg:text-xs leading-relaxed">
+                            On-site reefer mechanics equipped to handle troubleshooting, preventive maintenance, and both minor and major repairs.
+                        </p>
+                    </div>
+
+                    <!-- Feature 6 -->
+                    <div class="pb-1">
+                        <h3 class="font-bold text-white text-base lg:text-base mb-1">Cold Chain Integrity Management</h3>
+                        <p class="text-gray-300 text-xs lg:text-xs leading-relaxed">
+                            Strict operational protocols and monitoring systems designed to protect cargo quality throughout the storage and handling process.
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- Bottom Right Colored Accent Squares -->
+                <div class="flex items-center justify-end gap-2 pt-6 mt-4">
+                    <span class="w-4 h-4 md:w-5 md:h-5 bg-[#00A1FF] inline-block"></span>
+                    <span class="w-4 h-4 md:w-5 md:h-5 bg-[#0051FF] inline-block"></span>
+                    <span class="w-4 h-4 md:w-5 md:h-5 bg-[#2E3192] inline-block"></span>
+                </div>
+            </div>
+
         </div>
 
     </main>
-    
-    <!-- FOOTER GLOBAL COMPONENT SECTION -->
+
+    <!-- Global Footer -->
     <footer class="bg-[#000000] pt-6 pb-12 px-4 sm:px-6 md:px-12 w-full select-none font-sans text-white">
-        <div class="max-w-[1440px] mx-auto bg-[#0A0A0F] rounded-[32px] pt-16 pb-8 px-8 md:px-16 relative overflow-hidden">
+        <div class="max-w-[1440px] mx-auto bg-[#0A0A0F] rounded-[32px] pt-16 pb-8 px-8 md:px-16 relative overflow-hidden border border-white/5">
             <div class="absolute right-0 top-0 w-96 h-96 opacity-10 pointer-events-none bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:16px_16px]"></div>
             <div class="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-8 relative z-10 pb-16">
                 <!-- Column 1 -->
                 <div class="col-span-1 md:col-span-12 lg:col-span-3 flex flex-col space-y-6">
-                    <img src="./images/logo.png" alt="Dealex Logo" class="w-32 h-auto opacity-90">
+                    <img src="./images/logo_preview_on_dark.png" alt="Dealex Logo" class="w-32 h-auto opacity-90">
                     <p class="text-gray-400 text-xs sm:text-sm leading-relaxed max-w-sm">Leading the future of transport and logistics through innovation, reliability, and unparalleled service excellence.</p>
                 </div>
                 <!-- Column 2 -->
@@ -115,7 +216,7 @@
                         <a href="about.html" class="text-gray-400 hover:text-white transition-colors text-xs font-semibold">About us</a>
                         <a href="team.html" class="text-gray-400 hover:text-white transition-colors text-xs font-semibold">Our Team</a>
                         <a href="blog.html" class="text-gray-400 hover:text-white transition-colors text-xs font-semibold">Blog</a>
-                        <a href="dot-terminal.html" class="text-gray-400 hover:text-white transition-colors text-xs font-semibold">DOT Terminal</a>
+                        <a href="dot-terminal.html" class="text-[#00A1FF] hover:text-white transition-colors text-xs font-semibold">DOT Terminal</a>
                         <a href="contact.html" class="text-gray-400 hover:text-white transition-colors text-xs font-semibold">Contact Us</a>
                     </div>
                 </div>
@@ -146,6 +247,7 @@
             </div>
         </div>
     </footer>
+
     <script src="script.js" defer></script>
     <script>
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
