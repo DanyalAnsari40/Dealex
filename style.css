@@ -2,9 +2,9 @@ body {
     background-color: #000000;
 }
 
-/* Custom bottom right diagonal cutout for the hero frame */
+/* Custom hero section styling */
 .hero-container {
-    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 40px), calc(100% - 40px) 100%, 0 100%);
+    /* Full width hero layout */
 }
 
 /* Canvas interaction prevention */
