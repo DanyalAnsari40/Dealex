@@ -30,15 +30,39 @@ document.querySelectorAll('.faq-item').forEach(item => {
 });
 
 
-// Dynamic Hero Background Images
+// Dynamic Hero Background Images (6-Image Carousel)
 const heroImages = [
     './images/herobg1.jpg',
     './images/herobg2.jpg',
-    './images/herobg3.jpg'
+    './images/herobg3.jpg',
+    './images/bg3.png',
+    './images/bg4.png',
+    './images/bg5.jpeg'
 ];
 
 let currentHeroImageIndex = 0;
 const heroSection = document.getElementById('hero-section');
+const heroDotsContainer = document.getElementById('hero-dots');
+
+function updateHeroImage(index) {
+    if (!heroSection) return;
+    currentHeroImageIndex = index;
+    heroSection.style.backgroundImage = `url('${heroImages[currentHeroImageIndex]}')`;
+    
+    // Update active dot indicator styling
+    if (heroDotsContainer) {
+        const dots = heroDotsContainer.querySelectorAll('.hero-dot');
+        dots.forEach((dot, i) => {
+            if (i === currentHeroImageIndex) {
+                dot.classList.remove('opacity-40');
+                dot.classList.add('opacity-100', 'scale-125');
+            } else {
+                dot.classList.add('opacity-40');
+                dot.classList.remove('opacity-100', 'scale-125');
+            }
+        });
+    }
+}
 
 if (heroSection) {
     // Preload images to prevent flickering
@@ -47,8 +71,21 @@ if (heroSection) {
         img.src = src;
     });
 
+    // Create dot indicators dynamically for 6 images
+    if (heroDotsContainer) {
+        heroDotsContainer.innerHTML = '';
+        heroImages.forEach((_, i) => {
+            const dot = document.createElement('span');
+            dot.className = `w-2.5 h-2.5 rounded-full bg-white ${i === 0 ? 'opacity-100 scale-125' : 'opacity-40'} hover:opacity-100 cursor-pointer transition-all duration-300 hero-dot`;
+            dot.addEventListener('click', () => {
+                updateHeroImage(i);
+            });
+            heroDotsContainer.appendChild(dot);
+        });
+    }
+
     setInterval(() => {
-        currentHeroImageIndex = (currentHeroImageIndex + 1) % heroImages.length;
-        heroSection.style.backgroundImage = `url('${heroImages[currentHeroImageIndex]}')`;
+        const nextIndex = (currentHeroImageIndex + 1) % heroImages.length;
+        updateHeroImage(nextIndex);
     }, 4500); // Change image every 4.5 seconds
 }
