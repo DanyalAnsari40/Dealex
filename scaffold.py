@@ -117,7 +117,7 @@ def generate_html(title, h1, subtitle, content):
                 <a href="contact.html" class="hover:text-[#00A1FF] transition-colors text-white">Contact</a>
             </nav>
             <div class="flex items-center space-x-4">
-                <a href="contact.html" class="bg-[#00A1FF] hover:bg-[#0090E0] text-white px-5 py-2.5 rounded-full text-xs font-bold tracking-wide transition-all hidden sm:flex items-center gap-2 shadow-lg shadow-[#00A1FF]/20 border border-[#00A1FF]">
+                <a href="tel:+923032555145" class="bg-[#00A1FF] hover:bg-[#0090E0] text-white px-5 py-2.5 rounded-full text-xs font-bold tracking-wide transition-all hidden sm:flex items-center gap-2 shadow-lg shadow-[#00A1FF]/20 border border-[#00A1FF]">
                     Get In Touch <span class="text-xs font-normal">↗</span>
                 </a>
                 <button id="mobile-menu-btn" class="lg:hidden text-white hover:text-[#00A1FF] transition-colors p-2 ml-2">
