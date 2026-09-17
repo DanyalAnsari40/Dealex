@@ -1,5 +1,10 @@
+* {
+    font-family: 'Space Grotesk', sans-serif;
+}
+
 body {
     background-color: #000000;
+    font-family: 'Space Grotesk', sans-serif;
 }
 
 /* Custom hero section styling */
