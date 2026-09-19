@@ -104,7 +104,7 @@ def generate_html(title, h1, subtitle, content):
     </script>
 
     <!-- Subpage Hero -->
-    <section class="relative w-full min-h-[400px] md:min-h-[500px] overflow-hidden bg-cover bg-center flex flex-col justify-start px-6 md:px-12 pb-6 pt-3 md:pt-5 mb-16" style="background-image: url('./images/herobg1.jpg');">
+    <section class="relative w-full min-h-[400px] md:min-h-[500px] overflow-hidden bg-cover bg-center flex flex-col justify-start px-6 md:px-12 pb-6 pt-3 md:pt-5 mb-16" style="background-image: url('./images/bg3.png');">
         <header class="relative z-30 w-full max-w-[1440px] mx-auto bg-transparent border border-white/10 rounded-full px-6 py-3 flex items-center justify-between shadow-xl mt-0">
             <a href="index.html" class="flex items-center">
                 <img src="./images/logo.png" alt="Dealex Logo" class="h-9 md:h-10 w-auto object-contain transition-transform duration-300 hover:scale-105">

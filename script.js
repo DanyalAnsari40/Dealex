@@ -30,11 +30,8 @@ document.querySelectorAll('.faq-item').forEach(item => {
 });
 
 
-// Dynamic Hero Background Images (6-Image Carousel)
+// Dynamic Hero Background Images (3-Image Carousel)
 const heroImages = [
-    './images/herobg1.jpg',
-    './images/herobg2.jpg',
-    './images/herobg3.jpg',
     './images/bg3.png',
     './images/bg4.png',
     './images/bg5.jpeg'
@@ -71,7 +68,7 @@ if (heroSection) {
         img.src = src;
     });
 
-    // Create dot indicators dynamically for 6 images
+    // Create dot indicators dynamically for 3 images
     if (heroDotsContainer) {
         heroDotsContainer.innerHTML = '';
         heroImages.forEach((_, i) => {
