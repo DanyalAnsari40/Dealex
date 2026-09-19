@@ -77,7 +77,7 @@ def generate_html(title, h1, subtitle, content):
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {{
-            theme: {{ extend: {{ fontFamily: {{ sans: ['"Space Grotesk"', 'sans-serif'], display: ['"Space Grotesk"', 'sans-serif'] }} }} }}
+            theme: {{ extend: {{ fontFamily: {{ sans: ['"Space Grotesk"', 'sans-serif'], display: ['"Space Grotesk"', 'sans-serif'], mono: ['"Space Grotesk"', 'sans-serif'], serif: ['"Space Grotesk"', 'sans-serif'] }} }} }}
         }}
     </script>
     <style>
