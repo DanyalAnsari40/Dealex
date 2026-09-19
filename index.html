@@ -605,96 +605,121 @@
         });
     </script>
     
-    <!-- Partners / Get a Quote Section -->
-    <section class="bg-[#000000] py-4 md:py-24 px-6 md:px-12 w-full select-none relative overflow-hidden">
-        <div class="max-w-[1440px] mx-auto space-y-16 relative z-10">
-            <div class="text-center space-y-4 max-w-2xl mx-auto">
+    <!-- Our Terminal Network Section -->
+    <section class="bg-[#000000] py-12 md:py-20 px-6 md:px-12 w-full select-none relative overflow-hidden" id="terminal-network-section">
+        <div class="max-w-[1440px] mx-auto space-y-12 relative z-10">
+            <!-- Section Header -->
+            <div class="text-center space-y-4 max-w-3xl mx-auto">
                 <div class="inline-flex items-center justify-center space-x-2">
                     <span class="text-[#00A1FF] text-sm">⚓</span>
-                    <span class="text-white font-bold text-xs uppercase tracking-wider">Our Shipping Partners</span>
+                    <span class="text-white font-bold text-xs uppercase tracking-wider">Our Terminal Network</span>
                 </div>
                 <h2 class="text-white text-3xl sm:text-4xl lg:text-[44px] font-extrabold tracking-tight leading-[1.15]">
-                    Get a Quote from <span class="text-[#00A1FF]">Top Carriers</span>
+                    Strong Partnerships. <span class="text-[#00A1FF]">Seamless Port Operations.</span>
                 </h2>
-                <p class="text-gray-400 text-sm md:text-base">
-                    Choose your preferred shipping line and request a specialized quote tailored to your cargo needs.
+                <p class="text-gray-400 text-sm md:text-base leading-relaxed">
+                    We maintain strong working relationships and operational coordination with Karachi's major container terminals, ensuring smooth, efficient and reliable cargo and reefer operations.
                 </p>
             </div>
 
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+            <!-- Terminal Cards Vertical Stack -->
+            <div class="space-y-4 sm:space-y-5">
+                
+                <!-- QICT -->
+                <div class="group relative bg-[#0A0A10] border border-white/10 rounded-[16px] p-4 sm:p-5 flex flex-col md:flex-row items-center gap-5 sm:gap-6 hover:border-[#00A1FF]/60 hover:bg-[#10101A] hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-[#00A1FF]/15 transition-all duration-500 cursor-pointer overflow-hidden">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-[#00A1FF] transform -translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
+                    <div class="w-full md:w-[280px] lg:w-[320px] h-[160px] sm:h-[180px] shrink-0 rounded-[12px] overflow-hidden relative">
+                        <img loading="lazy" src="./images/logistics_port_terminal.png" alt="QICT Terminal" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/20"></div>
+                        <div class="absolute bottom-3 left-4 text-white font-black text-lg tracking-wider drop-shadow-md">QICT</div>
+                    </div>
+                    <div class="flex flex-col md:flex-row items-start md:items-center gap-4 sm:gap-6 flex-grow">
+                        <div class="w-full md:w-[240px] shrink-0 border-b md:border-b-0 md:border-r border-white/10 pb-3 md:pb-0 md:pr-6">
+                            <h3 class="text-white font-extrabold text-2xl tracking-wide group-hover:text-[#00A1FF] transition-colors duration-300">QICT</h3>
+                            <p class="text-[#00A1FF] text-xs font-medium mt-1">Qasim International Container Terminal</p>
+                        </div>
+                        <p class="text-gray-300 text-xs sm:text-sm leading-relaxed flex-grow">
+                            QICT is Pakistan's first and largest container terminal, known for its modern infrastructure and high operational standards. We work closely with QICT to ensure fast, secure and efficient handling of your cargo, including time-sensitive and temperature-controlled shipments.
+                        </p>
+                    </div>
+                </div>
 
-                <!-- CMA CGM -->
-                <div class="relative group rounded-lg bg-[#0D0D12] border border-white/5 hover:border-[#00A1FF]/50 p-4 sm:p-6 flex flex-col items-center transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#00A1FF]/20 cursor-pointer h-full min-h-[260px]">
-                    <div class="h-[120px] w-full flex-shrink-0 flex items-center justify-center mb-4 bg-white rounded-md p-2.5 transition-colors duration-500">
-                        <img loading="lazy" src="./partners/CMA-CGM-logo.png" alt="CMA CGM" class="max-w-[95%] max-h-[90%] object-contain transition-all duration-500 group-hover:scale-110">
+                <!-- KICT -->
+                <div class="group relative bg-[#0A0A10] border border-white/10 rounded-[16px] p-4 sm:p-5 flex flex-col md:flex-row items-center gap-5 sm:gap-6 hover:border-[#00A1FF]/60 hover:bg-[#10101A] hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-[#00A1FF]/15 transition-all duration-500 cursor-pointer overflow-hidden">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-[#00A1FF] transform -translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
+                    <div class="w-full md:w-[280px] lg:w-[320px] h-[160px] sm:h-[180px] shrink-0 rounded-[12px] overflow-hidden relative">
+                        <img loading="lazy" src="./images/dot_terminal_crane_hero.jpg" alt="KICT Terminal" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/20"></div>
+                        <div class="absolute bottom-3 left-4 text-white font-black text-lg tracking-wider drop-shadow-md">KICT</div>
                     </div>
-                    <p class="text-gray-400 text-xs sm:text-sm text-center leading-relaxed">
-                        Efficient inland transportation for major shipping lines. Providing seamless port-to-door delivery with modern tracking.
-                    </p>
-                </div>
-                <!-- Cosco -->
-                <div class="relative group rounded-lg bg-[#0D0D12] border border-white/5 hover:border-[#00A1FF]/50 p-4 sm:p-6 flex flex-col items-center transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#00A1FF]/20 cursor-pointer h-full min-h-[260px]">
-                    <div class="h-[120px] w-full flex-shrink-0 flex items-center justify-center mb-4 bg-white rounded-md p-2.5 transition-colors duration-500">
-                        <img loading="lazy" src="./partners/Cosco-logo.png" alt="Cosco" class="max-w-[95%] max-h-[90%] object-contain transition-all duration-500 group-hover:scale-110">
+                    <div class="flex flex-col md:flex-row items-start md:items-center gap-4 sm:gap-6 flex-grow">
+                        <div class="w-full md:w-[240px] shrink-0 border-b md:border-b-0 md:border-r border-white/10 pb-3 md:pb-0 md:pr-6">
+                            <h3 class="text-white font-extrabold text-2xl tracking-wide group-hover:text-[#00A1FF] transition-colors duration-300">KICT</h3>
+                            <p class="text-[#00A1FF] text-xs font-medium mt-1">Karachi International Container Terminal</p>
+                        </div>
+                        <p class="text-gray-300 text-xs sm:text-sm leading-relaxed flex-grow">
+                            KICT is a leading container terminal in Karachi, offering world-class facilities and advanced technology. Our close coordination with KICT helps us deliver smooth vessel operations, faster turnaround times and reliable cargo movement for our valued customers.
+                        </p>
                     </div>
-                    <p class="text-gray-400 text-xs sm:text-sm text-center leading-relaxed">
-                        Reliable ocean freight and supply chain solutions tailored to your business needs globally.
-                    </p>
                 </div>
-                <!-- Feeder -->
-                <div class="relative group rounded-lg bg-[#0D0D12] border border-white/5 hover:border-[#00A1FF]/50 p-4 sm:p-6 flex flex-col items-center transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#00A1FF]/20 cursor-pointer h-full min-h-[260px]">
-                    <div class="h-[120px] w-full flex-shrink-0 flex items-center justify-center mb-4 bg-white rounded-md p-2.5 transition-colors duration-500">
-                        <img loading="lazy" src="./partners/Feeder-logo.jpg" alt="Feeder" class="max-w-[95%] max-h-[90%] object-contain transition-all duration-500 group-hover:scale-110">
+
+                <!-- KGTL -->
+                <div class="group relative bg-[#0A0A10] border border-white/10 rounded-[16px] p-4 sm:p-5 flex flex-col md:flex-row items-center gap-5 sm:gap-6 hover:border-[#00A1FF]/60 hover:bg-[#10101A] hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-[#00A1FF]/15 transition-all duration-500 cursor-pointer overflow-hidden">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-[#00A1FF] transform -translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
+                    <div class="w-full md:w-[280px] lg:w-[320px] h-[160px] sm:h-[180px] shrink-0 rounded-[12px] overflow-hidden relative">
+                        <img loading="lazy" src="./images/dot_crane_hero.png" alt="KGTL Terminal" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/20"></div>
+                        <div class="absolute bottom-3 left-4 text-white font-black text-lg tracking-wider drop-shadow-md">KGTL</div>
                     </div>
-                    <p class="text-gray-400 text-xs sm:text-sm text-center leading-relaxed">
-                        Agile short-sea and feeder services backed by robust inland transportation for maximum flexibility.
-                    </p>
-                </div>
-                <!-- Hapag Lloyd -->
-                <div class="relative group rounded-lg bg-[#0D0D12] border border-white/5 hover:border-[#00A1FF]/50 p-4 sm:p-6 flex flex-col items-center transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#00A1FF]/20 cursor-pointer h-full min-h-[260px]">
-                    <div class="h-[120px] w-full flex-shrink-0 flex items-center justify-center mb-4 bg-white rounded-md p-2.5 transition-colors duration-500">
-                        <img loading="lazy" src="./partners/Hapag LIoyd-logo" alt="Hapag Lloyd" class="max-w-[95%] max-h-[90%] object-contain transition-all duration-500 group-hover:scale-110">
+                    <div class="flex flex-col md:flex-row items-start md:items-center gap-4 sm:gap-6 flex-grow">
+                        <div class="w-full md:w-[240px] shrink-0 border-b md:border-b-0 md:border-r border-white/10 pb-3 md:pb-0 md:pr-6">
+                            <h3 class="text-white font-extrabold text-2xl tracking-wide group-hover:text-[#00A1FF] transition-colors duration-300">KGTL</h3>
+                            <p class="text-[#00A1FF] text-xs font-medium mt-1">Karachi Gateway Terminal Limited</p>
+                        </div>
+                        <p class="text-gray-300 text-xs sm:text-sm leading-relaxed flex-grow">
+                            KGTL is a state-of-the-art terminal, designed for efficiency, safety and sustainability. We maintain strong operational coordination with KGTL to ensure seamless cargo handling and timely delivery of both dry and reefer cargo.
+                        </p>
                     </div>
-                    <p class="text-gray-400 text-xs sm:text-sm text-center leading-relaxed">
-                        Reliable container shipping services backed by a robust truck fleet dedicated to punctual deliveries across regions.
-                    </p>
                 </div>
-                <!-- Maersk -->
-                <div class="relative group rounded-lg bg-[#0D0D12] border border-white/5 hover:border-[#00A1FF]/50 p-4 sm:p-6 flex flex-col items-center transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#00A1FF]/20 cursor-pointer h-full min-h-[260px]">
-                    <div class="h-[120px] w-full flex-shrink-0 flex items-center justify-center mb-4 bg-white rounded-md p-2.5 transition-colors duration-500">
-                        <img loading="lazy" src="./partners/Maersk-logo.png" alt="Maersk" class="max-w-[95%] max-h-[90%] object-contain transition-all duration-500 group-hover:scale-110">
+
+                <!-- SAPT -->
+                <div class="group relative bg-[#0A0A10] border border-white/10 rounded-[16px] p-4 sm:p-5 flex flex-col md:flex-row items-center gap-5 sm:gap-6 hover:border-[#00A1FF]/60 hover:bg-[#10101A] hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-[#00A1FF]/15 transition-all duration-500 cursor-pointer overflow-hidden">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-[#00A1FF] transform -translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
+                    <div class="w-full md:w-[280px] lg:w-[320px] h-[160px] sm:h-[180px] shrink-0 rounded-[12px] overflow-hidden relative">
+                        <img loading="lazy" src="./images/dot_crane_hero.jpg" alt="SAPT Terminal" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/20"></div>
+                        <div class="absolute bottom-3 left-4 text-white font-black text-lg tracking-wider drop-shadow-md">SAPT</div>
                     </div>
-                    <p class="text-gray-400 text-xs sm:text-sm text-center leading-relaxed">
-                        Global shipping logistics connected directly to our road transport network. Reliable cold chain and dry cargo handling.
-                    </p>
-                </div>
-                <!-- OOCL -->
-                <div class="relative group rounded-lg bg-[#0D0D12] border border-white/5 hover:border-[#00A1FF]/50 p-4 sm:p-6 flex flex-col items-center transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#00A1FF]/20 cursor-pointer h-full min-h-[260px]">
-                    <div class="h-[120px] w-full flex-shrink-0 flex items-center justify-center mb-4 bg-white rounded-md p-2.5 transition-colors duration-500">
-                        <img loading="lazy" src="./partners/OOCL-logo.png" alt="OOCL" class="max-w-[95%] max-h-[90%] object-contain transition-all duration-500 group-hover:scale-110">
+                    <div class="flex flex-col md:flex-row items-start md:items-center gap-4 sm:gap-6 flex-grow">
+                        <div class="w-full md:w-[240px] shrink-0 border-b md:border-b-0 md:border-r border-white/10 pb-3 md:pb-0 md:pr-6">
+                            <h3 class="text-white font-extrabold text-2xl tracking-wide group-hover:text-[#00A1FF] transition-colors duration-300">SAPT</h3>
+                            <p class="text-[#00A1FF] text-xs font-medium mt-1">South Asia Pakistan Terminal</p>
+                        </div>
+                        <p class="text-gray-300 text-xs sm:text-sm leading-relaxed flex-grow">
+                            SAPT plays a vital role in Pakistan's trade and logistics network. Our established relationship and continuous coordination with SAPT allow us to provide efficient terminal operations, faster vessel processing and dependable cargo handling services.
+                        </p>
                     </div>
-                    <p class="text-gray-400 text-xs sm:text-sm text-center leading-relaxed">
-                        World-class shipping logistics with advanced IT systems connecting our road freight seamlessly to global networks.
-                    </p>
                 </div>
-                <!-- Unifeeder -->
-                <div class="relative group rounded-lg bg-[#0D0D12] border border-white/5 hover:border-[#00A1FF]/50 p-4 sm:p-6 flex flex-col items-center transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#00A1FF]/20 cursor-pointer h-full min-h-[260px]">
-                    <div class="h-[120px] w-full flex-shrink-0 flex items-center justify-center mb-4 bg-white rounded-md p-2.5 transition-colors duration-500">
-                        <img loading="lazy" src="./partners/Unifeeder-logo.jpg" alt="Unifeeder" class="max-w-[95%] max-h-[90%] object-contain transition-all duration-500 group-hover:scale-110">
+
+                <!-- ICT -->
+                <div class="group relative bg-[#0A0A10] border border-white/10 rounded-[16px] p-4 sm:p-5 flex flex-col md:flex-row items-center gap-5 sm:gap-6 hover:border-[#00A1FF]/60 hover:bg-[#10101A] hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-[#00A1FF]/15 transition-all duration-500 cursor-pointer overflow-hidden">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-[#00A1FF] transform -translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
+                    <div class="w-full md:w-[280px] lg:w-[320px] h-[160px] sm:h-[180px] shrink-0 rounded-[12px] overflow-hidden relative">
+                        <img loading="lazy" src="./images/logistics_port_terminal.png" alt="ICT Terminal" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/20"></div>
+                        <div class="absolute bottom-3 left-4 text-white font-black text-lg tracking-wider drop-shadow-md">ICT</div>
                     </div>
-                    <p class="text-gray-400 text-xs sm:text-sm text-center leading-relaxed">
-                        Fast and efficient regional logistics connecting smaller ports to major hubs. Uninterrupted supply chain flow.
-                    </p>
-                </div>
-                <!-- Wan Hai -->
-                <div class="relative group rounded-lg bg-[#0D0D12] border border-white/5 hover:border-[#00A1FF]/50 p-4 sm:p-6 flex flex-col items-center transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#00A1FF]/20 cursor-pointer h-full min-h-[260px]">
-                    <div class="h-[120px] w-full flex-shrink-0 flex items-center justify-center mb-4 bg-white rounded-md p-2.5 transition-colors duration-500">
-                        <img loading="lazy" src="./partners/Wan Hai Lines lt-logo.png" alt="Wan Hai" class="max-w-[95%] max-h-[90%] object-contain transition-all duration-500 group-hover:scale-110">
+                    <div class="flex flex-col md:flex-row items-start md:items-center gap-4 sm:gap-6 flex-grow">
+                        <div class="w-full md:w-[240px] shrink-0 border-b md:border-b-0 md:border-r border-white/10 pb-3 md:pb-0 md:pr-6">
+                            <h3 class="text-white font-extrabold text-2xl tracking-wide group-hover:text-[#00A1FF] transition-colors duration-300">ICT</h3>
+                            <p class="text-[#00A1FF] text-xs font-medium mt-1">International Cargo Terminal</p>
+                        </div>
+                        <p class="text-gray-300 text-xs sm:text-sm leading-relaxed flex-grow">
+                            ICT is a modern and strategically located terminal, offering flexible and reliable services for all types of cargo. We work in close coordination with ICT to ensure smooth operations, reduced transit times and efficient handling of refrigerated and general cargo.
+                        </p>
                     </div>
-                    <p class="text-gray-400 text-xs sm:text-sm text-center leading-relaxed">
-                        Comprehensive freight solutions handling intra-Asia trade connections and global transit logistics safely and securely.
-                    </p>
                 </div>
+
             </div>
         </div>
     </section>
