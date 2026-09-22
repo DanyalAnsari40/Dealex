@@ -150,7 +150,7 @@
                 <div class="lg:col-span-3 flex flex-col space-y-4 w-full">
                     <div class="flex items-center self-start gap-4 w-full">
                         <a href="#" class="flex items-center shrink-0">
-                            <img loading="lazy" src="./images/logo.png" alt="Dealex Logo" class="h-16 md:h-20 lg:h-24 w-auto object-contain transition-transform duration-300 hover:scale-105" style="filter: invert(1) hue-rotate(180deg);">
+                            <img loading="lazy" src="./images/logo.png" alt="Dealex Logo" class="h-10 md:h-12 lg:h-14 w-auto object-contain transition-transform duration-300 hover:scale-105" style="filter: invert(1) hue-rotate(180deg);">
                         </a>
                         <div class="w-[160px] md:hidden shrink-0 relative aspect-[2/1] bg-contain bg-no-repeat bg-center" style="background-image: url('./images/DOT.png');">
                         </div>
@@ -230,17 +230,18 @@
                 <div class="col-span-1 md:col-span-6 lg:col-span-3 flex flex-col space-y-6">
                     <h4 class="text-[#00A1FF] font-extrabold text-sm tracking-wide">Working Hours</h4>
                     <div class="space-y-3.5 text-gray-400 text-xs font-semibold">
-                        <p class="flex items-center justify-between">
-                            <span>Mon to Fri :</span>
-                            <span class="text-white text-right">9:00 AM - 5:00 PM</span>
-                        </p>
-                        <p class="flex items-center justify-between">
-                            <span>Saturday :</span>
-                            <span class="text-white text-right">10:00 AM - 6:00 PM</span>
-                        </p>
-                        <p class="flex items-center justify-between text-gray-400">
-                            <span>Sunday Closed</span>
-                        </p>
+                        <div class="grid grid-cols-[100px_1fr] items-center gap-2">
+                            <span class="text-gray-400">Mon to Fri:</span>
+                            <span class="text-white font-medium">9:00 AM - 5:00 PM</span>
+                        </div>
+                        <div class="grid grid-cols-[100px_1fr] items-center gap-2">
+                            <span class="text-gray-400">Saturday:</span>
+                            <span class="text-white font-medium">10:00 AM - 6:00 PM</span>
+                        </div>
+                        <div class="grid grid-cols-[100px_1fr] items-center gap-2">
+                            <span class="text-gray-400">Sunday:</span>
+                            <span class="text-gray-400 font-medium">Closed</span>
+                        </div>
                     </div>
                 </div>
 

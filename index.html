@@ -11,9 +11,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
@@ -39,6 +37,7 @@
             justify-content: center;
             transition: opacity 0.5s ease, visibility 0.5s ease;
         }
+
         .spinner {
             width: 50px;
             height: 50px;
@@ -47,7 +46,13 @@
             border-radius: 50%;
             animation: spin 1s linear infinite;
         }
-        @keyframes spin { 100% { transform: rotate(360deg); } }
+
+        @keyframes spin {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
         h1,
         h2,
         h3,
@@ -107,17 +112,23 @@
         <header
             class="relative z-30 w-full max-w-[1440px] mx-auto bg-transparent pt-1 pb-2 flex items-center justify-between">
             <a href="#" class="flex items-center">
-                <img src="./images/logo.png" alt="Dealex Logo" class="h-12 md:h-16 lg:h-18 w-auto object-contain transition-transform duration-300 hover:scale-105">
+                <img src="./images/logo.png" alt="Dealex Logo"
+                    class="h-12 md:h-16 lg:h-18 w-auto object-contain transition-transform duration-300 hover:scale-105">
             </a>
 
             <nav
                 class="hidden lg:flex items-center space-x-7 text-sm font-extrabold tracking-wider text-white uppercase">
-                <a href="#hero-section" class="text-white hover:text-[#00A1FF] transition-colors font-extrabold">Home</a>
-                <a href="about.html" class="text-white hover:text-[#00A1FF] transition-colors font-extrabold">About Us</a>
-                <a href="#services-section" class="text-white hover:text-[#00A1FF] transition-colors font-extrabold">Services</a>
+                <a href="#hero-section"
+                    class="text-white hover:text-[#00A1FF] transition-colors font-extrabold">Home</a>
+                <a href="about.html" class="text-white hover:text-[#00A1FF] transition-colors font-extrabold">About
+                    Us</a>
+                <a href="#services-section"
+                    class="text-white hover:text-[#00A1FF] transition-colors font-extrabold">Services</a>
                 <a href="blog.html" class="text-white hover:text-[#00A1FF] transition-colors font-extrabold">Blog</a>
-                <a href="dot-terminal.html" class="text-white hover:text-[#00A1FF] transition-colors font-extrabold">DOT Terminal</a>
-                <a href="contact.html" class="text-white hover:text-[#00A1FF] transition-colors font-extrabold">Contact</a>
+                <a href="dot-terminal.html" class="text-white hover:text-[#00A1FF] transition-colors font-extrabold">DOT
+                    Terminal</a>
+                <a href="contact.html"
+                    class="text-white hover:text-[#00A1FF] transition-colors font-extrabold">Contact</a>
             </nav>
 
             <div class="flex items-center space-x-4">
@@ -129,33 +140,44 @@
                     Get In Touch <span class="text-xs font-normal">↗</span>
                 </a>
                 <!-- Hamburger Button -->
-                <button id="mobile-menu-btn" class="lg:hidden text-white hover:text-[#00A1FF] transition-colors p-2 ml-2">
+                <button id="mobile-menu-btn"
+                    class="lg:hidden text-white hover:text-[#00A1FF] transition-colors p-2 ml-2">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
                 </button>
             </div>
         </header>
 
         <!-- Mobile Menu Dropdown -->
-        <div id="mobile-menu" class="absolute top-[80px] left-6 right-6 bg-[#0A0A0F]/95 backdrop-blur-xl border border-white/10 rounded-[24px] z-50 transform origin-top scale-y-0 opacity-0 transition-all duration-300 flex flex-col p-6 shadow-2xl pointer-events-none lg:hidden">
+        <div id="mobile-menu"
+            class="absolute top-[80px] left-6 right-6 bg-[#0A0A0F]/95 backdrop-blur-xl border border-white/10 rounded-[24px] z-50 transform origin-top scale-y-0 opacity-0 transition-all duration-300 flex flex-col p-6 shadow-2xl pointer-events-none lg:hidden">
             <nav class="flex flex-col space-y-4 text-base font-semibold tracking-wider text-white uppercase">
                 <a href="#hero-section" class="text-[#00A1FF] mobile-nav-link border-b border-white/5 pb-4">Home</a>
-                <a href="about.html" class="hover:text-[#00A1FF] transition-colors mobile-nav-link border-b border-white/5 pb-4">About Us</a>
-                <a href="#services-section" class="hover:text-[#00A1FF] transition-colors mobile-nav-link border-b border-white/5 pb-4">Services</a>
-                <a href="blog.html" class="hover:text-[#00A1FF] transition-colors mobile-nav-link border-b border-white/5 pb-4">Blog</a>
-                <a href="dot-terminal.html" class="hover:text-[#00A1FF] transition-colors mobile-nav-link border-b border-white/5 pb-4">DOT Terminal</a>
+                <a href="about.html"
+                    class="hover:text-[#00A1FF] transition-colors mobile-nav-link border-b border-white/5 pb-4">About
+                    Us</a>
+                <a href="#services-section"
+                    class="hover:text-[#00A1FF] transition-colors mobile-nav-link border-b border-white/5 pb-4">Services</a>
+                <a href="blog.html"
+                    class="hover:text-[#00A1FF] transition-colors mobile-nav-link border-b border-white/5 pb-4">Blog</a>
+                <a href="dot-terminal.html"
+                    class="hover:text-[#00A1FF] transition-colors mobile-nav-link border-b border-white/5 pb-4">DOT
+                    Terminal</a>
                 <a href="contact.html" class="hover:text-[#00A1FF] transition-colors mobile-nav-link pb-2">Contact</a>
             </nav>
             <div class="flex items-center justify-between mt-6 pt-4 border-t border-white/10">
 
-                <a href="tel:+923032555145" class="bg-[#00A1FF] hover:bg-[#0090E0] text-white px-5 py-2.5 rounded-full text-xs font-bold tracking-wide transition-all shadow-lg shadow-[#00A1FF]/20">
+                <a href="tel:+923032555145"
+                    class="bg-[#00A1FF] hover:bg-[#0090E0] text-white px-5 py-2.5 rounded-full text-xs font-bold tracking-wide transition-all shadow-lg shadow-[#00A1FF]/20">
                     Get In Touch
                 </a>
             </div>
         </div>
 
-        <div class="relative z-20 w-full max-w-[1000px] mx-auto my-auto pt-6 md:pt-10 pb-2 flex flex-col items-center justify-center text-center space-y-6">
+        <div
+            class="relative z-20 w-full max-w-[1000px] mx-auto my-auto pt-6 md:pt-10 pb-2 flex flex-col items-center justify-center text-center space-y-6">
             <div class="space-y-4">
                 <h1
                     class="text-white text-4xl sm:text-5xl md:text-6xl lg:text-[68px] font-extrabold tracking-tight leading-[1.05] text-center">
@@ -204,11 +226,13 @@
                 </div>
 
                 <!-- Animated Truck Image -->
-                <div class="relative lg:h-full lg:min-h-[400px] flex items-center justify-center lg:justify-end mt-2 mb-4 lg:mt-0 lg:mb-0 overflow-hidden lg:overflow-visible order-2 lg:col-start-2 lg:row-start-1 lg:row-span-1">
+                <div
+                    class="relative lg:h-full lg:min-h-[400px] flex items-center justify-center lg:justify-end mt-2 mb-4 lg:mt-0 lg:mb-0 overflow-hidden lg:overflow-visible order-2 lg:col-start-2 lg:row-start-1 lg:row-span-1">
                     <div class="relative z-10 w-full flex items-center justify-center lg:justify-start lg:-ml-[5%]">
                         <picture class="w-full flex justify-center lg:block">
                             <source media="(min-width: 1024px)" srcset="./images/truck_about.png">
-                            <img loading="lazy" id="about-truck" src="./images/truck_about -mobile.png" alt="Logistics Truck"
+                            <img loading="lazy" id="about-truck" src="./images/truck_about -mobile.png"
+                                alt="Logistics Truck"
                                 class="w-[90%] sm:w-[80%] max-w-[350px] lg:max-w-none lg:w-[90%] h-auto object-contain lg:object-cover drop-shadow-[0_20px_50px_rgba(0,0,0,0.3)] transform translate-x-[100%] transition-transform duration-[1200ms] ease-out">
                         </picture>
                     </div>
@@ -250,13 +274,15 @@
     </section>
 
     <!-- New About Us Section (Redesigned) -->
-    <section class="w-full bg-[#000000] pt-4 pb-12 md:pt-6 md:pb-16 px-6 md:px-12 select-none font-sans" id="about-us-section">
+    <section class="w-full bg-[#000000] pt-4 pb-12 md:pt-6 md:pb-16 px-6 md:px-12 select-none font-sans"
+        id="about-us-section">
         <div class="max-w-[1440px] mx-auto space-y-8 md:space-y-10">
 
             <!-- Top Area: Label + Big Text -->
             <div class="flex flex-col space-y-6 max-w-5xl mx-auto">
                 <!-- Label -->
-                <div class="flex items-center justify-center space-x-3 font-bold text-white text-lg md:text-xl tracking-wider uppercase mx-auto">
+                <div
+                    class="flex items-center justify-center space-x-3 font-bold text-white text-lg md:text-xl tracking-wider uppercase mx-auto">
                     <svg class="w-6 h-6 text-[#00A1FF]" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M12 2l8 4.5v11L12 22l-8-4.5v-11L12 2z" />
                     </svg>
@@ -264,72 +290,109 @@
                 </div>
 
                 <!-- Big Text -->
-                <h2 id="about-animated-text" class="text-3xl md:text-4xl lg:text-[42px] font-medium text-white leading-[1.3] tracking-tight text-left">
+                <h2 id="about-animated-text"
+                    class="text-3xl md:text-4xl lg:text-[42px] font-medium text-white leading-[1.3] tracking-tight text-left">
                     We provide seamless and reliable logistics solutions that help businesses move goods efficiently
                     through smart transportation and streamlined supply chain management.
                 </h2>
             </div>
 
             <!-- Bottom Area: Bento Image Grid -->
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4" style="grid-template-rows: 220px 220px; grid-auto-rows: 220px;">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4"
+                style="grid-template-rows: 220px 220px; grid-auto-rows: 220px;">
 
                 <!-- Image 1: Port Terminal (Large - spans 2 cols) -->
-                <div class="col-span-2 row-span-2 relative rounded-2xl overflow-hidden group cursor-pointer opacity-0 translate-y-10 transition-all duration-[1000ms] ease-out about-card" style="transition-delay: 100ms;">
+                <div class="col-span-2 row-span-2 relative rounded-2xl overflow-hidden group cursor-pointer opacity-0 translate-y-10 transition-all duration-[1000ms] ease-out about-card"
+                    style="transition-delay: 100ms;">
                     <img loading="lazy" src="./images/logistics_port_terminal.png" alt="Container Port Terminal"
                         class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-500"></div>
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-500">
+                    </div>
                     <!-- Blue accent line -->
-                    <div class="absolute top-0 left-0 w-1 h-full bg-[#00A1FF] transform -translate-y-full group-hover:translate-y-0 transition-transform duration-700"></div>
+                    <div
+                        class="absolute top-0 left-0 w-1 h-full bg-[#00A1FF] transform -translate-y-full group-hover:translate-y-0 transition-transform duration-700">
+                    </div>
                     <div class="absolute bottom-0 left-0 p-6 md:p-8 z-10">
-                        <div class="text-[#00A1FF] text-xs font-bold tracking-[0.2em] uppercase mb-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500">01 — Terminal</div>
-                        <h3 class="text-white text-xl md:text-2xl lg:text-3xl font-bold leading-tight">Port &<br>Terminal Ops</h3>
-                        <p class="text-white/60 text-xs md:text-sm mt-2 max-w-[280px] leading-relaxed">Container handling, crane operations, and seamless cargo movement at our port facilities.</p>
+                        <div
+                            class="text-[#00A1FF] text-xs font-bold tracking-[0.2em] uppercase mb-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                            01 — Terminal</div>
+                        <h3 class="text-white text-xl md:text-2xl lg:text-3xl font-bold leading-tight">Port
+                            &<br>Terminal Ops</h3>
+                        <p class="text-white/60 text-xs md:text-sm mt-2 max-w-[280px] leading-relaxed">Container
+                            handling, crane operations, and seamless cargo movement at our port facilities.</p>
                     </div>
                     <!-- Stats badge -->
-                    <div class="absolute top-4 right-4 bg-black/50 backdrop-blur-md rounded-full px-4 py-2 border border-white/10 opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-2 group-hover:translate-y-0">
+                    <div
+                        class="absolute top-4 right-4 bg-black/50 backdrop-blur-md rounded-full px-4 py-2 border border-white/10 opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-2 group-hover:translate-y-0">
                         <span class="text-white font-bold text-sm">245+</span>
                         <span class="text-white/50 text-[10px] ml-1">Deliveries</span>
                     </div>
                 </div>
 
                 <!-- Image 2: Warehouse (Top Right) -->
-                <div class="col-span-1 relative rounded-2xl overflow-hidden group cursor-pointer opacity-0 translate-y-10 transition-all duration-[1000ms] ease-out about-card" style="transition-delay: 200ms;">
+                <div class="col-span-1 relative rounded-2xl overflow-hidden group cursor-pointer opacity-0 translate-y-10 transition-all duration-[1000ms] ease-out about-card"
+                    style="transition-delay: 200ms;">
                     <img loading="lazy" src="./images/logistics_warehouse.png" alt="Logistics Warehouse"
                         class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent opacity-60 group-hover:opacity-90 transition-opacity duration-500"></div>
-                    <div class="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-[#00A1FF] to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left"></div>
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent opacity-60 group-hover:opacity-90 transition-opacity duration-500">
+                    </div>
+                    <div
+                        class="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-[#00A1FF] to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left">
+                    </div>
                     <div class="absolute bottom-0 left-0 p-4 md:p-5 z-10">
-                        <div class="text-[#00A1FF] text-[10px] font-bold tracking-[0.2em] uppercase mb-1 opacity-0 group-hover:opacity-100 transition-opacity duration-500">02</div>
+                        <div
+                            class="text-[#00A1FF] text-[10px] font-bold tracking-[0.2em] uppercase mb-1 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                            02</div>
                         <h3 class="text-white text-sm md:text-base font-bold leading-tight">Warehousing</h3>
                     </div>
                 </div>
 
                 <!-- Image 3: Truck Fleet (Top Far Right) -->
-                <div class="col-span-1 relative rounded-2xl overflow-hidden group cursor-pointer opacity-0 translate-y-10 transition-all duration-[1000ms] ease-out about-card" style="transition-delay: 300ms;">
+                <div class="col-span-1 relative rounded-2xl overflow-hidden group cursor-pointer opacity-0 translate-y-10 transition-all duration-[1000ms] ease-out about-card"
+                    style="transition-delay: 300ms;">
                     <img loading="lazy" src="./images/fletnewwot-top" alt="Fleet Network"
                         class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent opacity-60 group-hover:opacity-90 transition-opacity duration-500"></div>
-                    <div class="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-[#00A1FF] to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left"></div>
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent opacity-60 group-hover:opacity-90 transition-opacity duration-500">
+                    </div>
+                    <div
+                        class="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-[#00A1FF] to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left">
+                    </div>
                     <div class="absolute bottom-0 left-0 p-4 md:p-5 z-10">
-                        <div class="text-[#00A1FF] text-[10px] font-bold tracking-[0.2em] uppercase mb-1 opacity-0 group-hover:opacity-100 transition-opacity duration-500">03</div>
+                        <div
+                            class="text-[#00A1FF] text-[10px] font-bold tracking-[0.2em] uppercase mb-1 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                            03</div>
                         <h3 class="text-white text-sm md:text-base font-bold leading-tight">Fleet Network</h3>
                     </div>
                 </div>
 
                 <!-- Image 4: Cold Chain (Bottom Right - spans 2 cols) -->
-                <div class="col-span-2 relative rounded-2xl overflow-hidden group cursor-pointer opacity-0 translate-y-10 transition-all duration-[1000ms] ease-out about-card" style="transition-delay: 400ms;">
+                <div class="col-span-2 relative rounded-2xl overflow-hidden group cursor-pointer opacity-0 translate-y-10 transition-all duration-[1000ms] ease-out about-card"
+                    style="transition-delay: 400ms;">
                     <img loading="lazy" src="./images/logistics_cold_chain.png" alt="Cold Chain Reefer Storage"
                         class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent opacity-60 group-hover:opacity-90 transition-opacity duration-500"></div>
-                    <div class="absolute bottom-0 left-0 w-full h-[3px] bg-gradient-to-r from-[#00A1FF] via-[#212EE6] to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left"></div>
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent opacity-60 group-hover:opacity-90 transition-opacity duration-500">
+                    </div>
+                    <div
+                        class="absolute bottom-0 left-0 w-full h-[3px] bg-gradient-to-r from-[#00A1FF] via-[#212EE6] to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left">
+                    </div>
                     <div class="absolute bottom-0 left-0 p-4 md:p-6 z-10 w-full flex items-end justify-between">
                         <div>
-                            <div class="text-[#00A1FF] text-[10px] font-bold tracking-[0.2em] uppercase mb-1 opacity-0 group-hover:opacity-100 transition-opacity duration-500">04 — Reefer</div>
-                            <h3 class="text-white text-sm md:text-lg font-bold leading-tight">Cold Chain & Reefer Hub</h3>
-                            <p class="text-white/50 text-xs mt-1 hidden md:block">Temperature-controlled storage & monitoring</p>
+                            <div
+                                class="text-[#00A1FF] text-[10px] font-bold tracking-[0.2em] uppercase mb-1 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                04 — Reefer</div>
+                            <h3 class="text-white text-sm md:text-lg font-bold leading-tight">Cold Chain & Reefer Hub
+                            </h3>
+                            <p class="text-white/50 text-xs mt-1 hidden md:block">Temperature-controlled storage &
+                                monitoring</p>
                         </div>
-                        <div class="bg-[#00A1FF]/20 backdrop-blur-sm rounded-lg px-3 py-2 border border-[#00A1FF]/30 hidden md:flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-all duration-500">
-                            <svg class="w-4 h-4 text-[#00A1FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                        <div
+                            class="bg-[#00A1FF]/20 backdrop-blur-sm rounded-lg px-3 py-2 border border-[#00A1FF]/30 hidden md:flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-all duration-500">
+                            <svg class="w-4 h-4 text-[#00A1FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
                             </svg>
                             <span class="text-white text-xs font-semibold">Learn More</span>
@@ -364,11 +427,11 @@
                 const text = animatedText.innerText.trim().replace(/\s+/g, ' ');
                 animatedText.innerHTML = '';
                 let charIndex = 0;
-                
+
                 text.split(' ').forEach((word, wordIndex, array) => {
                     const wordSpan = document.createElement('span');
                     wordSpan.className = 'inline-block whitespace-nowrap';
-                    
+
                     word.split('').forEach(char => {
                         const charSpan = document.createElement('span');
                         charSpan.className = 'inline-block opacity-0 translate-x-[40px] transition-all duration-[800ms] ease-out about-text-char';
@@ -377,9 +440,9 @@
                         wordSpan.appendChild(charSpan);
                         charIndex++;
                     });
-                    
+
                     animatedText.appendChild(wordSpan);
-                    
+
                     if (wordIndex < array.length - 1) {
                         const spaceSpan = document.createElement('span');
                         spaceSpan.innerHTML = '&nbsp;';
@@ -452,69 +515,107 @@
     <!-- Trusted Partners Single Horizontal Marquee Section -->
     <section class="relative bg-[#000000] py-10 md:py-14 overflow-hidden w-full select-none  flex items-center">
         <!-- Subtle Side Fade Overlays -->
-        <div class="absolute left-0 top-0 bottom-0 w-20 sm:w-36 bg-gradient-to-r from-[#000000] to-transparent z-20 pointer-events-none"></div>
-        <div class="absolute right-0 top-0 bottom-0 w-20 sm:w-36 bg-gradient-to-l from-[#000000] to-transparent z-20 pointer-events-none"></div>
+        <div
+            class="absolute left-0 top-0 bottom-0 w-20 sm:w-36 bg-gradient-to-r from-[#000000] to-transparent z-20 pointer-events-none">
+        </div>
+        <div
+            class="absolute right-0 top-0 bottom-0 w-20 sm:w-36 bg-gradient-to-l from-[#000000] to-transparent z-20 pointer-events-none">
+        </div>
 
         <div class="flex overflow-hidden w-full relative z-10">
             <!-- First Marquee Group -->
             <div class="flex flex-shrink-0 items-center justify-around min-w-full animate-marquee-forward">
-                <div class="w-36 sm:w-44 h-16 sm:h-20 p-2 sm:p-2.5 mx-2.5 sm:mx-3.5 bg-white rounded-md flex items-center justify-center shadow-lg border border-white/20 flex-shrink-0 transition-transform duration-300 hover:scale-105">
-                    <img src="./partners/CMA-CGM-logo.png" alt="CMA CGM" class="max-h-[85%] max-w-[90%] w-auto object-contain">
+                <div
+                    class="w-36 sm:w-44 h-16 sm:h-20 p-2 sm:p-2.5 mx-2.5 sm:mx-3.5 bg-white rounded-md flex items-center justify-center shadow-lg border border-white/20 flex-shrink-0 transition-transform duration-300 hover:scale-105">
+                    <img src="./partners/CMA-CGM-logo.png" alt="CMA CGM"
+                        class="max-h-[85%] max-w-[90%] w-auto object-contain">
                 </div>
-                <div class="w-36 sm:w-44 h-16 sm:h-20 p-2 sm:p-2.5 mx-2.5 sm:mx-3.5 bg-white rounded-md flex items-center justify-center shadow-lg border border-white/20 flex-shrink-0 transition-transform duration-300 hover:scale-105">
-                    <img src="./partners/Cosco-logo.png" alt="COSCO" class="max-h-[85%] max-w-[90%] w-auto object-contain">
+                <div
+                    class="w-36 sm:w-44 h-16 sm:h-20 p-2 sm:p-2.5 mx-2.5 sm:mx-3.5 bg-white rounded-md flex items-center justify-center shadow-lg border border-white/20 flex-shrink-0 transition-transform duration-300 hover:scale-105">
+                    <img src="./partners/Cosco-logo.png" alt="COSCO"
+                        class="max-h-[85%] max-w-[90%] w-auto object-contain">
                 </div>
-                <div class="w-36 sm:w-44 h-16 sm:h-20 p-2 sm:p-2.5 mx-2.5 sm:mx-3.5 bg-white rounded-md flex items-center justify-center shadow-lg border border-white/20 flex-shrink-0 transition-transform duration-300 hover:scale-105">
-                    <img src="./partners/Feeder-logo.jpg" alt="Feeder" class="max-h-[85%] max-w-[90%] w-auto object-contain">
+                <div
+                    class="w-36 sm:w-44 h-16 sm:h-20 p-2 sm:p-2.5 mx-2.5 sm:mx-3.5 bg-white rounded-md flex items-center justify-center shadow-lg border border-white/20 flex-shrink-0 transition-transform duration-300 hover:scale-105">
+                    <img src="./partners/Feeder-logo.jpg" alt="Feeder"
+                        class="max-h-[85%] max-w-[90%] w-auto object-contain">
                 </div>
-                <div class="w-36 sm:w-44 h-16 sm:h-20 p-2 sm:p-2.5 mx-2.5 sm:mx-3.5 bg-white rounded-md flex items-center justify-center shadow-lg border border-white/20 flex-shrink-0 transition-transform duration-300 hover:scale-105">
-                    <img src="./partners/Hapag LIoyd-logo" alt="Hapag-Lloyd" class="max-h-[85%] max-w-[90%] w-auto object-contain">
+                <div
+                    class="w-36 sm:w-44 h-16 sm:h-20 p-2 sm:p-2.5 mx-2.5 sm:mx-3.5 bg-white rounded-md flex items-center justify-center shadow-lg border border-white/20 flex-shrink-0 transition-transform duration-300 hover:scale-105">
+                    <img src="./partners/Hapag LIoyd-logo" alt="Hapag-Lloyd"
+                        class="max-h-[85%] max-w-[90%] w-auto object-contain">
                 </div>
-                <div class="w-36 sm:w-44 h-16 sm:h-20 p-2 sm:p-2.5 mx-2.5 sm:mx-3.5 bg-white rounded-md flex items-center justify-center shadow-lg border border-white/20 flex-shrink-0 transition-transform duration-300 hover:scale-105">
-                    <img src="./partners/Maersk-logo.png" alt="Maersk" class="max-h-[85%] max-w-[90%] w-auto object-contain">
+                <div
+                    class="w-36 sm:w-44 h-16 sm:h-20 p-2 sm:p-2.5 mx-2.5 sm:mx-3.5 bg-white rounded-md flex items-center justify-center shadow-lg border border-white/20 flex-shrink-0 transition-transform duration-300 hover:scale-105">
+                    <img src="./partners/Maersk-logo.png" alt="Maersk"
+                        class="max-h-[85%] max-w-[90%] w-auto object-contain">
                 </div>
-                <div class="w-36 sm:w-44 h-16 sm:h-20 p-2 sm:p-2.5 mx-2.5 sm:mx-3.5 bg-white rounded-md flex items-center justify-center shadow-lg border border-white/20 flex-shrink-0 transition-transform duration-300 hover:scale-105">
-                    <img src="./partners/OOCL-logo.png" alt="OOCL" class="max-h-[85%] max-w-[90%] w-auto object-contain">
+                <div
+                    class="w-36 sm:w-44 h-16 sm:h-20 p-2 sm:p-2.5 mx-2.5 sm:mx-3.5 bg-white rounded-md flex items-center justify-center shadow-lg border border-white/20 flex-shrink-0 transition-transform duration-300 hover:scale-105">
+                    <img src="./partners/OOCL-logo.png" alt="OOCL"
+                        class="max-h-[85%] max-w-[90%] w-auto object-contain">
                 </div>
-                <div class="w-36 sm:w-44 h-16 sm:h-20 p-2 sm:p-2.5 mx-2.5 sm:mx-3.5 bg-white rounded-md flex items-center justify-center shadow-lg border border-white/20 flex-shrink-0 transition-transform duration-300 hover:scale-105">
-                    <img src="./partners/Unifeeder-logo.jpg" alt="Unifeeder" class="max-h-[85%] max-w-[90%] w-auto object-contain">
+                <div
+                    class="w-36 sm:w-44 h-16 sm:h-20 p-2 sm:p-2.5 mx-2.5 sm:mx-3.5 bg-white rounded-md flex items-center justify-center shadow-lg border border-white/20 flex-shrink-0 transition-transform duration-300 hover:scale-105">
+                    <img src="./partners/Unifeeder-logo.jpg" alt="Unifeeder"
+                        class="max-h-[85%] max-w-[90%] w-auto object-contain">
                 </div>
-                <div class="w-36 sm:w-44 h-16 sm:h-20 p-2 sm:p-2.5 mx-2.5 sm:mx-3.5 bg-white rounded-md flex items-center justify-center shadow-lg border border-white/20 flex-shrink-0 transition-transform duration-300 hover:scale-105">
-                    <img src="./partners/Wan Hai Lines lt-logo.png" alt="Wan Hai Lines" class="max-h-[85%] max-w-[90%] w-auto object-contain">
+                <div
+                    class="w-36 sm:w-44 h-16 sm:h-20 p-2 sm:p-2.5 mx-2.5 sm:mx-3.5 bg-white rounded-md flex items-center justify-center shadow-lg border border-white/20 flex-shrink-0 transition-transform duration-300 hover:scale-105">
+                    <img src="./partners/Wan Hai Lines lt-logo.png" alt="Wan Hai Lines"
+                        class="max-h-[85%] max-w-[90%] w-auto object-contain">
                 </div>
             </div>
 
             <!-- Second Marquee Group (for seamless infinite loop) -->
-            <div class="flex flex-shrink-0 items-center justify-around min-w-full animate-marquee-forward" aria-hidden="true">
-                <div class="w-36 sm:w-44 h-16 sm:h-20 p-2 sm:p-2.5 mx-2.5 sm:mx-3.5 bg-white rounded-md flex items-center justify-center shadow-lg border border-white/20 flex-shrink-0 transition-transform duration-300 hover:scale-105">
-                    <img src="./partners/CMA-CGM-logo.png" alt="CMA CGM" class="max-h-[85%] max-w-[90%] w-auto object-contain">
+            <div class="flex flex-shrink-0 items-center justify-around min-w-full animate-marquee-forward"
+                aria-hidden="true">
+                <div
+                    class="w-36 sm:w-44 h-16 sm:h-20 p-2 sm:p-2.5 mx-2.5 sm:mx-3.5 bg-white rounded-md flex items-center justify-center shadow-lg border border-white/20 flex-shrink-0 transition-transform duration-300 hover:scale-105">
+                    <img src="./partners/CMA-CGM-logo.png" alt="CMA CGM"
+                        class="max-h-[85%] max-w-[90%] w-auto object-contain">
                 </div>
-                <div class="w-36 sm:w-44 h-16 sm:h-20 p-2 sm:p-2.5 mx-2.5 sm:mx-3.5 bg-white rounded-md flex items-center justify-center shadow-lg border border-white/20 flex-shrink-0 transition-transform duration-300 hover:scale-105">
-                    <img src="./partners/Cosco-logo.png" alt="COSCO" class="max-h-[85%] max-w-[90%] w-auto object-contain">
+                <div
+                    class="w-36 sm:w-44 h-16 sm:h-20 p-2 sm:p-2.5 mx-2.5 sm:mx-3.5 bg-white rounded-md flex items-center justify-center shadow-lg border border-white/20 flex-shrink-0 transition-transform duration-300 hover:scale-105">
+                    <img src="./partners/Cosco-logo.png" alt="COSCO"
+                        class="max-h-[85%] max-w-[90%] w-auto object-contain">
                 </div>
-                <div class="w-36 sm:w-44 h-16 sm:h-20 p-2 sm:p-2.5 mx-2.5 sm:mx-3.5 bg-white rounded-md flex items-center justify-center shadow-lg border border-white/20 flex-shrink-0 transition-transform duration-300 hover:scale-105">
-                    <img src="./partners/Feeder-logo.jpg" alt="Feeder" class="max-h-[85%] max-w-[90%] w-auto object-contain">
+                <div
+                    class="w-36 sm:w-44 h-16 sm:h-20 p-2 sm:p-2.5 mx-2.5 sm:mx-3.5 bg-white rounded-md flex items-center justify-center shadow-lg border border-white/20 flex-shrink-0 transition-transform duration-300 hover:scale-105">
+                    <img src="./partners/Feeder-logo.jpg" alt="Feeder"
+                        class="max-h-[85%] max-w-[90%] w-auto object-contain">
                 </div>
-                <div class="w-36 sm:w-44 h-16 sm:h-20 p-2 sm:p-2.5 mx-2.5 sm:mx-3.5 bg-white rounded-md flex items-center justify-center shadow-lg border border-white/20 flex-shrink-0 transition-transform duration-300 hover:scale-105">
-                    <img src="./partners/Hapag LIoyd-logo" alt="Hapag-Lloyd" class="max-h-[85%] max-w-[90%] w-auto object-contain">
+                <div
+                    class="w-36 sm:w-44 h-16 sm:h-20 p-2 sm:p-2.5 mx-2.5 sm:mx-3.5 bg-white rounded-md flex items-center justify-center shadow-lg border border-white/20 flex-shrink-0 transition-transform duration-300 hover:scale-105">
+                    <img src="./partners/Hapag LIoyd-logo" alt="Hapag-Lloyd"
+                        class="max-h-[85%] max-w-[90%] w-auto object-contain">
                 </div>
-                <div class="w-36 sm:w-44 h-16 sm:h-20 p-2 sm:p-2.5 mx-2.5 sm:mx-3.5 bg-white rounded-md flex items-center justify-center shadow-lg border border-white/20 flex-shrink-0 transition-transform duration-300 hover:scale-105">
-                    <img src="./partners/Maersk-logo.png" alt="Maersk" class="max-h-[85%] max-w-[90%] w-auto object-contain">
+                <div
+                    class="w-36 sm:w-44 h-16 sm:h-20 p-2 sm:p-2.5 mx-2.5 sm:mx-3.5 bg-white rounded-md flex items-center justify-center shadow-lg border border-white/20 flex-shrink-0 transition-transform duration-300 hover:scale-105">
+                    <img src="./partners/Maersk-logo.png" alt="Maersk"
+                        class="max-h-[85%] max-w-[90%] w-auto object-contain">
                 </div>
-                <div class="w-36 sm:w-44 h-16 sm:h-20 p-2 sm:p-2.5 mx-2.5 sm:mx-3.5 bg-white rounded-md flex items-center justify-center shadow-lg border border-white/20 flex-shrink-0 transition-transform duration-300 hover:scale-105">
-                    <img src="./partners/OOCL-logo.png" alt="OOCL" class="max-h-[85%] max-w-[90%] w-auto object-contain">
+                <div
+                    class="w-36 sm:w-44 h-16 sm:h-20 p-2 sm:p-2.5 mx-2.5 sm:mx-3.5 bg-white rounded-md flex items-center justify-center shadow-lg border border-white/20 flex-shrink-0 transition-transform duration-300 hover:scale-105">
+                    <img src="./partners/OOCL-logo.png" alt="OOCL"
+                        class="max-h-[85%] max-w-[90%] w-auto object-contain">
                 </div>
-                <div class="w-36 sm:w-44 h-16 sm:h-20 p-2 sm:p-2.5 mx-2.5 sm:mx-3.5 bg-white rounded-md flex items-center justify-center shadow-lg border border-white/20 flex-shrink-0 transition-transform duration-300 hover:scale-105">
-                    <img src="./partners/Unifeeder-logo.jpg" alt="Unifeeder" class="max-h-[85%] max-w-[90%] w-auto object-contain">
+                <div
+                    class="w-36 sm:w-44 h-16 sm:h-20 p-2 sm:p-2.5 mx-2.5 sm:mx-3.5 bg-white rounded-md flex items-center justify-center shadow-lg border border-white/20 flex-shrink-0 transition-transform duration-300 hover:scale-105">
+                    <img src="./partners/Unifeeder-logo.jpg" alt="Unifeeder"
+                        class="max-h-[85%] max-w-[90%] w-auto object-contain">
                 </div>
-                <div class="w-36 sm:w-44 h-16 sm:h-20 p-2 sm:p-2.5 mx-2.5 sm:mx-3.5 bg-white rounded-md flex items-center justify-center shadow-lg border border-white/20 flex-shrink-0 transition-transform duration-300 hover:scale-105">
-                    <img src="./partners/Wan Hai Lines lt-logo.png" alt="Wan Hai Lines" class="max-h-[85%] max-w-[90%] w-auto object-contain">
+                <div
+                    class="w-36 sm:w-44 h-16 sm:h-20 p-2 sm:p-2.5 mx-2.5 sm:mx-3.5 bg-white rounded-md flex items-center justify-center shadow-lg border border-white/20 flex-shrink-0 transition-transform duration-300 hover:scale-105">
+                    <img src="./partners/Wan Hai Lines lt-logo.png" alt="Wan Hai Lines"
+                        class="max-h-[85%] max-w-[90%] w-auto object-contain">
                 </div>
             </div>
         </div>
     </section>
     <!-- Dealex Own Terminal Services -->
-    <section id="services-section" class="bg-[#000000] py-24 px-6 md:px-12 w-full select-none relative overflow-visible">
+    <section id="services-section"
+        class="bg-[#000000] py-24 px-6 md:px-12 w-full select-none relative overflow-visible">
         <div class="max-w-[1440px] mx-auto space-y-12 relative z-10">
             <!-- Header -->
             <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-6">
@@ -534,8 +635,8 @@
             <!-- Cards -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <!-- Card 1 -->
-                <div
-                    class="relative group h-full rounded-[24px] p-8 bg-gradient-to-b from-[#0D1520] to-[#0A0A0F] text-white transition-all duration-500 hover:bg-[#00A1FF] hover:-translate-y-6 hover:-rotate-3 hover:scale-[1.02] hover:shadow-2xl hover:shadow-[#00A1FF]/30 hover:z-10 cursor-pointer flex flex-col border border-[#00A1FF]/20 hover:border-[#00A1FF] origin-bottom-left opacity-0 -translate-x-[50px] terminal-card shadow-[0_8px_30px_rgba(0,161,255,0.08)]" style="transition-delay: 100ms;">
+                <div class="relative group h-full rounded-[24px] p-8 bg-gradient-to-b from-[#0D1520] to-[#0A0A0F] text-white transition-all duration-500 hover:bg-[#00A1FF] hover:-translate-y-6 hover:-rotate-3 hover:scale-[1.02] hover:shadow-2xl hover:shadow-[#00A1FF]/30 hover:z-10 cursor-pointer flex flex-col border border-[#00A1FF]/20 hover:border-[#00A1FF] origin-bottom-left opacity-0 -translate-x-[50px] terminal-card shadow-[0_8px_30px_rgba(0,161,255,0.08)]"
+                    style="transition-delay: 100ms;">
                     <h3 class="text-[20px] font-bold leading-snug mb-4">Key Features</h3>
                     <ul
                         class="text-[13px] text-white/90 group-hover:text-white transition-colors leading-relaxed list-disc pl-4 space-y-2">
@@ -546,8 +647,8 @@
                 </div>
 
                 <!-- Card 2 -->
-                <div
-                    class="relative group h-full rounded-[24px] p-8 bg-gradient-to-b from-[#0D1520] to-[#0A0A0F] text-white transition-all duration-500 hover:bg-[#00A1FF] hover:-translate-y-6 hover:rotate-2 hover:scale-[1.02] hover:shadow-2xl hover:shadow-[#00A1FF]/30 hover:z-10 cursor-pointer flex flex-col border border-[#00A1FF]/20 hover:border-[#00A1FF] origin-bottom-right opacity-0 translate-x-[50px] terminal-card shadow-[0_8px_30px_rgba(0,161,255,0.08)]" style="transition-delay: 200ms;">
+                <div class="relative group h-full rounded-[24px] p-8 bg-gradient-to-b from-[#0D1520] to-[#0A0A0F] text-white transition-all duration-500 hover:bg-[#00A1FF] hover:-translate-y-6 hover:rotate-2 hover:scale-[1.02] hover:shadow-2xl hover:shadow-[#00A1FF]/30 hover:z-10 cursor-pointer flex flex-col border border-[#00A1FF]/20 hover:border-[#00A1FF] origin-bottom-right opacity-0 translate-x-[50px] terminal-card shadow-[0_8px_30px_rgba(0,161,255,0.08)]"
+                    style="transition-delay: 200ms;">
                     <h3 class="text-[20px] font-bold leading-snug mb-4">Operations & Security</h3>
                     <ul
                         class="text-[13px] text-white/90 group-hover:text-white transition-colors leading-relaxed list-disc pl-4 space-y-2">
@@ -559,8 +660,8 @@
                 </div>
 
                 <!-- Card 3 -->
-                <div
-                    class="relative group h-full rounded-[24px] p-8 bg-gradient-to-b from-[#0D1520] to-[#0A0A0F] text-white transition-all duration-500 hover:bg-[#00A1FF] hover:-translate-y-6 hover:-rotate-2 hover:scale-[1.02] hover:shadow-2xl hover:shadow-[#00A1FF]/30 hover:z-10 cursor-pointer flex flex-col border border-[#00A1FF]/20 hover:border-[#00A1FF] origin-bottom-left opacity-0 -translate-x-[50px] terminal-card shadow-[0_8px_30px_rgba(0,161,255,0.08)]" style="transition-delay: 300ms;">
+                <div class="relative group h-full rounded-[24px] p-8 bg-gradient-to-b from-[#0D1520] to-[#0A0A0F] text-white transition-all duration-500 hover:bg-[#00A1FF] hover:-translate-y-6 hover:-rotate-2 hover:scale-[1.02] hover:shadow-2xl hover:shadow-[#00A1FF]/30 hover:z-10 cursor-pointer flex flex-col border border-[#00A1FF]/20 hover:border-[#00A1FF] origin-bottom-left opacity-0 -translate-x-[50px] terminal-card shadow-[0_8px_30px_rgba(0,161,255,0.08)]"
+                    style="transition-delay: 300ms;">
                     <h3 class="text-[20px] font-bold leading-snug mb-4">Target Customers</h3>
                     <ul
                         class="text-[13px] text-white/90 group-hover:text-white transition-colors leading-relaxed list-disc pl-4 space-y-2">
@@ -573,8 +674,8 @@
                 </div>
 
                 <!-- Card 4 -->
-                <div
-                    class="relative group h-full rounded-[24px] p-8 bg-gradient-to-b from-[#0D1520] to-[#0A0A0F] text-white transition-all duration-500 hover:bg-[#00A1FF] hover:-translate-y-6 hover:rotate-3 hover:scale-[1.02] hover:shadow-2xl hover:shadow-[#00A1FF]/30 hover:z-10 cursor-pointer flex flex-col border border-[#00A1FF]/20 hover:border-[#00A1FF] origin-bottom-right opacity-0 translate-x-[50px] terminal-card shadow-[0_8px_30px_rgba(0,161,255,0.08)]" style="transition-delay: 400ms;">
+                <div class="relative group h-full rounded-[24px] p-8 bg-gradient-to-b from-[#0D1520] to-[#0A0A0F] text-white transition-all duration-500 hover:bg-[#00A1FF] hover:-translate-y-6 hover:rotate-3 hover:scale-[1.02] hover:shadow-2xl hover:shadow-[#00A1FF]/30 hover:z-10 cursor-pointer flex flex-col border border-[#00A1FF]/20 hover:border-[#00A1FF] origin-bottom-right opacity-0 translate-x-[50px] terminal-card shadow-[0_8px_30px_rgba(0,161,255,0.08)]"
+                    style="transition-delay: 400ms;">
                     <h3 class="text-[20px] font-bold leading-snug mb-4">Our Commitment</h3>
                     <ul
                         class="text-[13px] text-white/90 group-hover:text-white transition-colors leading-relaxed list-none space-y-3 font-semibold uppercase tracking-wider">
@@ -606,9 +707,10 @@
             }
         });
     </script>
-    
+
     <!-- Our Terminal Network Section -->
-    <section class="bg-[#000000] py-12 md:py-20 px-6 md:px-12 w-full select-none relative overflow-hidden" id="terminal-network-section">
+    <section class="bg-[#000000] py-12 md:py-20 px-6 md:px-12 w-full select-none relative overflow-hidden"
+        id="terminal-network-section">
         <div class="max-w-[1440px] mx-auto space-y-12 relative z-10">
             <!-- Section Header -->
             <div class="text-center space-y-4 max-w-3xl mx-auto">
@@ -620,104 +722,168 @@
                     Strong Partnerships. <span class="text-[#00A1FF]">Seamless Port Operations.</span>
                 </h2>
                 <p class="text-gray-400 text-sm md:text-base leading-relaxed">
-                    We maintain strong working relationships and operational coordination with Karachi's major container terminals, ensuring smooth, efficient and reliable cargo and reefer operations.
+                    We maintain strong working relationships and operational coordination with Karachi's major container
+                    terminals, ensuring smooth, efficient and reliable cargo and reefer operations.
                 </p>
             </div>
 
             <!-- Terminal Cards Vertical Stack -->
             <div class="space-y-4 sm:space-y-5">
-                
+
                 <!-- QICT -->
-                <div class="group relative bg-[#0A0A10] border border-white/10 rounded-[16px] p-4 sm:p-5 flex flex-col md:flex-row items-center gap-5 sm:gap-6 hover:border-[#00A1FF]/60 hover:bg-[#10101A] hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-[#00A1FF]/15 transition-all duration-500 cursor-pointer overflow-hidden">
-                    <div class="absolute top-0 left-0 w-1 h-full bg-[#00A1FF] transform -translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
-                    <div class="w-full md:w-[280px] lg:w-[320px] h-[160px] sm:h-[180px] shrink-0 rounded-[12px] overflow-hidden relative">
-                        <img loading="lazy" src="./images/logistics_port_terminal.png" alt="QICT Terminal" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                <div
+                    class="group relative bg-[#0A0A10] border border-white/10 rounded-[16px] p-4 sm:p-5 flex flex-col md:flex-row items-center gap-5 sm:gap-6 hover:border-[#00A1FF]/60 hover:bg-[#10101A] hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-[#00A1FF]/15 transition-all duration-500 cursor-pointer overflow-hidden">
+                    <div
+                        class="absolute top-0 left-0 w-1 h-full bg-[#00A1FF] transform -translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                    </div>
+                    <div
+                        class="w-full md:w-[280px] lg:w-[320px] h-[160px] sm:h-[180px] shrink-0 rounded-[12px] overflow-hidden relative">
+                        <img loading="lazy" src="./images/QTCC.jpeg" alt="QICT Terminal"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                         <div class="absolute inset-0 bg-black/20"></div>
-                        <div class="absolute bottom-3 left-4 text-white font-black text-lg tracking-wider drop-shadow-md">QICT</div>
+                        <div
+                            class="absolute bottom-3 left-4 text-white font-black text-lg tracking-wider drop-shadow-md">
+                            QICT</div>
                     </div>
                     <div class="flex flex-col md:flex-row items-start md:items-center gap-4 sm:gap-6 flex-grow">
-                        <div class="w-full md:w-[240px] shrink-0 border-b md:border-b-0 md:border-r border-white/10 pb-3 md:pb-0 md:pr-6">
-                            <h3 class="text-white font-extrabold text-2xl tracking-wide group-hover:text-[#00A1FF] transition-colors duration-300">QICT</h3>
-                            <p class="text-[#00A1FF] text-xs font-medium mt-1">Qasim International Container Terminal</p>
+                        <div
+                            class="w-full md:w-[240px] shrink-0 border-b md:border-b-0 md:border-r border-white/10 pb-3 md:pb-0 md:pr-6">
+                            <h3
+                                class="text-white font-extrabold text-2xl tracking-wide group-hover:text-[#00A1FF] transition-colors duration-300">
+                                QICT</h3>
+                            <p class="text-[#00A1FF] text-xs font-medium mt-1">Qasim International Container Terminal
+                            </p>
                         </div>
                         <p class="text-gray-300 text-xs sm:text-sm leading-relaxed flex-grow">
-                            QICT is Pakistan's first and largest container terminal, known for its modern infrastructure and high operational standards. We work closely with QICT to ensure fast, secure and efficient handling of your cargo, including time-sensitive and temperature-controlled shipments.
+                            QICT is Pakistan's first and largest container terminal, known for its modern infrastructure
+                            and high operational standards. We work closely with QICT to ensure fast, secure and
+                            efficient handling of your cargo, including time-sensitive and temperature-controlled
+                            shipments.
                         </p>
                     </div>
                 </div>
 
                 <!-- KICT -->
-                <div class="group relative bg-[#0A0A10] border border-white/10 rounded-[16px] p-4 sm:p-5 flex flex-col md:flex-row items-center gap-5 sm:gap-6 hover:border-[#00A1FF]/60 hover:bg-[#10101A] hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-[#00A1FF]/15 transition-all duration-500 cursor-pointer overflow-hidden">
-                    <div class="absolute top-0 left-0 w-1 h-full bg-[#00A1FF] transform -translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
-                    <div class="w-full md:w-[280px] lg:w-[320px] h-[160px] sm:h-[180px] shrink-0 rounded-[12px] overflow-hidden relative">
-                        <img loading="lazy" src="./images/dot_terminal_crane_hero.jpg" alt="KICT Terminal" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                <div
+                    class="group relative bg-[#0A0A10] border border-white/10 rounded-[16px] p-4 sm:p-5 flex flex-col md:flex-row items-center gap-5 sm:gap-6 hover:border-[#00A1FF]/60 hover:bg-[#10101A] hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-[#00A1FF]/15 transition-all duration-500 cursor-pointer overflow-hidden">
+                    <div
+                        class="absolute top-0 left-0 w-1 h-full bg-[#00A1FF] transform -translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                    </div>
+                    <div
+                        class="w-full md:w-[280px] lg:w-[320px] h-[160px] sm:h-[180px] shrink-0 rounded-[12px] overflow-hidden relative">
+                        <img loading="lazy" src="./images/KICT.jpeg" alt="KICT Terminal"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                         <div class="absolute inset-0 bg-black/20"></div>
-                        <div class="absolute bottom-3 left-4 text-white font-black text-lg tracking-wider drop-shadow-md">KICT</div>
+                        <div
+                            class="absolute bottom-3 left-4 text-white font-black text-lg tracking-wider drop-shadow-md">
+                            KICT</div>
                     </div>
                     <div class="flex flex-col md:flex-row items-start md:items-center gap-4 sm:gap-6 flex-grow">
-                        <div class="w-full md:w-[240px] shrink-0 border-b md:border-b-0 md:border-r border-white/10 pb-3 md:pb-0 md:pr-6">
-                            <h3 class="text-white font-extrabold text-2xl tracking-wide group-hover:text-[#00A1FF] transition-colors duration-300">KICT</h3>
-                            <p class="text-[#00A1FF] text-xs font-medium mt-1">Karachi International Container Terminal</p>
+                        <div
+                            class="w-full md:w-[240px] shrink-0 border-b md:border-b-0 md:border-r border-white/10 pb-3 md:pb-0 md:pr-6">
+                            <h3
+                                class="text-white font-extrabold text-2xl tracking-wide group-hover:text-[#00A1FF] transition-colors duration-300">
+                                KICT</h3>
+                            <p class="text-[#00A1FF] text-xs font-medium mt-1">Karachi International Container Terminal
+                            </p>
                         </div>
                         <p class="text-gray-300 text-xs sm:text-sm leading-relaxed flex-grow">
-                            KICT is a leading container terminal in Karachi, offering world-class facilities and advanced technology. Our close coordination with KICT helps us deliver smooth vessel operations, faster turnaround times and reliable cargo movement for our valued customers.
+                            KICT is a leading container terminal in Karachi, offering world-class facilities and
+                            advanced technology. Our close coordination with KICT helps us deliver smooth vessel
+                            operations, faster turnaround times and reliable cargo movement for our valued customers.
                         </p>
                     </div>
                 </div>
 
                 <!-- KGTL -->
-                <div class="group relative bg-[#0A0A10] border border-white/10 rounded-[16px] p-4 sm:p-5 flex flex-col md:flex-row items-center gap-5 sm:gap-6 hover:border-[#00A1FF]/60 hover:bg-[#10101A] hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-[#00A1FF]/15 transition-all duration-500 cursor-pointer overflow-hidden">
-                    <div class="absolute top-0 left-0 w-1 h-full bg-[#00A1FF] transform -translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
-                    <div class="w-full md:w-[280px] lg:w-[320px] h-[160px] sm:h-[180px] shrink-0 rounded-[12px] overflow-hidden relative">
-                        <img loading="lazy" src="./images/dot_crane_hero.png" alt="KGTL Terminal" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                <div
+                    class="group relative bg-[#0A0A10] border border-white/10 rounded-[16px] p-4 sm:p-5 flex flex-col md:flex-row items-center gap-5 sm:gap-6 hover:border-[#00A1FF]/60 hover:bg-[#10101A] hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-[#00A1FF]/15 transition-all duration-500 cursor-pointer overflow-hidden">
+                    <div
+                        class="absolute top-0 left-0 w-1 h-full bg-[#00A1FF] transform -translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                    </div>
+                    <div
+                        class="w-full md:w-[280px] lg:w-[320px] h-[160px] sm:h-[180px] shrink-0 rounded-[12px] overflow-hidden relative">
+                        <img loading="lazy" src="./images/dot_crane_hero.png" alt="KGTL Terminal"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                         <div class="absolute inset-0 bg-black/20"></div>
-                        <div class="absolute bottom-3 left-4 text-white font-black text-lg tracking-wider drop-shadow-md">KGTL</div>
+                        <div
+                            class="absolute bottom-3 left-4 text-white font-black text-lg tracking-wider drop-shadow-md">
+                            KGTL</div>
                     </div>
                     <div class="flex flex-col md:flex-row items-start md:items-center gap-4 sm:gap-6 flex-grow">
-                        <div class="w-full md:w-[240px] shrink-0 border-b md:border-b-0 md:border-r border-white/10 pb-3 md:pb-0 md:pr-6">
-                            <h3 class="text-white font-extrabold text-2xl tracking-wide group-hover:text-[#00A1FF] transition-colors duration-300">KGTL</h3>
+                        <div
+                            class="w-full md:w-[240px] shrink-0 border-b md:border-b-0 md:border-r border-white/10 pb-3 md:pb-0 md:pr-6">
+                            <h3
+                                class="text-white font-extrabold text-2xl tracking-wide group-hover:text-[#00A1FF] transition-colors duration-300">
+                                KGTL</h3>
                             <p class="text-[#00A1FF] text-xs font-medium mt-1">Karachi Gateway Terminal Limited</p>
                         </div>
                         <p class="text-gray-300 text-xs sm:text-sm leading-relaxed flex-grow">
-                            KGTL is a state-of-the-art terminal, designed for efficiency, safety and sustainability. We maintain strong operational coordination with KGTL to ensure seamless cargo handling and timely delivery of both dry and reefer cargo.
+                            KGTL is a state-of-the-art terminal, designed for efficiency, safety and sustainability. We
+                            maintain strong operational coordination with KGTL to ensure seamless cargo handling and
+                            timely delivery of both dry and reefer cargo.
                         </p>
                     </div>
                 </div>
 
                 <!-- SAPT -->
-                <div class="group relative bg-[#0A0A10] border border-white/10 rounded-[16px] p-4 sm:p-5 flex flex-col md:flex-row items-center gap-5 sm:gap-6 hover:border-[#00A1FF]/60 hover:bg-[#10101A] hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-[#00A1FF]/15 transition-all duration-500 cursor-pointer overflow-hidden">
-                    <div class="absolute top-0 left-0 w-1 h-full bg-[#00A1FF] transform -translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
-                    <div class="w-full md:w-[280px] lg:w-[320px] h-[160px] sm:h-[180px] shrink-0 rounded-[12px] overflow-hidden relative">
-                        <img loading="lazy" src="./images/dot_crane_hero.jpg" alt="SAPT Terminal" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                <div
+                    class="group relative bg-[#0A0A10] border border-white/10 rounded-[16px] p-4 sm:p-5 flex flex-col md:flex-row items-center gap-5 sm:gap-6 hover:border-[#00A1FF]/60 hover:bg-[#10101A] hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-[#00A1FF]/15 transition-all duration-500 cursor-pointer overflow-hidden">
+                    <div
+                        class="absolute top-0 left-0 w-1 h-full bg-[#00A1FF] transform -translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                    </div>
+                    <div
+                        class="w-full md:w-[280px] lg:w-[320px] h-[160px] sm:h-[180px] shrink-0 rounded-[12px] overflow-hidden relative">
+                        <img loading="lazy" src="./images/dot_crane_hero.jpg" alt="SAPT Terminal"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                         <div class="absolute inset-0 bg-black/20"></div>
-                        <div class="absolute bottom-3 left-4 text-white font-black text-lg tracking-wider drop-shadow-md">SAPT</div>
+                        <div
+                            class="absolute bottom-3 left-4 text-white font-black text-lg tracking-wider drop-shadow-md">
+                            SAPT</div>
                     </div>
                     <div class="flex flex-col md:flex-row items-start md:items-center gap-4 sm:gap-6 flex-grow">
-                        <div class="w-full md:w-[240px] shrink-0 border-b md:border-b-0 md:border-r border-white/10 pb-3 md:pb-0 md:pr-6">
-                            <h3 class="text-white font-extrabold text-2xl tracking-wide group-hover:text-[#00A1FF] transition-colors duration-300">SAPT</h3>
+                        <div
+                            class="w-full md:w-[240px] shrink-0 border-b md:border-b-0 md:border-r border-white/10 pb-3 md:pb-0 md:pr-6">
+                            <h3
+                                class="text-white font-extrabold text-2xl tracking-wide group-hover:text-[#00A1FF] transition-colors duration-300">
+                                SAPT</h3>
                             <p class="text-[#00A1FF] text-xs font-medium mt-1">South Asia Pakistan Terminal</p>
                         </div>
                         <p class="text-gray-300 text-xs sm:text-sm leading-relaxed flex-grow">
-                            SAPT plays a vital role in Pakistan's trade and logistics network. Our established relationship and continuous coordination with SAPT allow us to provide efficient terminal operations, faster vessel processing and dependable cargo handling services.
+                            SAPT plays a vital role in Pakistan's trade and logistics network. Our established
+                            relationship and continuous coordination with SAPT allow us to provide efficient terminal
+                            operations, faster vessel processing and dependable cargo handling services.
                         </p>
                     </div>
                 </div>
 
                 <!-- ICT -->
-                <div class="group relative bg-[#0A0A10] border border-white/10 rounded-[16px] p-4 sm:p-5 flex flex-col md:flex-row items-center gap-5 sm:gap-6 hover:border-[#00A1FF]/60 hover:bg-[#10101A] hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-[#00A1FF]/15 transition-all duration-500 cursor-pointer overflow-hidden">
-                    <div class="absolute top-0 left-0 w-1 h-full bg-[#00A1FF] transform -translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
-                    <div class="w-full md:w-[280px] lg:w-[320px] h-[160px] sm:h-[180px] shrink-0 rounded-[12px] overflow-hidden relative">
-                        <img loading="lazy" src="./images/logistics_port_terminal.png" alt="ICT Terminal" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                <div
+                    class="group relative bg-[#0A0A10] border border-white/10 rounded-[16px] p-4 sm:p-5 flex flex-col md:flex-row items-center gap-5 sm:gap-6 hover:border-[#00A1FF]/60 hover:bg-[#10101A] hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-[#00A1FF]/15 transition-all duration-500 cursor-pointer overflow-hidden">
+                    <div
+                        class="absolute top-0 left-0 w-1 h-full bg-[#00A1FF] transform -translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                    </div>
+                    <div
+                        class="w-full md:w-[280px] lg:w-[320px] h-[160px] sm:h-[180px] shrink-0 rounded-[12px] overflow-hidden relative">
+                        <img loading="lazy" src="./images/logistics_port_terminal.png" alt="ICT Terminal"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                         <div class="absolute inset-0 bg-black/20"></div>
-                        <div class="absolute bottom-3 left-4 text-white font-black text-lg tracking-wider drop-shadow-md">ICT</div>
+                        <div
+                            class="absolute bottom-3 left-4 text-white font-black text-lg tracking-wider drop-shadow-md">
+                            ICT</div>
                     </div>
                     <div class="flex flex-col md:flex-row items-start md:items-center gap-4 sm:gap-6 flex-grow">
-                        <div class="w-full md:w-[240px] shrink-0 border-b md:border-b-0 md:border-r border-white/10 pb-3 md:pb-0 md:pr-6">
-                            <h3 class="text-white font-extrabold text-2xl tracking-wide group-hover:text-[#00A1FF] transition-colors duration-300">ICT</h3>
+                        <div
+                            class="w-full md:w-[240px] shrink-0 border-b md:border-b-0 md:border-r border-white/10 pb-3 md:pb-0 md:pr-6">
+                            <h3
+                                class="text-white font-extrabold text-2xl tracking-wide group-hover:text-[#00A1FF] transition-colors duration-300">
+                                ICT</h3>
                             <p class="text-[#00A1FF] text-xs font-medium mt-1">International Cargo Terminal</p>
                         </div>
                         <p class="text-gray-300 text-xs sm:text-sm leading-relaxed flex-grow">
-                            ICT is a modern and strategically located terminal, offering flexible and reliable services for all types of cargo. We work in close coordination with ICT to ensure smooth operations, reduced transit times and efficient handling of refrigerated and general cargo.
+                            ICT is a modern and strategically located terminal, offering flexible and reliable services
+                            for all types of cargo. We work in close coordination with ICT to ensure smooth operations,
+                            reduced transit times and efficient handling of refrigerated and general cargo.
                         </p>
                     </div>
                 </div>
@@ -725,7 +891,7 @@
             </div>
         </div>
     </section>
-    
+
     <!-- Our Process -->
     <!-- Why Choose Us -->
     <section class="bg-[#000000] pt-24 pb-40 lg:pb-48 px-6 md:px-12 w-full select-none relative overflow-hidden">
@@ -742,169 +908,217 @@
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 <!-- Item 1 -->
-                <div class="relative flex flex-col rounded-[12px] overflow-hidden cursor-pointer bg-[#242424] transition-all duration-700 ease-out opacity-0 translate-y-10 why-choose-card border border-white/5 group" style="transition-delay: 100ms;">
+                <div class="relative flex flex-col rounded-[12px] overflow-hidden cursor-pointer bg-[#242424] transition-all duration-700 ease-out opacity-0 translate-y-10 why-choose-card border border-white/5 group"
+                    style="transition-delay: 100ms;">
                     <div class="relative w-full overflow-hidden" style="aspect-ratio: 16/10;">
-                        <img loading="lazy" src="./images/logistics_truck_fleet.png" alt="Specialized Fleet" class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105">
+                        <img loading="lazy" src="./images/logistics_truck_fleet.png" alt="Specialized Fleet"
+                            class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105">
                     </div>
-                    <div class="flex items-center justify-between p-5 bg-[#2A2A2A] transition-colors duration-300 group-hover:bg-[#333333] z-10 relative">
+                    <div
+                        class="flex items-center justify-between p-5 bg-[#2A2A2A] transition-colors duration-300 group-hover:bg-[#333333] z-10 relative">
                         <div>
                             <div class="text-white/60 text-[11px] font-semibold mb-1">1. Logistics</div>
                             <h3 class="text-white font-bold text-lg leading-tight">Specialized Fleet</h3>
                         </div>
-                        <button class="why-choose-btn bg-white text-black rounded shadow w-8 h-8 flex items-center justify-center font-black text-sm group-hover:bg-[#00A1FF] group-hover:text-white transition-all duration-300">
+                        <button
+                            class="why-choose-btn bg-white text-black rounded shadow w-8 h-8 flex items-center justify-center font-black text-sm group-hover:bg-[#00A1FF] group-hover:text-white transition-all duration-300">
                             &raquo;
                         </button>
                     </div>
-                    <div class="why-choose-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out bg-[#2A2A2A] group-hover:bg-[#333333]">
+                    <div
+                        class="why-choose-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out bg-[#2A2A2A] group-hover:bg-[#333333]">
                         <p class="px-5 pb-5 text-gray-400 text-sm leading-relaxed border-t border-white/5 pt-3">
-                            State-of-the-art trucks equipped with modern temperature control and tracking systems, ensuring your cargo travels in optimal conditions.
+                            State-of-the-art trucks equipped with modern temperature control and tracking systems,
+                            ensuring your cargo travels in optimal conditions.
                         </p>
                     </div>
                 </div>
 
                 <!-- Item 2 -->
-                <div class="relative flex flex-col rounded-[12px] overflow-hidden cursor-pointer bg-[#242424] transition-all duration-700 ease-out opacity-0 translate-y-10 why-choose-card border border-white/5 group" style="transition-delay: 200ms;">
+                <div class="relative flex flex-col rounded-[12px] overflow-hidden cursor-pointer bg-[#242424] transition-all duration-700 ease-out opacity-0 translate-y-10 why-choose-card border border-white/5 group"
+                    style="transition-delay: 200ms;">
                     <div class="relative w-full overflow-hidden" style="aspect-ratio: 16/10;">
-                        <img loading="lazy" src="./images/logistics_highway_coverage.png" alt="Nationwide Coverage" class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105">
+                        <img loading="lazy" src="./images/logistics_highway_coverage.png" alt="Nationwide Coverage"
+                            class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105">
                     </div>
-                    <div class="flex items-center justify-between p-5 bg-[#2A2A2A] transition-colors duration-300 group-hover:bg-[#333333] z-10 relative">
+                    <div
+                        class="flex items-center justify-between p-5 bg-[#2A2A2A] transition-colors duration-300 group-hover:bg-[#333333] z-10 relative">
                         <div>
                             <div class="text-white/60 text-[11px] font-semibold mb-1">2. Network</div>
                             <h3 class="text-white font-bold text-lg leading-tight">Nationwide Coverage</h3>
                         </div>
-                        <button class="why-choose-btn bg-white text-black rounded shadow w-8 h-8 flex items-center justify-center font-black text-sm group-hover:bg-[#00A1FF] group-hover:text-white transition-all duration-300">
+                        <button
+                            class="why-choose-btn bg-white text-black rounded shadow w-8 h-8 flex items-center justify-center font-black text-sm group-hover:bg-[#00A1FF] group-hover:text-white transition-all duration-300">
                             &raquo;
                         </button>
                     </div>
-                    <div class="why-choose-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out bg-[#2A2A2A] group-hover:bg-[#333333]">
+                    <div
+                        class="why-choose-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out bg-[#2A2A2A] group-hover:bg-[#333333]">
                         <p class="px-5 pb-5 text-gray-400 text-sm leading-relaxed border-t border-white/5 pt-3">
-                            Extensive network spanning across major cities and remote locations, providing seamless connectivity throughout Pakistan.
+                            Extensive network spanning across major cities and remote locations, providing seamless
+                            connectivity throughout Pakistan.
                         </p>
                     </div>
                 </div>
 
                 <!-- Item 3 -->
-                <div class="relative flex flex-col rounded-[12px] overflow-hidden cursor-pointer bg-[#242424] transition-all duration-700 ease-out opacity-0 translate-y-10 why-choose-card border border-white/5 group" style="transition-delay: 300ms;">
+                <div class="relative flex flex-col rounded-[12px] overflow-hidden cursor-pointer bg-[#242424] transition-all duration-700 ease-out opacity-0 translate-y-10 why-choose-card border border-white/5 group"
+                    style="transition-delay: 300ms;">
                     <div class="relative w-full overflow-hidden" style="aspect-ratio: 16/10;">
-                        <img loading="lazy" src="./images/logistics_fast_delivery.png" alt="On-Time Delivery" class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105">
+                        <img loading="lazy" src="./images/logistics_fast_delivery.png" alt="On-Time Delivery"
+                            class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105">
                     </div>
-                    <div class="flex items-center justify-between p-5 bg-[#2A2A2A] transition-colors duration-300 group-hover:bg-[#333333] z-10 relative">
+                    <div
+                        class="flex items-center justify-between p-5 bg-[#2A2A2A] transition-colors duration-300 group-hover:bg-[#333333] z-10 relative">
                         <div>
                             <div class="text-white/60 text-[11px] font-semibold mb-1">3. Delivery</div>
                             <h3 class="text-white font-bold text-lg leading-tight">On-Time, Every Time</h3>
                         </div>
-                        <button class="why-choose-btn bg-white text-black rounded shadow w-8 h-8 flex items-center justify-center font-black text-sm group-hover:bg-[#00A1FF] group-hover:text-white transition-all duration-300">
+                        <button
+                            class="why-choose-btn bg-white text-black rounded shadow w-8 h-8 flex items-center justify-center font-black text-sm group-hover:bg-[#00A1FF] group-hover:text-white transition-all duration-300">
                             &raquo;
                         </button>
                     </div>
-                    <div class="why-choose-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out bg-[#2A2A2A] group-hover:bg-[#333333]">
+                    <div
+                        class="why-choose-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out bg-[#2A2A2A] group-hover:bg-[#333333]">
                         <p class="px-5 pb-5 text-gray-400 text-sm leading-relaxed border-t border-white/5 pt-3">
-                            Committed to strict schedules and rapid dispatch times, guaranteeing that your shipments arrive exactly when expected.
+                            Committed to strict schedules and rapid dispatch times, guaranteeing that your shipments
+                            arrive exactly when expected.
                         </p>
                     </div>
                 </div>
 
                 <!-- Item 4 -->
-                <div class="relative flex flex-col rounded-[12px] overflow-hidden cursor-pointer bg-[#242424] transition-all duration-700 ease-out opacity-0 translate-y-10 why-choose-card border border-white/5 group" style="transition-delay: 400ms;">
+                <div class="relative flex flex-col rounded-[12px] overflow-hidden cursor-pointer bg-[#242424] transition-all duration-700 ease-out opacity-0 translate-y-10 why-choose-card border border-white/5 group"
+                    style="transition-delay: 400ms;">
                     <div class="relative w-full overflow-hidden" style="aspect-ratio: 16/10;">
-                        <img loading="lazy" src="./images/logistics_tracking.png" alt="Advanced Tracking" class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105">
+                        <img loading="lazy" src="./images/logistics_tracking.png" alt="Advanced Tracking"
+                            class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105">
                     </div>
-                    <div class="flex items-center justify-between p-5 bg-[#2A2A2A] transition-colors duration-300 group-hover:bg-[#333333] z-10 relative">
+                    <div
+                        class="flex items-center justify-between p-5 bg-[#2A2A2A] transition-colors duration-300 group-hover:bg-[#333333] z-10 relative">
                         <div>
                             <div class="text-white/60 text-[11px] font-semibold mb-1">4. Technology</div>
                             <h3 class="text-white font-bold text-lg leading-tight">Advanced Tracking</h3>
                         </div>
-                        <button class="why-choose-btn bg-white text-black rounded shadow w-8 h-8 flex items-center justify-center font-black text-sm group-hover:bg-[#00A1FF] group-hover:text-white transition-all duration-300">
+                        <button
+                            class="why-choose-btn bg-white text-black rounded shadow w-8 h-8 flex items-center justify-center font-black text-sm group-hover:bg-[#00A1FF] group-hover:text-white transition-all duration-300">
                             &raquo;
                         </button>
                     </div>
-                    <div class="why-choose-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out bg-[#2A2A2A] group-hover:bg-[#333333]">
+                    <div
+                        class="why-choose-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out bg-[#2A2A2A] group-hover:bg-[#333333]">
                         <p class="px-5 pb-5 text-gray-400 text-sm leading-relaxed border-t border-white/5 pt-3">
-                            Real-time visibility and instant alerts keep you informed about your cargo's location and status at every step of the journey.
+                            Real-time visibility and instant alerts keep you informed about your cargo's location and
+                            status at every step of the journey.
                         </p>
                     </div>
                 </div>
 
                 <!-- Item 5 -->
-                <div class="relative flex flex-col rounded-[12px] overflow-hidden cursor-pointer bg-[#242424] transition-all duration-700 ease-out opacity-0 translate-y-10 why-choose-card border border-white/5 group" style="transition-delay: 500ms;">
+                <div class="relative flex flex-col rounded-[12px] overflow-hidden cursor-pointer bg-[#242424] transition-all duration-700 ease-out opacity-0 translate-y-10 why-choose-card border border-white/5 group"
+                    style="transition-delay: 500ms;">
                     <div class="relative w-full overflow-hidden" style="aspect-ratio: 16/10;">
-                        <img loading="lazy" src="./images/logistics_cost_effective.png" alt="Cost-Effective" class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105">
+                        <img loading="lazy" src="./images/logistics_cost_effective.png" alt="Cost-Effective"
+                            class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105">
                     </div>
-                    <div class="flex items-center justify-between p-5 bg-[#2A2A2A] transition-colors duration-300 group-hover:bg-[#333333] z-10 relative">
+                    <div
+                        class="flex items-center justify-between p-5 bg-[#2A2A2A] transition-colors duration-300 group-hover:bg-[#333333] z-10 relative">
                         <div>
                             <div class="text-white/60 text-[11px] font-semibold mb-1">5. Value</div>
                             <h3 class="text-white font-bold text-lg leading-tight">Cost-Effective</h3>
                         </div>
-                        <button class="why-choose-btn bg-white text-black rounded shadow w-8 h-8 flex items-center justify-center font-black text-sm group-hover:bg-[#00A1FF] group-hover:text-white transition-all duration-300">
+                        <button
+                            class="why-choose-btn bg-white text-black rounded shadow w-8 h-8 flex items-center justify-center font-black text-sm group-hover:bg-[#00A1FF] group-hover:text-white transition-all duration-300">
                             &raquo;
                         </button>
                     </div>
-                    <div class="why-choose-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out bg-[#2A2A2A] group-hover:bg-[#333333]">
+                    <div
+                        class="why-choose-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out bg-[#2A2A2A] group-hover:bg-[#333333]">
                         <p class="px-5 pb-5 text-gray-400 text-sm leading-relaxed border-t border-white/5 pt-3">
-                            Optimized routing and efficient fuel management allow us to offer highly competitive rates without compromising on quality.
+                            Optimized routing and efficient fuel management allow us to offer highly competitive rates
+                            without compromising on quality.
                         </p>
                     </div>
                 </div>
 
                 <!-- Item 6 -->
-                <div class="relative flex flex-col rounded-[12px] overflow-hidden cursor-pointer bg-[#242424] transition-all duration-700 ease-out opacity-0 translate-y-10 why-choose-card border border-white/5 group" style="transition-delay: 600ms;">
+                <div class="relative flex flex-col rounded-[12px] overflow-hidden cursor-pointer bg-[#242424] transition-all duration-700 ease-out opacity-0 translate-y-10 why-choose-card border border-white/5 group"
+                    style="transition-delay: 600ms;">
                     <div class="relative w-full overflow-hidden" style="aspect-ratio: 16/10;">
-                        <img loading="lazy" src="./images/logistics_safety.png" alt="Safety & Compliance" class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105">
+                        <img loading="lazy" src="./images/logistics_safety.png" alt="Safety & Compliance"
+                            class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105">
                     </div>
-                    <div class="flex items-center justify-between p-5 bg-[#2A2A2A] transition-colors duration-300 group-hover:bg-[#333333] z-10 relative">
+                    <div
+                        class="flex items-center justify-between p-5 bg-[#2A2A2A] transition-colors duration-300 group-hover:bg-[#333333] z-10 relative">
                         <div>
                             <div class="text-white/60 text-[11px] font-semibold mb-1">6. Standards</div>
                             <h3 class="text-white font-bold text-lg leading-tight">Safety & Compliance</h3>
                         </div>
-                        <button class="why-choose-btn bg-white text-black rounded shadow w-8 h-8 flex items-center justify-center font-black text-sm group-hover:bg-[#00A1FF] group-hover:text-white transition-all duration-300">
+                        <button
+                            class="why-choose-btn bg-white text-black rounded shadow w-8 h-8 flex items-center justify-center font-black text-sm group-hover:bg-[#00A1FF] group-hover:text-white transition-all duration-300">
                             &raquo;
                         </button>
                     </div>
-                    <div class="why-choose-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out bg-[#2A2A2A] group-hover:bg-[#333333]">
+                    <div
+                        class="why-choose-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out bg-[#2A2A2A] group-hover:bg-[#333333]">
                         <p class="px-5 pb-5 text-gray-400 text-sm leading-relaxed border-t border-white/5 pt-3">
-                            Rigorous adherence to international safety standards and regular fleet maintenance to protect your valuable shipments.
+                            Rigorous adherence to international safety standards and regular fleet maintenance to
+                            protect your valuable shipments.
                         </p>
                     </div>
                 </div>
 
                 <!-- Item 7 -->
-                <div class="relative flex flex-col rounded-[12px] overflow-hidden cursor-pointer bg-[#242424] transition-all duration-700 ease-out opacity-0 translate-y-10 why-choose-card border border-white/5 group" style="transition-delay: 700ms;">
+                <div class="relative flex flex-col rounded-[12px] overflow-hidden cursor-pointer bg-[#242424] transition-all duration-700 ease-out opacity-0 translate-y-10 why-choose-card border border-white/5 group"
+                    style="transition-delay: 700ms;">
                     <div class="relative w-full overflow-hidden" style="aspect-ratio: 16/10;">
-                        <img loading="lazy" src="./images/logistics_operations_team.png" alt="Experienced Team" class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105">
+                        <img loading="lazy" src="./images/logistics_operations_team.png" alt="Experienced Team"
+                            class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105">
                     </div>
-                    <div class="flex items-center justify-between p-5 bg-[#2A2A2A] transition-colors duration-300 group-hover:bg-[#333333] z-10 relative">
+                    <div
+                        class="flex items-center justify-between p-5 bg-[#2A2A2A] transition-colors duration-300 group-hover:bg-[#333333] z-10 relative">
                         <div>
                             <div class="text-white/60 text-[11px] font-semibold mb-1">7. Expertise</div>
                             <h3 class="text-white font-bold text-lg leading-tight">Experienced Team</h3>
                         </div>
-                        <button class="why-choose-btn bg-white text-black rounded shadow w-8 h-8 flex items-center justify-center font-black text-sm group-hover:bg-[#00A1FF] group-hover:text-white transition-all duration-300">
+                        <button
+                            class="why-choose-btn bg-white text-black rounded shadow w-8 h-8 flex items-center justify-center font-black text-sm group-hover:bg-[#00A1FF] group-hover:text-white transition-all duration-300">
                             &raquo;
                         </button>
                     </div>
-                    <div class="why-choose-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out bg-[#2A2A2A] group-hover:bg-[#333333]">
+                    <div
+                        class="why-choose-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out bg-[#2A2A2A] group-hover:bg-[#333333]">
                         <p class="px-5 pb-5 text-gray-400 text-sm leading-relaxed border-t border-white/5 pt-3">
-                            Dedicated professionals with deep industry knowledge managing complex logistics operations with precision and care.
+                            Dedicated professionals with deep industry knowledge managing complex logistics operations
+                            with precision and care.
                         </p>
                     </div>
                 </div>
 
                 <!-- Item 8 -->
-                <div class="relative flex flex-col rounded-[12px] overflow-hidden cursor-pointer bg-[#242424] transition-all duration-700 ease-out opacity-0 translate-y-10 why-choose-card border border-white/5 group" style="transition-delay: 800ms;">
+                <div class="relative flex flex-col rounded-[12px] overflow-hidden cursor-pointer bg-[#242424] transition-all duration-700 ease-out opacity-0 translate-y-10 why-choose-card border border-white/5 group"
+                    style="transition-delay: 800ms;">
                     <div class="relative w-full overflow-hidden" style="aspect-ratio: 16/10;">
-                        <img loading="lazy" src="./images/logistics_eco_friendly.png" alt="Eco-Friendly" class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105">
+                        <img loading="lazy" src="./images/logistics_eco_friendly.png" alt="Eco-Friendly"
+                            class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105">
                     </div>
-                    <div class="flex items-center justify-between p-5 bg-[#2A2A2A] transition-colors duration-300 group-hover:bg-[#333333] z-10 relative">
+                    <div
+                        class="flex items-center justify-between p-5 bg-[#2A2A2A] transition-colors duration-300 group-hover:bg-[#333333] z-10 relative">
                         <div>
                             <div class="text-white/60 text-[11px] font-semibold mb-1">8. Sustainability</div>
                             <h3 class="text-white font-bold text-lg leading-tight">Eco-Friendly</h3>
                         </div>
-                        <button class="why-choose-btn bg-white text-black rounded shadow w-8 h-8 flex items-center justify-center font-black text-sm group-hover:bg-[#00A1FF] group-hover:text-white transition-all duration-300">
+                        <button
+                            class="why-choose-btn bg-white text-black rounded shadow w-8 h-8 flex items-center justify-center font-black text-sm group-hover:bg-[#00A1FF] group-hover:text-white transition-all duration-300">
                             &raquo;
                         </button>
                     </div>
-                    <div class="why-choose-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out bg-[#2A2A2A] group-hover:bg-[#333333]">
+                    <div
+                        class="why-choose-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out bg-[#2A2A2A] group-hover:bg-[#333333]">
                         <p class="px-5 pb-5 text-gray-400 text-sm leading-relaxed border-t border-white/5 pt-3">
-                            Implementing sustainable practices and utilizing fuel-efficient vehicles to minimize our environmental footprint.
+                            Implementing sustainable practices and utilizing fuel-efficient vehicles to minimize our
+                            environmental footprint.
                         </p>
                     </div>
                 </div>
@@ -917,7 +1131,7 @@
                         card.addEventListener('click', () => {
                             const content = card.querySelector('.why-choose-content');
                             const btn = card.querySelector('.why-choose-btn');
-                            
+
                             if (content.style.maxHeight && content.style.maxHeight !== '0px') {
                                 content.style.maxHeight = '0px';
                                 btn.style.transform = 'rotate(0deg)';
@@ -940,14 +1154,15 @@
                     });
                 });
             </script>
-            </div>
+        </div>
         </div>
     </section>
 
 
 
     <!-- Statistics Badge & FAQ Accordion Section -->
-    <section id="faq-section" class="bg-[#000000] pt-0 pb-2 md:pb-24 px-6 md:px-12 w-full select-none relative overflow-visible text-white z-20">
+    <section id="faq-section"
+        class="bg-[#000000] pt-0 pb-2 md:pb-24 px-6 md:px-12 w-full select-none relative overflow-visible text-white z-20">
         <div
             class="absolute right-0 top-1/4 w-96 h-96 opacity-10 pointer-events-none bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:16px_16px]">
         </div>
@@ -982,14 +1197,16 @@
                 </div>
             </div>
 
-                        <!-- FAQ Layout Restructure -->
+            <!-- FAQ Layout Restructure -->
             <div class="mt-24 pb-8 w-full">
                 <!-- Top Header & Button -->
-                <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-10 space-y-6 md:space-y-0">
+                <div
+                    class="flex flex-col md:flex-row justify-between items-start md:items-center mb-10 space-y-6 md:space-y-0">
                     <p class="text-white/80 text-lg md:text-xl max-w-xl leading-relaxed font-light">
                         We combine efficient transport, technology, and communication for seamless logistics.
                     </p>
-                    <a href="tel:+923032555145" class="inline-flex items-center space-x-3 bg-[#00A1FF] hover:bg-[#0090E0] text-white font-medium px-8 py-4 rounded-full transition-colors text-sm md:text-base tracking-wide shadow-lg shadow-[#00A1FF]/20 group">
+                    <a href="tel:+923032555145"
+                        class="inline-flex items-center space-x-3 bg-[#00A1FF] hover:bg-[#0090E0] text-white font-medium px-8 py-4 rounded-full transition-colors text-sm md:text-base tracking-wide shadow-lg shadow-[#00A1FF]/20 group">
                         <span>Ask Us a Question</span>
                         <span class="text-xl leading-none transition-transform group-hover:translate-x-1">&rarr;</span>
                     </a>
@@ -1004,47 +1221,70 @@
                     <div class="flex flex-col divide-y divide-white/10">
                         <div class="faq-item group py-6 cursor-pointer transition-all">
                             <div class="flex items-center justify-between w-full text-left">
-                                <span class="faq-heading text-white font-bold text-base sm:text-lg tracking-wide group-hover:text-[#00A1FF] transition-colors pr-4">Where can I find the FAQ section?</span>
-                                <span class="arrow-icon text-xl font-bold text-gray-400 transition-transform duration-300">&#x2198;</span>
+                                <span
+                                    class="faq-heading text-white font-bold text-base sm:text-lg tracking-wide group-hover:text-[#00A1FF] transition-colors pr-4">Where
+                                    can I find the FAQ section?</span>
+                                <span
+                                    class="arrow-icon text-xl font-bold text-gray-400 transition-transform duration-300">&#x2198;</span>
                             </div>
                             <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-                                <p class="text-gray-400 text-sm leading-relaxed pt-4 max-w-md">Our FAQ section provides answers to the most commonly asked questions regarding our transport, technology, and tracking services.</p>
+                                <p class="text-gray-400 text-sm leading-relaxed pt-4 max-w-md">Our FAQ section provides
+                                    answers to the most commonly asked questions regarding our transport, technology,
+                                    and tracking services.</p>
                             </div>
                         </div>
                         <div class="faq-item group py-6 cursor-pointer transition-all">
                             <div class="flex items-center justify-between w-full text-left">
-                                <span class="faq-heading text-white font-bold text-base sm:text-lg tracking-wide group-hover:text-[#00A1FF] transition-colors pr-4">How can I contact customer support?</span>
-                                <span class="arrow-icon text-xl font-bold text-gray-400 transition-transform duration-300">&#x2198;</span>
+                                <span
+                                    class="faq-heading text-white font-bold text-base sm:text-lg tracking-wide group-hover:text-[#00A1FF] transition-colors pr-4">How
+                                    can I contact customer support?</span>
+                                <span
+                                    class="arrow-icon text-xl font-bold text-gray-400 transition-transform duration-300">&#x2198;</span>
                             </div>
                             <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-                                <p class="text-gray-400 text-sm leading-relaxed pt-4 max-w-md">You can reach out to our dedicated support team 24/7 via phone, email, or through the "Ask Us a Question" button.</p>
+                                <p class="text-gray-400 text-sm leading-relaxed pt-4 max-w-md">You can reach out to our
+                                    dedicated support team 24/7 via phone, email, or through the "Ask Us a Question"
+                                    button.</p>
                             </div>
                         </div>
                         <div class="faq-item group py-6 cursor-pointer transition-all">
                             <div class="flex items-center justify-between w-full text-left">
-                                <span class="faq-heading text-white font-bold text-base sm:text-lg tracking-wide group-hover:text-[#00A1FF] transition-colors pr-4">What should I do if there is an issue with my order?</span>
-                                <span class="arrow-icon text-xl font-bold text-gray-400 transition-transform duration-300">&#x2198;</span>
+                                <span
+                                    class="faq-heading text-white font-bold text-base sm:text-lg tracking-wide group-hover:text-[#00A1FF] transition-colors pr-4">What
+                                    should I do if there is an issue with my order?</span>
+                                <span
+                                    class="arrow-icon text-xl font-bold text-gray-400 transition-transform duration-300">&#x2198;</span>
                             </div>
                             <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-                                <p class="text-gray-400 text-sm leading-relaxed pt-4 max-w-md">If you experience any issues, please contact our support team immediately with your tracking number.</p>
+                                <p class="text-gray-400 text-sm leading-relaxed pt-4 max-w-md">If you experience any
+                                    issues, please contact our support team immediately with your tracking number.</p>
                             </div>
                         </div>
                         <div class="faq-item group py-6 cursor-pointer transition-all">
                             <div class="flex items-center justify-between w-full text-left">
-                                <span class="faq-heading text-white font-bold text-base sm:text-lg tracking-wide group-hover:text-[#00A1FF] transition-colors pr-4">What should I do if I receive a damaged item?</span>
-                                <span class="arrow-icon text-xl font-bold text-gray-400 transition-transform duration-300">&#x2198;</span>
+                                <span
+                                    class="faq-heading text-white font-bold text-base sm:text-lg tracking-wide group-hover:text-[#00A1FF] transition-colors pr-4">What
+                                    should I do if I receive a damaged item?</span>
+                                <span
+                                    class="arrow-icon text-xl font-bold text-gray-400 transition-transform duration-300">&#x2198;</span>
                             </div>
                             <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-                                <p class="text-gray-400 text-sm leading-relaxed pt-4 max-w-md">Document the damage with photographs immediately and contact our claims department for swift resolution.</p>
+                                <p class="text-gray-400 text-sm leading-relaxed pt-4 max-w-md">Document the damage with
+                                    photographs immediately and contact our claims department for swift resolution.</p>
                             </div>
                         </div>
                         <div class="faq-item group py-6 cursor-pointer transition-all border-b border-white/10">
                             <div class="flex items-center justify-between w-full text-left">
-                                <span class="faq-heading text-white font-bold text-base sm:text-lg tracking-wide group-hover:text-[#00A1FF] transition-colors pr-4">What payment methods do you accept?</span>
-                                <span class="arrow-icon text-xl font-bold text-gray-400 transition-transform duration-300">&#x2198;</span>
+                                <span
+                                    class="faq-heading text-white font-bold text-base sm:text-lg tracking-wide group-hover:text-[#00A1FF] transition-colors pr-4">What
+                                    payment methods do you accept?</span>
+                                <span
+                                    class="arrow-icon text-xl font-bold text-gray-400 transition-transform duration-300">&#x2198;</span>
                             </div>
                             <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-                                <p class="text-gray-400 text-sm leading-relaxed pt-4 max-w-md">We accept all major credit cards, wire transfers, and verified digital payment platforms for international clients.</p>
+                                <p class="text-gray-400 text-sm leading-relaxed pt-4 max-w-md">We accept all major
+                                    credit cards, wire transfers, and verified digital payment platforms for
+                                    international clients.</p>
                             </div>
                         </div>
                     </div>
@@ -1053,47 +1293,68 @@
                     <div class="flex flex-col divide-y divide-white/10">
                         <div class="faq-item group py-6 cursor-pointer transition-all">
                             <div class="flex items-center justify-between w-full text-left">
-                                <span class="faq-heading text-white font-bold text-base sm:text-lg tracking-wide group-hover:text-[#00A1FF] transition-colors pr-4">Can I cancel my order?</span>
-                                <span class="arrow-icon text-xl font-bold text-gray-400 transition-transform duration-300">&#x2198;</span>
+                                <span
+                                    class="faq-heading text-white font-bold text-base sm:text-lg tracking-wide group-hover:text-[#00A1FF] transition-colors pr-4">Can
+                                    I cancel my order?</span>
+                                <span
+                                    class="arrow-icon text-xl font-bold text-gray-400 transition-transform duration-300">&#x2198;</span>
                             </div>
                             <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-                                <p class="text-gray-400 text-sm leading-relaxed pt-4 max-w-md">Orders can be cancelled before dispatch. Please check our cancellation terms for specific timeframes.</p>
+                                <p class="text-gray-400 text-sm leading-relaxed pt-4 max-w-md">Orders can be cancelled
+                                    before dispatch. Please check our cancellation terms for specific timeframes.</p>
                             </div>
                         </div>
                         <div class="faq-item group py-6 cursor-pointer transition-all">
                             <div class="flex items-center justify-between w-full text-left">
-                                <span class="faq-heading text-white font-bold text-base sm:text-lg tracking-wide group-hover:text-[#00A1FF] transition-colors pr-4">How can I track my order?</span>
-                                <span class="arrow-icon text-xl font-bold text-gray-400 transition-transform duration-300">&#x2198;</span>
+                                <span
+                                    class="faq-heading text-white font-bold text-base sm:text-lg tracking-wide group-hover:text-[#00A1FF] transition-colors pr-4">How
+                                    can I track my order?</span>
+                                <span
+                                    class="arrow-icon text-xl font-bold text-gray-400 transition-transform duration-300">&#x2198;</span>
                             </div>
                             <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-                                <p class="text-gray-400 text-sm leading-relaxed pt-4 max-w-md">You can use the 14-digit tracking number provided in your confirmation email on our portal for real-time updates.</p>
+                                <p class="text-gray-400 text-sm leading-relaxed pt-4 max-w-md">You can use the 14-digit
+                                    tracking number provided in your confirmation email on our portal for real-time
+                                    updates.</p>
                             </div>
                         </div>
                         <div class="faq-item group py-6 cursor-pointer transition-all">
                             <div class="flex items-center justify-between w-full text-left">
-                                <span class="faq-heading text-white font-bold text-base sm:text-lg tracking-wide group-hover:text-[#00A1FF] transition-colors pr-4">Do you offer international shipping?</span>
-                                <span class="arrow-icon text-xl font-bold text-gray-400 transition-transform duration-300">&#x2198;</span>
+                                <span
+                                    class="faq-heading text-white font-bold text-base sm:text-lg tracking-wide group-hover:text-[#00A1FF] transition-colors pr-4">Do
+                                    you offer international shipping?</span>
+                                <span
+                                    class="arrow-icon text-xl font-bold text-gray-400 transition-transform duration-300">&#x2198;</span>
                             </div>
                             <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-                                <p class="text-gray-400 text-sm leading-relaxed pt-4 max-w-md">Yes, our global network allows us to provide shipping services to over 150 countries worldwide.</p>
+                                <p class="text-gray-400 text-sm leading-relaxed pt-4 max-w-md">Yes, our global network
+                                    allows us to provide shipping services to over 150 countries worldwide.</p>
                             </div>
                         </div>
                         <div class="faq-item group py-6 cursor-pointer transition-all">
                             <div class="flex items-center justify-between w-full text-left">
-                                <span class="faq-heading text-white font-bold text-base sm:text-lg tracking-wide group-hover:text-[#00A1FF] transition-colors pr-4">What is your return policy?</span>
-                                <span class="arrow-icon text-xl font-bold text-gray-400 transition-transform duration-300">&#x2198;</span>
+                                <span
+                                    class="faq-heading text-white font-bold text-base sm:text-lg tracking-wide group-hover:text-[#00A1FF] transition-colors pr-4">What
+                                    is your return policy?</span>
+                                <span
+                                    class="arrow-icon text-xl font-bold text-gray-400 transition-transform duration-300">&#x2198;</span>
                             </div>
                             <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-                                <p class="text-gray-400 text-sm leading-relaxed pt-4 max-w-md">Our return policy allows items to be returned within 30 days of receipt, subject to terms and conditions.</p>
+                                <p class="text-gray-400 text-sm leading-relaxed pt-4 max-w-md">Our return policy allows
+                                    items to be returned within 30 days of receipt, subject to terms and conditions.</p>
                             </div>
                         </div>
                         <div class="faq-item group py-6 cursor-pointer transition-all border-b border-white/10">
                             <div class="flex items-center justify-between w-full text-left">
-                                <span class="faq-heading text-white font-bold text-base sm:text-lg tracking-wide group-hover:text-[#00A1FF] transition-colors pr-4">What is your shipping policy?</span>
-                                <span class="arrow-icon text-xl font-bold text-gray-400 transition-transform duration-300">&#x2198;</span>
+                                <span
+                                    class="faq-heading text-white font-bold text-base sm:text-lg tracking-wide group-hover:text-[#00A1FF] transition-colors pr-4">What
+                                    is your shipping policy?</span>
+                                <span
+                                    class="arrow-icon text-xl font-bold text-gray-400 transition-transform duration-300">&#x2198;</span>
                             </div>
                             <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-                                <p class="text-gray-400 text-sm leading-relaxed pt-4 max-w-md">We offer a variety of shipping methods depending on the destination, size, and urgency of the freight.</p>
+                                <p class="text-gray-400 text-sm leading-relaxed pt-4 max-w-md">We offer a variety of
+                                    shipping methods depending on the destination, size, and urgency of the freight.</p>
                             </div>
                         </div>
                     </div>
@@ -1120,9 +1381,12 @@
                 <div class="lg:col-span-3 flex flex-col space-y-4 w-full">
                     <div class="flex items-center self-start gap-4 w-full">
                         <a href="#" class="flex items-center shrink-0">
-                            <img loading="lazy" src="./images/logo.png" alt="Dealex Logo" class="h-16 md:h-20 lg:h-24 w-auto object-contain transition-transform duration-300 hover:scale-105" style="filter: invert(1) hue-rotate(180deg);">
+                            <img loading="lazy" src="./images/logo.png" alt="Dealex Logo"
+                                class="h-10 md:h-12 lg:h-14 w-auto object-contain transition-transform duration-300 hover:scale-105"
+                                style="filter: invert(1) hue-rotate(180deg);">
                         </a>
-                        <div class="w-[160px] md:hidden shrink-0 relative aspect-[2/1] bg-contain bg-no-repeat bg-center" style="background-image: url('./images/DOT.png');">
+                        <div class="w-[160px] md:hidden shrink-0 relative aspect-[2/1] bg-contain bg-no-repeat bg-center"
+                            style="background-image: url('./images/DOT.png');">
                         </div>
                     </div>
                 </div>
@@ -1188,11 +1452,18 @@
                 <div class="col-span-1 md:col-span-6 lg:col-span-2 flex flex-col space-y-6">
                     <h4 class="text-[#00A1FF] font-extrabold text-sm tracking-wide">Useful Link</h4>
                     <div class="grid grid-cols-1 gap-x-4 gap-y-3.5">
-                        <a href="about.html" class="text-gray-400 hover:text-white transition-colors text-xs font-semibold">About us</a>
-                        <a href="team.html" class="text-gray-400 hover:text-white transition-colors text-xs font-semibold">Our Team</a>
-                        <a href="blog.html" class="text-gray-400 hover:text-white transition-colors text-xs font-semibold">Blog</a>
-                        <a href="dot-terminal.html" class="text-gray-400 hover:text-white transition-colors text-xs font-semibold">DOT Terminal</a>
-                        <a href="contact.html" class="text-gray-400 hover:text-white transition-colors text-xs font-semibold">Contact Us</a>
+                        <a href="about.html"
+                            class="text-gray-400 hover:text-white transition-colors text-xs font-semibold">About us</a>
+                        <a href="team.html"
+                            class="text-gray-400 hover:text-white transition-colors text-xs font-semibold">Our Team</a>
+                        <a href="blog.html"
+                            class="text-gray-400 hover:text-white transition-colors text-xs font-semibold">Blog</a>
+                        <a href="dot-terminal.html"
+                            class="text-gray-400 hover:text-white transition-colors text-xs font-semibold">DOT
+                            Terminal</a>
+                        <a href="contact.html"
+                            class="text-gray-400 hover:text-white transition-colors text-xs font-semibold">Contact
+                            Us</a>
                     </div>
                 </div>
 
@@ -1200,35 +1471,42 @@
                 <div class="col-span-1 md:col-span-6 lg:col-span-3 flex flex-col space-y-6">
                     <h4 class="text-[#00A1FF] font-extrabold text-sm tracking-wide">Working Hours</h4>
                     <div class="space-y-3.5 text-gray-400 text-xs font-semibold">
-                        <p class="flex items-center justify-between">
-                            <span>Mon to Fri :</span>
-                            <span class="text-white text-right">9:00 AM - 5:00 PM</span>
-                        </p>
-                        <p class="flex items-center justify-between">
-                            <span>Saturday :  </span>
-                            <span class="text-white text-right">10:00 AM - 6:00 PM</span>
-                        </p>
-                        <p class="flex items-center justify-between text-gray-400">
-                            <span>Sunday Closed</span>
-                        </p>
+                        <div class="grid grid-cols-[100px_1fr] items-center gap-2">
+                            <span class="text-gray-400">Mon to Fri:</span>
+                            <span class="text-white font-medium">9:00 AM - 5:00 PM</span>
+                        </div>
+                        <div class="grid grid-cols-[100px_1fr] items-center gap-2">
+                            <span class="text-gray-400">Saturday:</span>
+                            <span class="text-white font-medium">10:00 AM - 6:00 PM</span>
+                        </div>
+                        <div class="grid grid-cols-[100px_1fr] items-center gap-2">
+                            <span class="text-gray-400">Sunday:</span>
+                            <span class="text-gray-400 font-medium">Closed</span>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Column Block 4: Contact Core Communication Links Layout -->
                 <div class="col-span-2 md:col-span-6 lg:col-span-4 flex flex-col space-y-6">
                     <h4 class="text-[#00A1FF] font-extrabold text-sm tracking-wide">Contact Us</h4>
-                    
+
                     <!-- DTLS -->
                     <div class="space-y-2">
-                        <h5 class="text-white text-xs font-bold uppercase tracking-wider">Dealex Transport & Logistics Services</h5>
+                        <h5 class="text-white text-xs font-bold uppercase tracking-wider">Dealex Transport & Logistics
+                            Services</h5>
                         <p class="text-gray-400 text-xs leading-relaxed pr-4">
                             Suite #309, 3rd Floor, Landmark Plaza, I.I. Chundrigar Road, Karachi – 74200, Pakistan
                         </p>
                         <p class="text-gray-400 text-[11px] font-semibold">
-                            Phone: <a href="tel:+923032555145" class="hover:text-[#00A1FF] transition-colors">+92 303 2555145</a> | <a href="tel:+923032555142" class="hover:text-[#00A1FF] transition-colors">+92 303 2555142</a> | <a href="tel:+923042555191" class="hover:text-[#00A1FF] transition-colors">+92 304 2555191</a>
+                            Phone: <a href="tel:+923032555145" class="hover:text-[#00A1FF] transition-colors">+92 303
+                                2555145</a> | <a href="tel:+923032555142"
+                                class="hover:text-[#00A1FF] transition-colors">+92 303 2555142</a> | <a
+                                href="tel:+923042555191" class="hover:text-[#00A1FF] transition-colors">+92 304
+                                2555191</a>
                         </p>
                         <p class="text-gray-400 text-[11px] font-semibold">
-                            Email: <a href="mailto:logistics@dealex.pk" class="hover:text-[#00A1FF] transition-colors underline underline-offset-2">logistics@dealex.pk</a>
+                            Email: <a href="mailto:logistics@dealex.pk"
+                                class="hover:text-[#00A1FF] transition-colors underline underline-offset-2">logistics@dealex.pk</a>
                         </p>
                     </div>
 
@@ -1239,10 +1517,17 @@
                             31-Km Sunder Stop, Multan Road, Lahore, Pakistan
                         </p>
                         <p class="text-gray-400 text-[11px] font-semibold">
-                            Phone: <a href="tel:+923028244428" class="hover:text-[#00A1FF] transition-colors">+92 302 8244428</a> | <a href="tel:+923088244428" class="hover:text-[#00A1FF] transition-colors">+92 308 8244428</a> | <a href="tel:+923098244428" class="hover:text-[#00A1FF] transition-colors">+92 309 8244428</a>
+                            Phone: <a href="tel:+923028244428" class="hover:text-[#00A1FF] transition-colors">+92 302
+                                8244428</a> | <a href="tel:+923088244428"
+                                class="hover:text-[#00A1FF] transition-colors">+92 308 8244428</a> | <a
+                                href="tel:+923098244428" class="hover:text-[#00A1FF] transition-colors">+92 309
+                                8244428</a>
                         </p>
                         <p class="text-gray-400 text-[11px] font-semibold">
-                            Email: <a href="mailto:dot@dealex.pk" class="hover:text-[#00A1FF] transition-colors underline underline-offset-2">dot@dealex.pk</a> | <a href="mailto:tm.dot@dealex.pk" class="hover:text-[#00A1FF] transition-colors underline underline-offset-2">tm.dot@dealex.pk</a>
+                            Email: <a href="mailto:dot@dealex.pk"
+                                class="hover:text-[#00A1FF] transition-colors underline underline-offset-2">dot@dealex.pk</a>
+                            | <a href="mailto:tm.dot@dealex.pk"
+                                class="hover:text-[#00A1FF] transition-colors underline underline-offset-2">tm.dot@dealex.pk</a>
                         </p>
                     </div>
                 </div>
@@ -1267,14 +1552,14 @@
         const mobileMenu = document.getElementById('mobile-menu');
         const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
 
-        if(mobileMenuBtn && mobileMenu) {
+        if (mobileMenuBtn && mobileMenu) {
             mobileMenuBtn.addEventListener('click', () => {
                 mobileMenu.classList.toggle('scale-y-0');
                 mobileMenu.classList.toggle('opacity-0');
                 mobileMenu.classList.toggle('pointer-events-none');
-                
+
                 const svg = mobileMenuBtn.querySelector('svg');
-                if(svg) {
+                if (svg) {
                     if (mobileMenu.classList.contains('scale-y-0')) {
                         svg.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>';
                     } else {
@@ -1282,12 +1567,12 @@
                     }
                 }
             });
-            
+
             mobileNavLinks.forEach(link => {
                 link.addEventListener('click', () => {
                     mobileMenu.classList.add('scale-y-0', 'opacity-0', 'pointer-events-none');
                     const svg = mobileMenuBtn.querySelector('svg');
-                    if(svg) {
+                    if (svg) {
                         svg.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>';
                     }
                 });
@@ -1297,4 +1582,3 @@
 </body>
 
 </html>
-
