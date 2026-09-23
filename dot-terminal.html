@@ -120,107 +120,206 @@
     </section>
 
     <!-- Main DOT Terminal Showcase Presentation Banner -->
-    <main class="w-full max-w-[1440px] mx-auto bg-[#000000] border border-white/10 rounded-[24px] md:rounded-[32px] overflow-hidden p-6 md:p-10 lg:p-12 mb-16 shadow-2xl relative">
+    <main class="w-full max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 mb-20 relative z-10">
         
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-4 items-stretch relative z-10">
+        <!-- SECTION 1: Hero Showcase Card -->
+        <div class="bg-gradient-to-b from-[#0D0E15] to-[#050508] border border-white/10 rounded-[28px] md:rounded-[36px] overflow-hidden p-6 md:p-10 lg:p-12 shadow-2xl relative mb-12 backdrop-blur-xl">
+            <!-- Background Ambient Glow & Grid Accents -->
+            <div class="absolute top-0 right-0 w-96 h-96 bg-[#00A1FF]/10 rounded-full blur-[100px] pointer-events-none"></div>
+            <div class="absolute bottom-0 left-0 w-80 h-80 bg-[#0051FF]/10 rounded-full blur-[90px] pointer-events-none"></div>
             
-            <!-- Left Column: Branding, DOT Logo, Title & Overview -->
-            <div class="lg:col-span-5 flex flex-col justify-between pr-0 lg:pr-6 z-20">
-                <div>
-                    <!-- Top Dealex Logo -->
-                    <div class="mb-8">
-                        <img src="./images/logo_preview_on_dark.png" alt="Dealex Transport & Logistics Services" class="h-12 md:h-14 w-auto object-contain">
-                    </div>
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center relative z-10">
+                
+                <!-- Left Column: Branding, Title, Stats & Description -->
+                <div class="lg:col-span-6 flex flex-col justify-between space-y-6">
+                    <div>
 
-                    <!-- DOT Terminal Logo Graphic -->
-                    <div class="my-6 flex justify-center lg:justify-start">
-                        <img src="./images/DOT.png" alt="DOT Dealex Own Terminal" class="max-w-[280px] md:max-w-[320px] lg:max-w-[340px] w-full h-auto object-contain drop-shadow-[0_0_25px_rgba(0,161,255,0.25)]">
-                    </div>
+                        <!-- Brand Logos Row -->
+                        <div class="flex flex-wrap items-center gap-6 mb-6">
+                            <img src="./images/logo_preview_on_dark.png" alt="Dealex Transport & Logistics Services" class="h-10 md:h-12 w-auto object-contain">
+                            <div class="h-8 w-[1px] bg-white/15 hidden sm:block"></div>
+                            <img src="./images/DOT.png" alt="DOT Dealex Own Terminal" class="h-12 md:h-14 w-auto object-contain drop-shadow-[0_0_20px_rgba(0,161,255,0.3)]">
+                        </div>
 
-                    <!-- Heading with Cyan Vertical Accent Bar -->
-                    <div class="flex items-stretch gap-4 mt-8 mb-6">
-                        <div class="w-3 md:w-3.5 bg-[#00A1FF] rounded-sm shrink-0"></div>
-                        <div>
-                            <h2 class="text-2xl md:text-3xl lg:text-3xl xl:text-4xl font-extrabold text-white leading-tight">
-                                Dealex Own Terminal (DOT)<br>
-                                <span class="text-white">Reefer & Cold Chain HUB</span>
-                            </h2>
+                        <!-- Main Heading -->
+                        <h2 class="text-3xl sm:text-4xl lg:text-4xl xl:text-5xl font-extrabold text-white leading-[1.15] mb-5 tracking-tight">
+                            Dealex Own Terminal <span class="text-[#00A1FF] font-black">(DOT)</span><br>
+                            <span class="bg-gradient-to-r from-[#00A1FF] via-[#38BDF8] to-[#60A5FA] bg-clip-text text-transparent">Reefer & Cold Chain HUB</span>
+                        </h2>
+
+                        <!-- Overview Text -->
+                        <p class="text-gray-300 text-sm sm:text-base leading-relaxed font-normal mb-8">
+                            Dealex Own Terminal (DOT) is a state-of-the-art, purpose-built Reefer & Cold Chain logistics hub engineered to handle, store, monitor, and service temperature-controlled containers with uncompromising standards of efficiency, safety, and reliability. DOT guarantees end-to-end cold chain integrity from arrival to final dispatch.
+                        </p>
+
+                        <!-- Key Highlights / Quick Metrics Bar -->
+                        <div class="grid grid-cols-3 gap-3 sm:gap-4 pt-4 border-t border-white/10">
+                            <div class="bg-white/5 border border-white/10 rounded-2xl p-3 text-center transition-all hover:border-[#00A1FF]/50 hover:bg-[#00A1FF]/5">
+                                <div class="text-[#00A1FF] text-xl sm:text-2xl font-black">24/7</div>
+                                <div class="text-gray-400 text-[10px] sm:text-xs font-semibold uppercase tracking-wider mt-0.5">Live Monitoring</div>
+                            </div>
+                            <div class="bg-white/5 border border-white/10 rounded-2xl p-3 text-center transition-all hover:border-[#00A1FF]/50 hover:bg-[#00A1FF]/5">
+                                <div class="text-[#00A1FF] text-xl sm:text-2xl font-black">100%</div>
+                                <div class="text-gray-400 text-[10px] sm:text-xs font-semibold uppercase tracking-wider mt-0.5">PTI Compliant</div>
+                            </div>
+                            <div class="bg-white/5 border border-white/10 rounded-2xl p-3 text-center transition-all hover:border-[#00A1FF]/50 hover:bg-[#00A1FF]/5">
+                                <div class="text-[#00A1FF] text-xl sm:text-2xl font-black">99.9%</div>
+                                <div class="text-gray-400 text-[10px] sm:text-xs font-semibold uppercase tracking-wider mt-0.5">Power Uptime</div>
+                            </div>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Description Text -->
-                    <p class="text-gray-300 text-sm md:text-base leading-relaxed font-normal pl-7 lg:pl-8 max-w-xl">
-                        Dealex Own Terminal (DOT) is a purpose-built Reefer & Cold Chain logistics hub designed to handle, store, monitor, and service temperature-controlled containers with the highest standards of efficiency, safety, and reliability. Developed to meet the growing needs of perishable cargo movement, DOT ensures end-to-end cold chain integrity from container arrival to final dispatch.
+                <!-- Right Column: Media Feature Visual Card -->
+                <div class="lg:col-span-6 relative">
+                    <div class="relative group rounded-2xl sm:rounded-3xl overflow-hidden border border-white/15 bg-black shadow-2xl shadow-[#00A1FF]/10">
+                        <img src="./images/dot_terminal_crane_hero.jpg" alt="DOT Terminal Reefer Container Crane Yard" class="w-full h-[380px] sm:h-[450px] lg:h-[500px] object-cover transition-transform duration-700 group-hover:scale-105">
+                        
+                        <!-- Overlay Gradients -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent pointer-events-none"></div>
+
+
+                        <!-- Bottom Information Card Overlay -->
+                        <div class="absolute bottom-4 left-4 right-4 bg-[#0A0A0F]/85 backdrop-blur-xl border border-white/15 rounded-2xl p-4 sm:p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 shadow-xl">
+                            <div>
+                                <h4 class="text-white text-sm sm:text-base font-bold">DOT Terminal Reefer Crane Yard</h4>
+                                <p class="text-gray-400 text-xs mt-0.5">31-Km Sunder Stop, Multan Road, Lahore</p>
+                            </div>
+                            <a href="contact.html" class="bg-[#00A1FF] hover:bg-[#0090E0] text-white text-xs font-bold px-4 py-2.5 rounded-xl transition-all shrink-0 flex items-center gap-1.5 shadow-md shadow-[#00A1FF]/30">
+                                Contact Facility <span>↗</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- SECTION 2: Capabilities & Services Header -->
+        <div class="text-center max-w-3xl mx-auto mb-10">
+            <h3 class="text-xs font-extrabold uppercase tracking-[0.2em] text-[#00A1FF] mb-2">Capabilities & Infrastructure</h3>
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white tracking-tight">
+                Comprehensive Reefer & Cold Chain Services
+            </h2>
+            <p class="text-gray-400 text-xs sm:text-sm mt-3 leading-relaxed">
+                Equipped with specialized power infrastructure, continuous monitoring, and expert technical teams to ensure unbroken cold chain integrity for every container.
+            </p>
+        </div>
+
+        <!-- SECTION 3: 6-Card Feature Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+            <!-- Card 1 -->
+            <div class="group bg-[#0A0A0F]/90 hover:bg-[#0D0E17] border border-white/10 hover:border-[#00A1FF]/50 rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 shadow-lg hover:shadow-2xl hover:shadow-[#00A1FF]/10 flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-[#00A1FF]/10 border border-[#00A1FF]/30 flex items-center justify-center text-[#00A1FF] mb-5 group-hover:scale-110 group-hover:bg-[#00A1FF] group-hover:text-white transition-all duration-300">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-white text-lg mb-2 group-hover:text-[#00A1FF] transition-colors">Reefer Container Stacking & Storage</h3>
+                    <p class="text-gray-300 text-xs sm:text-sm leading-relaxed">
+                        Secure and organized stacking solutions supported by efficient yard planning for both short-term and long-term storage requirements.
                     </p>
                 </div>
-            </div>
-
-            <!-- Middle Column: Angled Container Crane Photo Section -->
-            <div class="lg:col-span-3 relative flex items-center justify-center -mx-0 lg:-mx-6 my-6 lg:my-0 min-h-[350px] lg:min-h-[620px] overflow-hidden rounded-2xl lg:rounded-none">
-                <div class="w-full h-full angled-image-container relative overflow-hidden bg-black flex items-center justify-center">
-                    <img src="./images/dot_terminal_crane_hero.jpg" alt="DOT Terminal Reefer Container Crane Yard" class="w-full h-full object-cover min-h-[350px] lg:min-h-[620px] transform hover:scale-105 transition-transform duration-700">
+                <div class="mt-6 pt-4 border-t border-white/5 flex items-center justify-between text-xs text-[#00A1FF] font-semibold">
+                    <span>Yard Capacity & Planning</span>
+                    <span class="group-hover:translate-x-1 transition-transform">→</span>
                 </div>
             </div>
 
-            <!-- Right Column: Cold Chain Feature List & Accent Blocks -->
-            <div class="lg:col-span-4 flex flex-col justify-between pl-0 lg:pl-6 pt-2 lg:pt-0 z-20">
-                <div class="space-y-5">
-                    
-                    <!-- Feature 1 -->
-                    <div class="border-b border-[#00A1FF] pb-4">
-                        <h3 class="font-bold text-white text-base lg:text-base mb-1">Reefer Container Stacking & Storage</h3>
-                        <p class="text-gray-300 text-xs lg:text-xs leading-relaxed">
-                            Secure and organized stacking solutions supported by efficient yard planning for both short-term and long-term storage requirements.
-                        </p>
+            <!-- Card 2 -->
+            <div class="group bg-[#0A0A0F]/90 hover:bg-[#0D0E17] border border-white/10 hover:border-[#00A1FF]/50 rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 shadow-lg hover:shadow-2xl hover:shadow-[#00A1FF]/10 flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-[#00A1FF]/10 border border-[#00A1FF]/30 flex items-center justify-center text-[#00A1FF] mb-5 group-hover:scale-110 group-hover:bg-[#00A1FF] group-hover:text-white transition-all duration-300">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
                     </div>
-
-                    <!-- Feature 2 -->
-                    <div class="border-b border-[#00A1FF] pb-4">
-                        <h3 class="font-bold text-white text-base lg:text-base mb-1">Reefer Plug-in & Power Supply Facilities</h3>
-                        <p class="text-gray-300 text-xs lg:text-xs leading-relaxed">
-                            High-capacity plug-in points providing uninterrupted power supply to maintain precise temperature control at all times.
-                        </p>
-                    </div>
-
-                    <!-- Feature 3 -->
-                    <div class="border-b border-[#00A1FF] pb-4">
-                        <h3 class="font-bold text-white text-base lg:text-base mb-1">24/7 Reefer Monitoring</h3>
-                        <p class="text-gray-300 text-xs lg:text-xs leading-relaxed">
-                            Round-the-clock monitoring of temperature, humidity, and container performance by trained and certified reefer technicians.
-                        </p>
-                    </div>
-
-                    <!-- Feature 4 -->
-                    <div class="border-b border-[#00A1FF] pb-4">
-                        <h3 class="font-bold text-white text-base lg:text-base mb-1">Pre-Trip Inspection (PTI)</h3>
-                        <p class="text-gray-300 text-xs lg:text-xs leading-relaxed">
-                            Comprehensive PTI services to ensure reefer containers are fully compliant and ready for loading and onward transit.
-                        </p>
-                    </div>
-
-                    <!-- Feature 5 -->
-                    <div class="border-b border-[#00A1FF] pb-4">
-                        <h3 class="font-bold text-white text-base lg:text-base mb-1">Technical Support & Repairs</h3>
-                        <p class="text-gray-300 text-xs lg:text-xs leading-relaxed">
-                            On-site reefer mechanics equipped to handle troubleshooting, preventive maintenance, and both minor and major repairs.
-                        </p>
-                    </div>
-
-                    <!-- Feature 6 -->
-                    <div class="pb-1">
-                        <h3 class="font-bold text-white text-base lg:text-base mb-1">Cold Chain Integrity Management</h3>
-                        <p class="text-gray-300 text-xs lg:text-xs leading-relaxed">
-                            Strict operational protocols and monitoring systems designed to protect cargo quality throughout the storage and handling process.
-                        </p>
-                    </div>
-
+                    <h3 class="font-bold text-white text-lg mb-2 group-hover:text-[#00A1FF] transition-colors">Reefer Plug-in & Power Supply Facilities</h3>
+                    <p class="text-gray-300 text-xs sm:text-sm leading-relaxed">
+                        High-capacity plug-in points providing uninterrupted power supply to maintain precise temperature control at all times.
+                    </p>
                 </div>
+                <div class="mt-6 pt-4 border-t border-white/5 flex items-center justify-between text-xs text-[#00A1FF] font-semibold">
+                    <span>Uninterrupted Power</span>
+                    <span class="group-hover:translate-x-1 transition-transform">→</span>
+                </div>
+            </div>
 
-                <!-- Bottom Right Colored Accent Squares -->
-                <div class="flex items-center justify-end gap-2 pt-6 mt-4">
-                    <span class="w-4 h-4 md:w-5 md:h-5 bg-[#00A1FF] inline-block"></span>
-                    <span class="w-4 h-4 md:w-5 md:h-5 bg-[#0051FF] inline-block"></span>
-                    <span class="w-4 h-4 md:w-5 md:h-5 bg-[#2E3192] inline-block"></span>
+            <!-- Card 3 -->
+            <div class="group bg-[#0A0A0F]/90 hover:bg-[#0D0E17] border border-white/10 hover:border-[#00A1FF]/50 rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 shadow-lg hover:shadow-2xl hover:shadow-[#00A1FF]/10 flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-[#00A1FF]/10 border border-[#00A1FF]/30 flex items-center justify-center text-[#00A1FF] mb-5 group-hover:scale-110 group-hover:bg-[#00A1FF] group-hover:text-white transition-all duration-300">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-white text-lg mb-2 group-hover:text-[#00A1FF] transition-colors">24/7 Reefer Monitoring</h3>
+                    <p class="text-gray-300 text-xs sm:text-sm leading-relaxed">
+                        Round-the-clock monitoring of temperature, humidity, and container performance by trained and certified reefer technicians.
+                    </p>
+                </div>
+                <div class="mt-6 pt-4 border-t border-white/5 flex items-center justify-between text-xs text-[#00A1FF] font-semibold">
+                    <span>Live Temp & Humidity</span>
+                    <span class="group-hover:translate-x-1 transition-transform">→</span>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="group bg-[#0A0A0F]/90 hover:bg-[#0D0E17] border border-white/10 hover:border-[#00A1FF]/50 rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 shadow-lg hover:shadow-2xl hover:shadow-[#00A1FF]/10 flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-[#00A1FF]/10 border border-[#00A1FF]/30 flex items-center justify-center text-[#00A1FF] mb-5 group-hover:scale-110 group-hover:bg-[#00A1FF] group-hover:text-white transition-all duration-300">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-white text-lg mb-2 group-hover:text-[#00A1FF] transition-colors">Pre-Trip Inspection (PTI)</h3>
+                    <p class="text-gray-300 text-xs sm:text-sm leading-relaxed">
+                        Comprehensive PTI services to ensure reefer containers are fully compliant and ready for loading and onward transit.
+                    </p>
+                </div>
+                <div class="mt-6 pt-4 border-t border-white/5 flex items-center justify-between text-xs text-[#00A1FF] font-semibold">
+                    <span>Full Diagnostic Ready</span>
+                    <span class="group-hover:translate-x-1 transition-transform">→</span>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="group bg-[#0A0A0F]/90 hover:bg-[#0D0E17] border border-white/10 hover:border-[#00A1FF]/50 rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 shadow-lg hover:shadow-2xl hover:shadow-[#00A1FF]/10 flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-[#00A1FF]/10 border border-[#00A1FF]/30 flex items-center justify-center text-[#00A1FF] mb-5 group-hover:scale-110 group-hover:bg-[#00A1FF] group-hover:text-white transition-all duration-300">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M11 4a2 2 0 114 0v1a2 2 0 01-4 0V4zm-3 8a3 3 0 013-3h2a3 3 0 013 3v1h-8v-1zM5 19h14a1 1 0 001-1v-1a4 4 0 00-4-4H8a4 4 0 00-4 4v1a1 1 0 001 1z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-white text-lg mb-2 group-hover:text-[#00A1FF] transition-colors">Technical Support & Repairs</h3>
+                    <p class="text-gray-300 text-xs sm:text-sm leading-relaxed">
+                        On-site certified reefer mechanics equipped to handle troubleshooting, preventive maintenance, and both minor and major repairs.
+                    </p>
+                </div>
+                <div class="mt-6 pt-4 border-t border-white/5 flex items-center justify-between text-xs text-[#00A1FF] font-semibold">
+                    <span>On-Site Certified Mechanics</span>
+                    <span class="group-hover:translate-x-1 transition-transform">→</span>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="group bg-[#0A0A0F]/90 hover:bg-[#0D0E17] border border-white/10 hover:border-[#00A1FF]/50 rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 shadow-lg hover:shadow-2xl hover:shadow-[#00A1FF]/10 flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-[#00A1FF]/10 border border-[#00A1FF]/30 flex items-center justify-center text-[#00A1FF] mb-5 group-hover:scale-110 group-hover:bg-[#00A1FF] group-hover:text-white transition-all duration-300">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-white text-lg mb-2 group-hover:text-[#00A1FF] transition-colors">Cold Chain Integrity Management</h3>
+                    <p class="text-gray-300 text-xs sm:text-sm leading-relaxed">
+                        Strict operational protocols and monitoring systems designed to protect cargo quality throughout the storage and handling process.
+                    </p>
+                </div>
+                <div class="mt-6 pt-4 border-t border-white/5 flex items-center justify-between text-xs text-[#00A1FF] font-semibold">
+                    <span>Quality & Temperature Protocols</span>
+                    <span class="group-hover:translate-x-1 transition-transform">→</span>
                 </div>
             </div>
 
