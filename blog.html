@@ -39,9 +39,9 @@
 
     <!-- Subpage Hero -->
     <section id="hero-section" class="relative w-full min-h-[480px] sm:min-h-[540px] lg:min-h-[600px] overflow-hidden bg-cover bg-center flex flex-col justify-between px-6 md:px-12 pt-2 md:pt-4 pb-4 md:pb-6 transition-all duration-[2000ms] ease-in-out mb-16" style="background-image: url('./images/bg3.png');">
-        <header class="relative z-30 w-full max-w-[1440px] mx-auto bg-transparent pt-1 pb-2 flex items-center justify-between mt-0">
+        <header class="relative z-30 w-full max-w-[1440px] mx-auto bg-[#0A0A0F]/60 backdrop-blur-xl border border-white/10 rounded-2xl md:rounded-full px-5 py-2 mt-0 md:mt-1 flex items-center justify-between shadow-2xl shadow-black/50">
             <a href="index.html" class="flex items-center">
-                <img src="./images/DEALEX White Logo-01.png" alt="Dealex Logo" class="h-12 md:h-16 lg:h-18 w-auto object-contain transition-transform duration-300 hover:scale-105">
+                <img src="./images/DEALEX White Logo-01.png" alt="Dealex Logo" class="h-6 sm:h-7 md:h-8 lg:h-9 w-auto object-contain transition-transform duration-300 hover:scale-105">
             </a>
             <nav class="hidden lg:flex items-center space-x-7 text-sm font-extrabold tracking-wider text-white uppercase">
                 <a href="index.html" class="hover:text-[#00A1FF] transition-colors text-white font-extrabold">Home</a>
@@ -52,7 +52,7 @@
                 <a href="contact.html" class="hover:text-[#00A1FF] transition-colors text-white font-extrabold">Contact</a>
             </nav>
             <div class="flex items-center space-x-4">
-                <a href="tel:+923032555145" class="bg-[#00A1FF] hover:bg-[#0090E0] text-white px-5 py-2.5 rounded-full text-xs font-bold tracking-wide transition-all hidden sm:flex items-center gap-2 shadow-lg shadow-[#00A1FF]/20 border border-[#00A1FF]">
+                <a href="tel:+923032555145" class="bg-[#00A1FF] hover:bg-[#0090E0] text-white px-4 py-1.5 rounded-full text-xs font-bold tracking-wide transition-all hidden sm:flex items-center gap-2 shadow-lg shadow-[#00A1FF]/20 border border-[#00A1FF]">
                     Get In Touch <span class="text-xs font-normal">↗</span>
                 </a>
                 <button id="mobile-menu-btn" class="lg:hidden text-white hover:text-[#00A1FF] transition-colors p-2 ml-2">
@@ -61,7 +61,7 @@
             </div>
         </header>
 
-        <div id="mobile-menu" class="absolute top-[80px] left-6 right-6 bg-[#0A0A0F]/95 backdrop-blur-xl border border-white/10 rounded-[24px] z-50 transform origin-top scale-y-0 opacity-0 transition-all duration-300 flex flex-col p-6 shadow-2xl pointer-events-none lg:hidden">
+        <div id="mobile-menu" class="absolute top-[75px] left-6 right-6 bg-[#0A0A0F]/95 backdrop-blur-xl border border-white/10 rounded-[24px] z-50 transform origin-top scale-y-0 opacity-0 transition-all duration-300 flex flex-col p-6 shadow-2xl pointer-events-none lg:hidden">
             <nav class="flex flex-col space-y-4 text-base font-semibold tracking-wider text-white uppercase">
                 <a href="index.html" class="hover:text-[#00A1FF] transition-colors mobile-nav-link border-b border-white/5 pb-4">Home</a>
                 <a href="about.html" class="hover:text-[#00A1FF] transition-colors mobile-nav-link border-b border-white/5 pb-4">About Us</a>
@@ -78,19 +78,27 @@
         </div>
 
         <div
-            class="relative z-20 w-full max-w-[1440px] mx-auto mt-auto mb-4 md:mb-8 pt-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+            class="relative z-20 w-full max-w-[1440px] mx-auto mt-auto mb-1 md:mb-2 pt-4 flex flex-col md:flex-row items-start md:items-end justify-between gap-4">
             <div class="space-y-3">
                 <h1
-                    class="text-white text-4xl sm:text-5xl md:text-6xl lg:text-[68px] font-extrabold tracking-tight leading-[1.05] text-left">
+                    class="text-white text-2xl sm:text-3xl md:text-4xl lg:text-[46px] font-extrabold tracking-tight leading-[1.1] text-left">
                     Blog & Insights
                 </h1>
             </div>
 
-            <div class="max-w-md md:text-right md:pb-2">
-                <p class="text-white font-medium text-sm sm:text-base leading-relaxed md:text-right">
+            <div class="max-w-md md:text-right">
+                <p class="text-white font-medium text-xs sm:text-sm leading-relaxed md:text-right">
                     Insights, company announcements, and logistics industry news from the Dealex team.
                 </p>
             </div>
+        </div>
+
+        <div id="hero-dots" class="absolute right-6 top-1/2 -translate-y-1/2 z-30 flex flex-col space-y-3">
+            <span
+                class="w-2.5 h-2.5 rounded-full bg-white opacity-40 hover:opacity-100 cursor-pointer transition-opacity"></span>
+            <span class="w-2.5 h-2.5 rounded-full bg-white cursor-pointer transition-opacity"></span>
+            <span
+                class="w-2.5 h-2.5 rounded-full bg-white opacity-40 hover:opacity-100 cursor-pointer transition-opacity"></span>
         </div>
     </section>
 
