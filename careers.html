@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers - Dealex Transport & Logistics Services</title>
+    <link rel="icon" type="image/png" href="./images/favicon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: { extend: { fontFamily: { sans: ['"Manrope"', 'sans-serif'], display: ['"Space Grotesk"', 'sans-serif'], heading: ['"Space Grotesk"', 'sans-serif'] } } }
+        }
+    </script>
+    <style>
+        #preloader { position: fixed; inset: 0; background-color: #000000; z-index: 9999; display: flex; align-items: center; justify-content: center; transition: opacity 0.5s ease, visibility 0.5s ease; }
+        .spinner { width: 50px; height: 50px; border: 4px solid rgba(255, 255, 255, 0.1); border-left-color: #00A1FF; border-radius: 50%; animation: spin 1s linear infinite; }
+        @keyframes spin { 100% { transform: rotate(360deg); } }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Space Grotesk', sans-serif; }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="min-h-screen flex flex-col items-center justify-start bg-[#000000] text-white overflow-x-hidden">
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="flex flex-col items-center">
+            <div class="spinner mb-4"></div>
+            <div class="text-[#00A1FF] font-bold tracking-widest uppercase text-xs">DEALEX</div>
+        </div>
+    </div>
+    <script>
+        window.addEventListener('load', () => {
+            const preloader = document.getElementById('preloader');
+            if (preloader) { preloader.style.opacity = '0'; preloader.style.visibility = 'hidden'; setTimeout(() => { preloader.remove(); document.body.classList.remove('overflow-hidden'); }, 500); }
+        });
+    </script>
+
+    <!-- Subpage Hero -->
+    <section id="hero-section" class="relative w-full min-h-[480px] sm:min-h-[540px] lg:min-h-[600px] overflow-hidden bg-cover bg-center flex flex-col justify-between px-6 md:px-12 pt-2 md:pt-4 pb-4 md:pb-6 transition-all duration-[2000ms] ease-in-out mb-16" style="background-image: url('./images/bg3.png');">
+        <header class="relative z-30 w-full max-w-[1440px] mx-auto bg-[#0A0A0F]/60 backdrop-blur-xl border border-white/10 rounded-2xl md:rounded-full px-5 py-2 mt-0 md:mt-1 flex items-center justify-between shadow-2xl shadow-black/50">
+            <a href="index.html" class="flex items-center">
+                <img src="./images/DEALEX White Logo-01.png" alt="Dealex Logo" class="h-6 sm:h-7 md:h-8 lg:h-9 w-auto object-contain transition-transform duration-300 hover:scale-105">
+            </a>
+            <nav class="hidden lg:flex items-center space-x-7 text-sm font-extrabold tracking-wider text-white uppercase">
+                <a href="index.html" class="hover:text-[#00A1FF] transition-colors text-white font-extrabold">Home</a>
+                <a href="about.html" class="hover:text-[#00A1FF] transition-colors text-white font-extrabold">About Us</a>
+                <a href="index.html#services-section" class="hover:text-[#00A1FF] transition-colors text-white font-extrabold">Services</a>
+                <a href="careers.html" class="hover:text-[#00A1FF] transition-colors text-[#00A1FF] font-black">Careers</a>
+                <a href="blog.html" class="hover:text-[#00A1FF] transition-colors text-white font-extrabold">Blog</a>
+                <a href="dot-terminal.html" class="hover:text-[#00A1FF] transition-colors text-white font-extrabold">DOT Terminal</a>
+                <a href="contact.html" class="hover:text-[#00A1FF] transition-colors text-white font-extrabold">Contact</a>
+            </nav>
+            <div class="flex items-center space-x-4">
+                <a href="tel:+923032555145" class="bg-[#00A1FF] hover:bg-[#0090E0] text-white px-4 py-1.5 rounded-full text-xs font-bold tracking-wide transition-all hidden sm:flex items-center gap-2 shadow-lg shadow-[#00A1FF]/20 border border-[#00A1FF]">
+                    Get In Touch <span class="text-xs font-normal">↗</span>
+                </a>
+                <button id="mobile-menu-btn" class="lg:hidden text-white hover:text-[#00A1FF] transition-colors p-2 ml-2">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+            </div>
+        </header>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="absolute top-[75px] left-6 right-6 bg-[#0A0A0F]/95 backdrop-blur-xl border border-white/10 rounded-[24px] z-50 transform origin-top scale-y-0 opacity-0 transition-all duration-300 flex flex-col p-6 shadow-2xl pointer-events-none lg:hidden">
+            <nav class="flex flex-col space-y-4 text-base font-semibold tracking-wider text-white uppercase">
+                <a href="index.html" class="hover:text-[#00A1FF] transition-colors mobile-nav-link border-b border-white/5 pb-4">Home</a>
+                <a href="about.html" class="hover:text-[#00A1FF] transition-colors mobile-nav-link border-b border-white/5 pb-4">About Us</a>
+                <a href="index.html#services-section" class="hover:text-[#00A1FF] transition-colors mobile-nav-link border-b border-white/5 pb-4">Services</a>
+                <a href="careers.html" class="text-[#00A1FF] transition-colors mobile-nav-link border-b border-white/5 pb-4 font-bold">Careers</a>
+                <a href="blog.html" class="hover:text-[#00A1FF] transition-colors mobile-nav-link border-b border-white/5 pb-4">Blog</a>
+                <a href="dot-terminal.html" class="hover:text-[#00A1FF] transition-colors mobile-nav-link border-b border-white/5 pb-4">DOT Terminal</a>
+                <a href="contact.html" class="hover:text-[#00A1FF] transition-colors mobile-nav-link pb-2">Contact</a>
+            </nav>
+            <div class="flex items-center justify-between mt-6 pt-4 border-t border-white/10">
+                <a href="tel:+923032555145" class="bg-[#00A1FF] hover:bg-[#0090E0] text-white px-5 py-2.5 rounded-full text-xs font-bold tracking-wide transition-all shadow-lg shadow-[#00A1FF]/20">
+                    Get In Touch
+                </a>
+            </div>
+        </div>
+
+        <div class="relative z-20 w-full max-w-[1440px] mx-auto mt-auto mb-1 md:mb-2 pt-4 flex flex-col md:flex-row items-start md:items-end justify-between gap-4">
+            <div class="space-y-3">
+                <h1 class="text-white text-2xl sm:text-3xl md:text-4xl lg:text-[46px] font-extrabold tracking-tight leading-[1.1] text-left uppercase">
+                    CAREERS
+                </h1>
+            </div>
+
+            <div class="max-w-md md:text-right">
+                <p class="text-white font-medium text-xs sm:text-sm leading-relaxed md:text-right">
+                    Build your career with Pakistan's premier freight forwarding & logistics provider.
+                </p>
+            </div>
+        </div>
+
+        <div id="hero-dots" class="absolute right-6 top-1/2 -translate-y-1/2 z-30 flex flex-col space-y-3">
+            <span class="w-2.5 h-2.5 rounded-full bg-white opacity-40 hover:opacity-100 cursor-pointer transition-opacity"></span>
+            <span class="w-2.5 h-2.5 rounded-full bg-white cursor-pointer transition-opacity"></span>
+            <span class="w-2.5 h-2.5 rounded-full bg-white opacity-40 hover:opacity-100 cursor-pointer transition-opacity"></span>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="w-full max-w-[1440px] px-6 md:px-12 mb-24 flex-grow text-white z-10 relative">
+        <div class="max-w-5xl mx-auto">
+            <!-- JOIN US Container Card -->
+            <div class="bg-[#0A0A0F] rounded-3xl p-8 md:p-12 border border-white/5 shadow-2xl">
+                <div class="mb-10 pb-8 border-b border-white/10">
+                    <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight text-white mb-4 uppercase">JOIN US</h2>
+                    <p class="text-gray-300 text-sm md:text-base leading-relaxed max-w-3xl">
+                        Dealex Transport & Logistics Services is an organization of passionate, committed, and talented professionals and believes that every team member will benefit alongside its growth.
+                    </p>
+                    <p class="text-[#00A1FF] font-semibold text-sm mt-4 uppercase tracking-wider">
+                        Please post your CV below.
+                    </p>
+                </div>
+
+                <!-- Form Section -->
+                <form id="career-form" class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="applicant_name" class="block text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Your Name: <span class="text-[#00A1FF]">*</span></label>
+                            <input type="text" id="applicant_name" required placeholder="Enter your full name" class="w-full bg-[#111118] border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-[#00A1FF] transition-colors text-sm">
+                        </div>
+                        <div>
+                            <label for="applicant_email" class="block text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Email: <span class="text-[#00A1FF]">*</span></label>
+                            <input type="email" id="applicant_email" required placeholder="name@example.com" class="w-full bg-[#111118] border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-[#00A1FF] transition-colors text-sm">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="applicant_phone" class="block text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Phone: <span class="text-[#00A1FF]">*</span></label>
+                            <input type="tel" id="applicant_phone" required placeholder="+92 300 0000000" class="w-full bg-[#111118] border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-[#00A1FF] transition-colors text-sm">
+                        </div>
+                        <div>
+                            <label for="applicant_position" class="block text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Position Applied For: <span class="text-[#00A1FF]">*</span></label>
+                            <select id="applicant_position" required class="w-full bg-[#111118] border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[#00A1FF] transition-colors text-sm">
+                                <option value="" disabled selected>Select a position</option>
+                                <option value="Logistics Coordinator">Logistics Coordinator</option>
+                                <option value="Fleet Operations Manager">Fleet Operations Manager</option>
+                                <option value="Terminal & Storage Supervisor">Terminal & Storage Supervisor</option>
+                                <option value="Freight Forwarding Officer">Freight Forwarding Officer</option>
+                                <option value="Accounts & Finance Executive">Accounts & Finance Executive</option>
+                                <option value="Customer Support & Admin">Customer Support & Admin</option>
+                                <option value="Other">Other Position</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="applicant_message" class="block text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Message: <span class="text-[#00A1FF]">*</span></label>
+                        <textarea id="applicant_message" rows="5" required placeholder="Tell us about your background, experience, and career goals..." class="w-full bg-[#111118] border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-[#00A1FF] transition-colors text-sm"></textarea>
+                    </div>
+
+                    <!-- File Upload Section -->
+                    <div>
+                        <label class="block text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Upload CV / Resume: <span class="text-[#00A1FF]">*</span></label>
+                        <div class="flex items-center gap-4 bg-[#111118] p-4 rounded-xl border border-white/10 border-dashed hover:border-[#00A1FF]/50 transition-colors">
+                            <label for="cv_file" class="bg-[#1F1F2C] hover:bg-[#2A2A3D] text-white text-xs font-bold py-2.5 px-4 rounded-lg cursor-pointer border border-white/10 transition-colors flex items-center gap-2">
+                                📁 Choose File
+                            </label>
+                            <input type="file" id="cv_file" accept=".pdf,.doc,.docx" required class="hidden">
+                            <span id="file-chosen" class="text-xs text-gray-400 truncate max-w-xs">No file chosen</span>
+                        </div>
+                        <p class="text-[11px] text-gray-500 mt-1">Accepted formats: PDF, DOC, DOCX (Max size: 10MB)</p>
+                    </div>
+
+                    <!-- reCAPTCHA Mock Container matching screenshot -->
+                    <div class="bg-[#111118] border border-white/10 rounded-xl p-4 inline-flex items-center justify-between min-w-[280px]">
+                        <label class="flex items-center gap-3 cursor-pointer select-none">
+                            <input type="checkbox" id="captcha-check" required class="w-5 h-5 rounded border-white/20 text-[#00A1FF] focus:ring-0 bg-[#0A0A0F] cursor-pointer">
+                            <span class="text-xs text-gray-300 font-medium">I'm not a robot</span>
+                        </label>
+                        <div class="flex flex-col items-center ml-6 opacity-70">
+                            <svg class="w-6 h-6 text-[#00A1FF]" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2A10 10 0 1 0 22 12 10 10 0 0 0 12 2zm1 15h-2v-2h2zm0-4h-2V7h2z"/>
+                            </svg>
+                            <span class="text-[8px] text-gray-400 uppercase tracking-widest mt-0.5">reCAPTCHA</span>
+                        </div>
+                    </div>
+
+                    <div class="pt-4 flex justify-start">
+                        <button type="submit" id="submit-btn" class="bg-[#242428] hover:bg-[#00A1FF] text-white font-bold px-10 py-3.5 rounded-xl transition-all duration-300 uppercase tracking-wider text-sm shadow-lg border border-white/10 hover:border-[#00A1FF]">
+                            SUBMIT
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Submission Modal Notification -->
+    <div id="success-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md flex items-center justify-center p-4 hidden">
+        <div class="bg-[#0A0A0F] border border-white/15 rounded-3xl max-w-lg w-full p-8 relative shadow-2xl text-center">
+            <div class="w-16 h-16 bg-[#00A1FF]/20 text-[#00A1FF] rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold border border-[#00A1FF]/40">
+                ✓
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-3 uppercase tracking-wide">Application Submitted!</h3>
+            <p class="text-gray-300 text-sm leading-relaxed mb-6">
+                Thank you for submitting your application. Your candidate profile and CV request have been routed to our HR team at <strong class="text-[#00A1FF]">logistics@dealex.pk</strong>.
+            </p>
+            <button id="close-modal-btn" class="bg-[#00A1FF] hover:bg-[#0090E0] text-white font-bold py-3 px-8 rounded-full text-xs uppercase tracking-wider transition-all shadow-lg shadow-[#00A1FF]/20">
+                Back to Careers
+            </button>
+        </div>
+    </div>
+
+    <!-- FOOTER GLOBAL COMPONENT SECTION -->
+    <footer class="bg-[#000000] pt-6 pb-12 px-4 sm:px-6 md:px-12 w-full select-none font-sans text-white">
+        <div class="max-w-[1440px] mx-auto bg-[#0A0A0F] rounded-[32px] pt-16 pb-8 px-8 md:px-16 relative overflow-hidden">
+            <div class="absolute right-0 top-0 w-96 h-96 opacity-10 pointer-events-none bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:16px_16px]"></div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-8 relative z-10 pb-16">
+                <!-- Column 1 -->
+                <div class="col-span-1 md:col-span-12 lg:col-span-3 flex flex-col space-y-6">
+                    <a href="index.html" class="flex items-center">
+                        <img src="./images/DEALEX White Logo-01.png" alt="Dealex Logo" class="h-8 w-auto object-contain">
+                    </a>
+                    <p class="text-gray-400 text-xs sm:text-sm leading-relaxed max-w-sm">
+                        Leading the future of transport and logistics through innovation, reliability, and unparalleled service excellence.
+                    </p>
+                </div>
+
+                <!-- Column 2 -->
+                <div class="col-span-1 md:col-span-6 lg:col-span-2 flex flex-col space-y-4">
+                    <h4 class="text-[#00A1FF] font-extrabold text-sm tracking-wide">Useful Link</h4>
+                    <div class="grid grid-cols-1 gap-x-4 gap-y-3">
+                        <a href="about.html" class="text-gray-400 hover:text-white transition-colors text-xs font-semibold">About us</a>
+                        <a href="team.html" class="text-gray-400 hover:text-white transition-colors text-xs font-semibold">Our Team</a>
+                        <a href="careers.html" class="text-white hover:text-[#00A1FF] transition-colors text-xs font-bold">Careers</a>
+                        <a href="blog.html" class="text-gray-400 hover:text-white transition-colors text-xs font-semibold">Blog</a>
+                        <a href="dot-terminal.html" class="text-gray-400 hover:text-white transition-colors text-xs font-semibold">DOT Terminal</a>
+                        <a href="contact.html" class="text-gray-400 hover:text-white transition-colors text-xs font-semibold">Contact Us</a>
+                    </div>
+                </div>
+
+                <!-- Column 3 -->
+                <div class="col-span-1 md:col-span-6 lg:col-span-3 flex flex-col space-y-4">
+                    <h4 class="text-[#00A1FF] font-extrabold text-sm tracking-wide">Working Hours</h4>
+                    <div class="space-y-2.5 text-gray-400 text-xs font-semibold">
+                        <p class="flex items-center justify-between"><span>Mon to Fri :</span><span class="text-white text-right">9:00 AM - 5:00 PM</span></p>
+                        <p class="flex items-center justify-between"><span>Saturday :</span><span class="text-white text-right">10:00 AM - 6:00 PM</span></p>
+                        <p class="flex items-center justify-between text-gray-400"><span>Sunday Closed</span></p>
+                    </div>
+                </div>
+
+                <!-- Column 4 -->
+                <div class="col-span-2 md:col-span-6 lg:col-span-4 flex flex-col space-y-4">
+                    <h4 class="text-[#00A1FF] font-extrabold text-sm tracking-wide">Contact Us</h4>
+                    <div class="space-y-2">
+                        <h5 class="text-white text-xs font-bold uppercase tracking-wider">Dealex Transport & Logistics Services</h5>
+                        <p class="text-gray-400 text-xs font-semibold">Email: <a href="mailto:logistics@dealex.pk" class="hover:text-[#00A1FF] transition-colors underline underline-offset-2">logistics@dealex.pk</a></p>
+                        <p class="text-gray-400 text-xs font-semibold">Phone: <a href="tel:+923032555145" class="hover:text-[#00A1FF] transition-colors">+92 303 2555145</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Base row -->
+            <div class="border-t border-white/5 pt-6 flex flex-col sm:flex-row items-center justify-between text-[11px] text-gray-400 font-medium tracking-wide gap-4 relative z-10">
+                <a href="#" class="hover:text-white transition-colors">Terms and conditions</a>
+                <p>© 2026 Dealex Transport & Logistics Services</p>
+                <a href="#" class="hover:text-white transition-colors">Privacy policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('scale-y-0');
+                mobileMenu.classList.toggle('opacity-0');
+                mobileMenu.classList.toggle('pointer-events-none');
+            });
+        }
+
+        // CV File selector display handler
+        const fileInput = document.getElementById('cv_file');
+        const fileChosenLabel = document.getElementById('file-chosen');
+        if (fileInput && fileChosenLabel) {
+            fileInput.addEventListener('change', function() {
+                if (this.files && this.files.length > 0) {
+                    fileChosenLabel.textContent = this.files[0].name;
+                    fileChosenLabel.classList.remove('text-gray-400');
+                    fileChosenLabel.classList.add('text-[#00A1FF]', 'font-semibold');
+                } else {
+                    fileChosenLabel.textContent = 'No file chosen';
+                    fileChosenLabel.classList.add('text-gray-400');
+                    fileChosenLabel.classList.remove('text-[#00A1FF]', 'font-semibold');
+                }
+            });
+        }
+
+        // Form submit & email handler targeting logistics@dealex.pk
+        const careerForm = document.getElementById('career-form');
+        const submitBtn = document.getElementById('submit-btn');
+        const successModal = document.getElementById('success-modal');
+        const closeModalBtn = document.getElementById('close-modal-btn');
+
+        if (careerForm) {
+            careerForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                const originalBtnText = submitBtn.textContent;
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'SUBMITTING...';
+                submitBtn.classList.add('opacity-75', 'cursor-not-allowed');
+
+                const formData = new FormData(careerForm);
+                // Also add fields by id explicitly to ensure match with PHP expectations
+                formData.append('applicant_name', document.getElementById('applicant_name').value);
+                formData.append('applicant_email', document.getElementById('applicant_email').value);
+                formData.append('applicant_phone', document.getElementById('applicant_phone').value);
+                formData.append('applicant_position', document.getElementById('applicant_position').value);
+                formData.append('applicant_message', document.getElementById('applicant_message').value);
+                if (fileInput.files[0]) {
+                    formData.append('cv_file', fileInput.files[0]);
+                }
+
+                fetch('send-career.php', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => response.json())
+                .then(data => {
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = originalBtnText;
+                    submitBtn.classList.remove('opacity-75', 'cursor-not-allowed');
+
+                    if (successModal) {
+                        const modalDesc = successModal.querySelector('p');
+                        if (modalDesc && data.message) {
+                            modalDesc.innerHTML = data.message;
+                        }
+                        successModal.classList.remove('hidden');
+                    }
+                })
+                .catch(err => {
+                    console.log('PHP mailer fallback to mailto:', err);
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = originalBtnText;
+                    submitBtn.classList.remove('opacity-75', 'cursor-not-allowed');
+
+                    // Mailto fallback if local preview / static server without PHP
+                    const name = document.getElementById('applicant_name').value;
+                    const email = document.getElementById('applicant_email').value;
+                    const phone = document.getElementById('applicant_phone').value;
+                    const position = document.getElementById('applicant_position').value;
+                    const message = document.getElementById('applicant_message').value;
+                    const file = fileInput.files[0] ? fileInput.files[0].name : 'Not attached';
+
+                    const subject = encodeURIComponent(`Job Application: ${name} - ${position}`);
+                    const body = encodeURIComponent(
+                        `Candidate Application Details:\n\n` +
+                        `Full Name: ${name}\n` +
+                        `Email: ${email}\n` +
+                        `Phone: ${phone}\n` +
+                        `Position Applied For: ${position}\n` +
+                        `Attached CV File: ${file}\n\n` +
+                        `Cover Note / Message:\n${message}\n\n` +
+                        `--- Sent via Dealex Careers Form ---`
+                    );
+
+                    window.location.href = `mailto:logistics@dealex.pk?subject=${subject}&body=${body}`;
+
+                    if (successModal) {
+                        successModal.classList.remove('hidden');
+                    }
+                });
+            });
+        }
+
+        if (closeModalBtn && successModal) {
+            closeModalBtn.addEventListener('click', () => {
+                successModal.classList.add('hidden');
+                careerForm.reset();
+                if (fileChosenLabel) {
+                    fileChosenLabel.textContent = 'No file chosen';
+                    fileChosenLabel.classList.add('text-gray-400');
+                    fileChosenLabel.classList.remove('text-[#00A1FF]', 'font-semibold');
+                }
+            });
+        }
+    </script>
+</body>
+</html>

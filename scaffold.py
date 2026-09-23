@@ -17,6 +17,7 @@ footer_content = '''
                     <div class="grid grid-cols-1 gap-x-4 gap-y-3.5">
                         <a href="about.html" class="text-gray-400 hover:text-white transition-colors text-xs font-semibold">About us</a>
                         <a href="team.html" class="text-gray-400 hover:text-white transition-colors text-xs font-semibold">Our Team</a>
+                        <a href="careers.html" class="text-gray-400 hover:text-white transition-colors text-xs font-semibold">Careers</a>
                         <a href="blog.html" class="text-gray-400 hover:text-white transition-colors text-xs font-semibold">Blog</a>
                         <a href="dot-terminal.html" class="text-gray-400 hover:text-white transition-colors text-xs font-semibold">DOT Terminal</a>
                         <a href="contact.html" class="text-gray-400 hover:text-white transition-colors text-xs font-semibold">Contact Us</a>
@@ -113,6 +114,7 @@ def generate_html(title, h1, subtitle, content):
                 <a href="index.html" class="hover:text-[#00A1FF] transition-colors text-white">Home</a>
                 <a href="about.html" class="hover:text-[#00A1FF] transition-colors text-white">About Us</a>
                 <a href="index.html#services-section" class="hover:text-[#00A1FF] transition-colors text-white">Services</a>
+                <a href="careers.html" class="hover:text-[#00A1FF] transition-colors text-white">Careers</a>
                 <a href="blog.html" class="hover:text-[#00A1FF] transition-colors text-white">Blog</a>
                 <a href="contact.html" class="hover:text-[#00A1FF] transition-colors text-white">Contact</a>
             </nav>
@@ -131,6 +133,7 @@ def generate_html(title, h1, subtitle, content):
                 <a href="index.html" class="hover:text-[#00A1FF] transition-colors mobile-nav-link border-b border-white/5 pb-4">Home</a>
                 <a href="about.html" class="hover:text-[#00A1FF] transition-colors mobile-nav-link border-b border-white/5 pb-4">About Us</a>
                 <a href="index.html#services-section" class="hover:text-[#00A1FF] transition-colors mobile-nav-link border-b border-white/5 pb-4">Services</a>
+                <a href="careers.html" class="hover:text-[#00A1FF] transition-colors mobile-nav-link border-b border-white/5 pb-4">Careers</a>
                 <a href="blog.html" class="hover:text-[#00A1FF] transition-colors mobile-nav-link border-b border-white/5 pb-4">Blog</a>
                 <a href="contact.html" class="hover:text-[#00A1FF] transition-colors mobile-nav-link pb-2">Contact</a>
             </nav>
