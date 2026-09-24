@@ -3,7 +3,7 @@
 header('Content-Type: application/json');
 
 // Configuration
-$to_email = "danyalansari3269@gmail.com";
+$to_email = "hr@dealex.pk";
 $subject_prefix = "Job Application:";
 
 // Enable error reporting for debugging if needed, but output JSON only
@@ -112,8 +112,8 @@ $message_body .= "--{$mime_boundary}--";
 $mail_success = @mail($to_email, $email_subject, $message_body, $headers);
 
 if ($mail_success) {
-    echo json_encode(['success' => true, 'message' => 'Your application and CV have been sent successfully to HR at danyalansari3269@gmail.com!']);
+    echo json_encode(['success' => true, 'message' => 'Your application and CV have been sent successfully to HR at hr@dealex.pk!']);
 } else {
-    echo json_encode(['success' => false, 'message' => 'Failed to send email. Please ensure mail service is configured on your server or contact danyalansari3269@gmail.com directly.']);
+    echo json_encode(['success' => false, 'message' => 'Failed to send email. Please ensure mail service is configured on your server or contact hr@dealex.pk directly.']);
 }
 ?>
