@@ -32,9 +32,9 @@ document.querySelectorAll('.faq-item').forEach(item => {
 
 // Dynamic Hero Background Images (3-Image Carousel)
 const heroImages = [
-    './images/bg3.png',
-    './images/bg4.png',
-    './images/bg5.jpeg'
+    './images/bg3.webp',
+    './images/bg4.webp',
+    './images/bg5.webp'
 ];
 
 let currentHeroImageIndex = 0;

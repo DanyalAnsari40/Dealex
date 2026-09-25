@@ -31,17 +31,30 @@
         </div>
     </div>
     <script>
-        window.addEventListener('load', () => {
+        function hidePreloader() {
             const preloader = document.getElementById('preloader');
-            if (preloader) { preloader.style.opacity = '0'; preloader.style.visibility = 'hidden'; setTimeout(() => { preloader.remove(); document.body.classList.remove('overflow-hidden'); }, 500); }
-        });
+            if (preloader && !preloader.dataset.done) {
+                preloader.dataset.done = 'true';
+                preloader.style.opacity = '0';
+                preloader.style.visibility = 'hidden';
+                setTimeout(() => {
+                    document.body.classList.remove('overflow-hidden');
+                    if (preloader.parentNode) preloader.remove();
+                }, 400);
+            } else if (document.body) {
+                document.body.classList.remove('overflow-hidden');
+            }
+        }
+        document.addEventListener('DOMContentLoaded', () => setTimeout(hidePreloader, 150));
+        window.addEventListener('load', hidePreloader);
+        setTimeout(hidePreloader, 800);
     </script>
 
     <!-- Subpage Hero -->
-    <section class="relative w-full min-h-[480px] sm:min-h-[540px] lg:min-h-[600px] overflow-hidden bg-cover bg-center flex flex-col justify-between px-6 md:px-12 pt-2 md:pt-4 pb-4 md:pb-6 transition-all duration-[2000ms] ease-in-out mb-16" style="background-image: url('./images/bg3.png');">
+    <section class="relative w-full min-h-[480px] sm:min-h-[540px] lg:min-h-[600px] overflow-hidden bg-cover bg-center flex flex-col justify-between px-6 md:px-12 pt-2 md:pt-4 pb-4 md:pb-6 transition-all duration-[2000ms] ease-in-out mb-16" style="background-image: url('./images/bg3.webp');">
         <header class="relative z-30 w-full max-w-[1440px] mx-auto bg-[#0A0A0F]/60 backdrop-blur-xl border border-white/10 rounded-2xl md:rounded-full px-5 py-2 mt-0 md:mt-1 flex items-center justify-between shadow-2xl shadow-black/50">
             <a href="index.html" class="flex items-center">
-                <img src="./images/DEALEX White Logo-01.png" alt="Dealex Logo" class="h-6 sm:h-7 md:h-8 lg:h-9 w-auto object-contain transition-transform duration-300 hover:scale-105">
+                <img decoding="async" src="./images/DEALEX White Logo-01.webp" alt="Dealex Logo" class="h-6 sm:h-7 md:h-8 lg:h-9 w-auto object-contain transition-transform duration-300 hover:scale-105">
             </a>
             <nav class="hidden lg:flex items-center space-x-7 text-sm font-extrabold tracking-wider text-white uppercase">
                 <a href="index.html" class="hover:text-[#00A1FF] transition-colors text-white font-extrabold">Home</a>
@@ -193,7 +206,7 @@
                 <!-- Card 1: Specialized Reefer Fleet -->
                 <div class="bg-[#0A0A0F] rounded-[28px] overflow-hidden border border-white/10 hover:border-[#00A1FF]/50 transition-all duration-500 group flex flex-col shadow-xl hover:shadow-[#00A1FF]/10 hover:-translate-y-2 opacity-0 translate-y-8 about-feature-card">
                     <div class="relative h-60 overflow-hidden">
-                        <img loading="lazy" src="./images/logistics_truck_fleet.png" alt="Specialized Reefer Fleet" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <img decoding="async" loading="lazy" src="./images/logistics_truck_fleet.webp" alt="Specialized Reefer Fleet" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                         <div class="absolute inset-0 bg-gradient-to-t from-[#0A0A0F] via-[#0A0A0F]/20 to-transparent"></div>
                     </div>
                     <div class="p-6 md:p-8 flex flex-col flex-grow space-y-3">
@@ -213,7 +226,7 @@
                 <!-- Card 2: Experienced Team -->
                 <div class="bg-[#0A0A0F] rounded-[28px] overflow-hidden border border-white/10 hover:border-[#00A1FF]/50 transition-all duration-500 group flex flex-col shadow-xl hover:shadow-[#00A1FF]/10 hover:-translate-y-2 opacity-0 translate-y-8 about-feature-card" style="transition-delay: 150ms;">
                     <div class="relative h-60 overflow-hidden">
-                        <img loading="lazy" src="./images/logistics_operations_team.png" alt="Experienced Logistics Team" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <img decoding="async" loading="lazy" src="./images/logistics_operations_team.webp" alt="Experienced Logistics Team" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                         <div class="absolute inset-0 bg-gradient-to-t from-[#0A0A0F] via-[#0A0A0F]/20 to-transparent"></div>
                     </div>
                     <div class="p-6 md:p-8 flex flex-col flex-grow space-y-3">
@@ -233,7 +246,7 @@
                 <!-- Card 3: Cost Effective Solutions -->
                 <div class="bg-[#0A0A0F] rounded-[28px] overflow-hidden border border-white/10 hover:border-[#00A1FF]/50 transition-all duration-500 group flex flex-col shadow-xl hover:shadow-[#00A1FF]/10 hover:-translate-y-2 opacity-0 translate-y-8 about-feature-card" style="transition-delay: 300ms;">
                     <div class="relative h-60 overflow-hidden">
-                        <img loading="lazy" src="./images/logistics_cost_effective.png" alt="Cost Effective Solutions" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <img decoding="async" loading="lazy" src="./images/logistics_cost_effective.webp" alt="Cost Effective Solutions" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                         <div class="absolute inset-0 bg-gradient-to-t from-[#0A0A0F] via-[#0A0A0F]/20 to-transparent"></div>
                     </div>
                     <div class="p-6 md:p-8 flex flex-col flex-grow space-y-3">
@@ -253,7 +266,7 @@
                 <!-- Card 4: Eco-Friendly Operations -->
                 <div class="bg-[#0A0A0F] rounded-[28px] overflow-hidden border border-white/10 hover:border-[#00A1FF]/50 transition-all duration-500 group flex flex-col shadow-xl hover:shadow-[#00A1FF]/10 hover:-translate-y-2 opacity-0 translate-y-8 about-feature-card" style="transition-delay: 100ms;">
                     <div class="relative h-60 overflow-hidden">
-                        <img loading="lazy" src="./images/logistics_eco_friendly.png" alt="Eco-Friendly Operations" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <img decoding="async" loading="lazy" src="./images/logistics_eco_friendly.webp" alt="Eco-Friendly Operations" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                         <div class="absolute inset-0 bg-gradient-to-t from-[#0A0A0F] via-[#0A0A0F]/20 to-transparent"></div>
                     </div>
                     <div class="p-6 md:p-8 flex flex-col flex-grow space-y-3">
@@ -273,7 +286,7 @@
                 <!-- Card 5: Safety & Regulatory Compliance -->
                 <div class="bg-[#0A0A0F] rounded-[28px] overflow-hidden border border-white/10 hover:border-[#00A1FF]/50 transition-all duration-500 group flex flex-col shadow-xl hover:shadow-[#00A1FF]/10 hover:-translate-y-2 opacity-0 translate-y-8 about-feature-card" style="transition-delay: 250ms;">
                     <div class="relative h-60 overflow-hidden">
-                        <img loading="lazy" src="./images/logistics_safety.png" alt="Safety & Regulatory Compliance" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <img decoding="async" loading="lazy" src="./images/logistics_safety.webp" alt="Safety & Regulatory Compliance" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                         <div class="absolute inset-0 bg-gradient-to-t from-[#0A0A0F] via-[#0A0A0F]/20 to-transparent"></div>
                     </div>
                     <div class="p-6 md:p-8 flex flex-col flex-grow space-y-3">
@@ -293,7 +306,7 @@
                 <!-- Card 6: Live Telematics & Tracking -->
                 <div class="bg-[#0A0A0F] rounded-[28px] overflow-hidden border border-white/10 hover:border-[#00A1FF]/50 transition-all duration-500 group flex flex-col shadow-xl hover:shadow-[#00A1FF]/10 hover:-translate-y-2 opacity-0 translate-y-8 about-feature-card" style="transition-delay: 400ms;">
                     <div class="relative h-60 overflow-hidden">
-                        <img loading="lazy" src="./images/logistics_tracking.png" alt="Live Telematics & Tracking" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <img decoding="async" loading="lazy" src="./images/logistics_tracking.webp" alt="Live Telematics & Tracking" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                         <div class="absolute inset-0 bg-gradient-to-t from-[#0A0A0F] via-[#0A0A0F]/20 to-transparent"></div>
                     </div>
                     <div class="p-6 md:p-8 flex flex-col flex-grow space-y-3">
@@ -384,7 +397,7 @@
                 <div class="lg:col-span-3 flex flex-col space-y-4 w-full">
                     <div class="flex items-center self-start gap-4 w-full">
                         <a href="#" class="flex items-center shrink-0">
-                            <img loading="lazy" src="./images/logo.png" alt="Dealex Logo"
+                            <img decoding="async" loading="lazy" src="./images/logo.webp" alt="Dealex Logo"
                                 class="h-14 md:h-16 lg:h-20 w-auto object-contain transition-transform duration-300 hover:scale-105"
                                 style="filter: invert(1) hue-rotate(180deg);">
                         </a>

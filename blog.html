@@ -31,17 +31,30 @@
         </div>
     </div>
     <script>
-        window.addEventListener('load', () => {
+        function hidePreloader() {
             const preloader = document.getElementById('preloader');
-            if (preloader) { preloader.style.opacity = '0'; preloader.style.visibility = 'hidden'; setTimeout(() => { preloader.remove(); document.body.classList.remove('overflow-hidden'); }, 500); }
-        });
+            if (preloader && !preloader.dataset.done) {
+                preloader.dataset.done = 'true';
+                preloader.style.opacity = '0';
+                preloader.style.visibility = 'hidden';
+                setTimeout(() => {
+                    document.body.classList.remove('overflow-hidden');
+                    if (preloader.parentNode) preloader.remove();
+                }, 400);
+            } else if (document.body) {
+                document.body.classList.remove('overflow-hidden');
+            }
+        }
+        document.addEventListener('DOMContentLoaded', () => setTimeout(hidePreloader, 150));
+        window.addEventListener('load', hidePreloader);
+        setTimeout(hidePreloader, 800);
     </script>
 
     <!-- Subpage Hero -->
-    <section id="hero-section" class="relative w-full min-h-[480px] sm:min-h-[540px] lg:min-h-[600px] overflow-hidden bg-cover bg-center flex flex-col justify-between px-6 md:px-12 pt-2 md:pt-4 pb-4 md:pb-6 transition-all duration-[2000ms] ease-in-out mb-16" style="background-image: url('./images/bg3.png');">
+    <section id="hero-section" class="relative w-full min-h-[480px] sm:min-h-[540px] lg:min-h-[600px] overflow-hidden bg-cover bg-center flex flex-col justify-between px-6 md:px-12 pt-2 md:pt-4 pb-4 md:pb-6 transition-all duration-[2000ms] ease-in-out mb-16" style="background-image: url('./images/bg3.webp');">
         <header class="relative z-30 w-full max-w-[1440px] mx-auto bg-[#0A0A0F]/60 backdrop-blur-xl border border-white/10 rounded-2xl md:rounded-full px-5 py-2 mt-0 md:mt-1 flex items-center justify-between shadow-2xl shadow-black/50">
             <a href="index.html" class="flex items-center">
-                <img src="./images/DEALEX White Logo-01.png" alt="Dealex Logo" class="h-6 sm:h-7 md:h-8 lg:h-9 w-auto object-contain transition-transform duration-300 hover:scale-105">
+                <img decoding="async" src="./images/DEALEX White Logo-01.webp" alt="Dealex Logo" class="h-6 sm:h-7 md:h-8 lg:h-9 w-auto object-contain transition-transform duration-300 hover:scale-105">
             </a>
             <nav class="hidden lg:flex items-center space-x-7 text-sm font-extrabold tracking-wider text-white uppercase">
                 <a href="index.html" class="hover:text-[#00A1FF] transition-colors text-white font-extrabold">Home</a>
@@ -110,7 +123,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <article class="bg-[#0A0A0F] rounded-3xl overflow-hidden border border-white/5 hover:border-[#00A1FF]/50 transition-colors group cursor-pointer" onclick="window.location.href='blog-details.html?id=1'">
                 <div class="h-48 bg-[#111118] relative overflow-hidden">
-                    <img src="./images/logistics_tracking.png" alt="Logistics Tracking" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 z-0">
+                    <img decoding="async" src="./images/logistics_tracking.webp" alt="Logistics Tracking" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 z-0">
                     <div class="absolute inset-0 bg-gradient-to-t from-[#0A0A0F] via-transparent to-transparent z-10"></div>
                 </div>
                 <div class="p-6">
@@ -123,7 +136,7 @@
 
             <article class="bg-[#0A0A0F] rounded-3xl overflow-hidden border border-white/5 hover:border-[#00A1FF]/50 transition-colors group cursor-pointer" onclick="window.location.href='blog-details.html?id=2'">
                 <div class="h-48 bg-[#111118] relative overflow-hidden">
-                    <img src="./images/logistics_eco_friendly.png" alt="Eco Friendly" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 z-0">
+                    <img decoding="async" src="./images/logistics_eco_friendly.webp" alt="Eco Friendly" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 z-0">
                     <div class="absolute inset-0 bg-gradient-to-t from-[#0A0A0F] via-transparent to-transparent z-10"></div>
                 </div>
                 <div class="p-6">
@@ -136,7 +149,7 @@
 
             <article class="bg-[#0A0A0F] rounded-3xl overflow-hidden border border-white/5 hover:border-[#00A1FF]/50 transition-colors group cursor-pointer" onclick="window.location.href='blog-details.html?id=3'">
                 <div class="h-48 bg-[#111118] relative overflow-hidden">
-                    <img src="./images/logistics_warehouse.png" alt="Terminal Operations" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 z-0">
+                    <img decoding="async" src="./images/logistics_warehouse.webp" alt="Terminal Operations" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 z-0">
                     <div class="absolute inset-0 bg-gradient-to-t from-[#0A0A0F] via-transparent to-transparent z-10"></div>
                 </div>
                 <div class="p-6">
@@ -149,7 +162,7 @@
 
             <article class="bg-[#0A0A0F] rounded-3xl overflow-hidden border border-white/5 hover:border-[#00A1FF]/50 transition-colors group cursor-pointer" onclick="window.location.href='blog-details.html?id=4'">
                 <div class="h-48 bg-[#111118] relative overflow-hidden">
-                    <img src="./images/logistics_port_terminal.png" alt="DOT Terminals" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 z-0">
+                    <img decoding="async" src="./images/logistics_port_terminal.webp" alt="DOT Terminals" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 z-0">
                     <div class="absolute inset-0 bg-gradient-to-t from-[#0A0A0F] via-transparent to-transparent z-10"></div>
                 </div>
                 <div class="p-6">
@@ -162,7 +175,7 @@
 
             <article class="bg-[#0A0A0F] rounded-3xl overflow-hidden border border-white/5 hover:border-[#00A1FF]/50 transition-colors group cursor-pointer" onclick="window.location.href='blog-details.html?id=5'">
                 <div class="h-48 bg-[#111118] relative overflow-hidden">
-                    <img src="./images/logistics_safety.png" alt="Security" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 z-0">
+                    <img decoding="async" src="./images/logistics_safety.webp" alt="Security" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 z-0">
                     <div class="absolute inset-0 bg-gradient-to-t from-[#0A0A0F] via-transparent to-transparent z-10"></div>
                 </div>
                 <div class="p-6">
@@ -175,7 +188,7 @@
 
             <article class="bg-[#0A0A0F] rounded-3xl overflow-hidden border border-white/5 hover:border-[#00A1FF]/50 transition-colors group cursor-pointer" onclick="window.location.href='blog-details.html?id=6'">
                 <div class="h-48 bg-[#111118] relative overflow-hidden">
-                    <img src="./images/logistics_truck_fleet.png" alt="Warehousing" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 z-0">
+                    <img decoding="async" src="./images/logistics_truck_fleet.webp" alt="Warehousing" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 z-0">
                     <div class="absolute inset-0 bg-gradient-to-t from-[#0A0A0F] via-transparent to-transparent z-10"></div>
                 </div>
                 <div class="p-6">
@@ -188,7 +201,7 @@
 
             <article class="bg-[#0A0A0F] rounded-3xl overflow-hidden border border-white/5 hover:border-[#00A1FF]/50 transition-colors group cursor-pointer" onclick="window.location.href='blog-details.html?id=7'">
                 <div class="h-48 bg-[#111118] relative overflow-hidden">
-                    <img src="./images/logistics_cost_effective.png" alt="Cost Effective" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 z-0">
+                    <img decoding="async" src="./images/logistics_cost_effective.webp" alt="Cost Effective" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 z-0">
                     <div class="absolute inset-0 bg-gradient-to-t from-[#0A0A0F] via-transparent to-transparent z-10"></div>
                 </div>
                 <div class="p-6">
@@ -201,7 +214,7 @@
 
             <article class="bg-[#0A0A0F] rounded-3xl overflow-hidden border border-white/5 hover:border-[#00A1FF]/50 transition-colors group cursor-pointer" onclick="window.location.href='blog-details.html?id=8'">
                 <div class="h-48 bg-[#111118] relative overflow-hidden">
-                    <img src="./images/logistics_operations_team.png" alt="Operations Team" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 z-0">
+                    <img decoding="async" src="./images/logistics_operations_team.webp" alt="Operations Team" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 z-0">
                     <div class="absolute inset-0 bg-gradient-to-t from-[#0A0A0F] via-transparent to-transparent z-10"></div>
                 </div>
                 <div class="p-6">
@@ -214,7 +227,7 @@
 
             <article class="bg-[#0A0A0F] rounded-3xl overflow-hidden border border-white/5 hover:border-[#00A1FF]/50 transition-colors group cursor-pointer" onclick="window.location.href='blog-details.html?id=9'">
                 <div class="h-48 bg-[#111118] relative overflow-hidden">
-                    <img src="./images/logistics_highway_coverage.png" alt="Safety Protocols" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 z-0">
+                    <img decoding="async" src="./images/logistics_highway_coverage.webp" alt="Safety Protocols" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 z-0">
                     <div class="absolute inset-0 bg-gradient-to-t from-[#0A0A0F] via-transparent to-transparent z-10"></div>
                 </div>
                 <div class="p-6">
@@ -246,7 +259,7 @@
                 <div class="lg:col-span-3 flex flex-col space-y-4 w-full">
                     <div class="flex items-center self-start gap-4 w-full">
                         <a href="#" class="flex items-center shrink-0">
-                            <img loading="lazy" src="./images/logo.png" alt="Dealex Logo"
+                            <img decoding="async" loading="lazy" src="./images/logo.webp" alt="Dealex Logo"
                                 class="h-14 md:h-16 lg:h-20 w-auto object-contain transition-transform duration-300 hover:scale-105"
                                 style="filter: invert(1) hue-rotate(180deg);">
                         </a>

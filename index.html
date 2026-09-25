@@ -65,7 +65,7 @@
     </style>
 
     <link rel="stylesheet" href="style.css">
-    <link rel="preload" as="image" href="./images/bg3.png">
+    <link rel="preload" as="image" href="./images/bg3.webp">
 </head>
 
 <body class="min-h-screen flex flex-col items-center justify-center bg-[#000000] text-white overflow-hidden">
@@ -78,42 +78,33 @@
     </div>
 
     <script>
-        // Preload images for the services section so they appear instantly on scroll
-        document.addEventListener("DOMContentLoaded", () => {
-            const items = document.querySelectorAll('.service-scroll-item');
-            items.forEach(item => {
-                const src = item.getAttribute('data-image');
-                if (src) {
-                    const img = new Image();
-                    img.src = src;
-                }
-            });
-        });
-
-        // Hide preloader when everything is fully loaded
-        window.addEventListener('load', () => {
+        function hidePreloader() {
             const preloader = document.getElementById('preloader');
-            if (preloader) {
+            if (preloader && !preloader.dataset.done) {
+                preloader.dataset.done = 'true';
                 preloader.style.opacity = '0';
                 preloader.style.visibility = 'hidden';
                 setTimeout(() => {
                     document.body.classList.remove('overflow-hidden');
-                    preloader.remove();
-                }, 500);
-            } else {
+                    if (preloader.parentNode) preloader.remove();
+                }, 400);
+            } else if (document.body) {
                 document.body.classList.remove('overflow-hidden');
             }
-        });
+        }
+        document.addEventListener('DOMContentLoaded', () => setTimeout(hidePreloader, 150));
+        window.addEventListener('load', hidePreloader);
+        setTimeout(hidePreloader, 800);
     </script>
 
     <section id="hero-section"
         class="relative w-full min-h-[480px] sm:min-h-[540px] lg:min-h-[600px] overflow-hidden bg-cover bg-center flex flex-col justify-between px-6 md:px-12 pt-2 md:pt-4 pb-4 md:pb-6 transition-all duration-[2000ms] ease-in-out"
-        style="background-image: url('./images/bg3.png');">
+        style="background-image: url('./images/bg3.webp');">
 
         <header
             class="relative z-30 w-full max-w-[1440px] mx-auto bg-[#0A0A0F]/60 backdrop-blur-xl border border-white/10 rounded-2xl md:rounded-full px-5 py-2 mt-0 md:mt-1 flex items-center justify-between shadow-2xl shadow-black/50">
             <a href="#" class="flex items-center">
-                <img src="./images/DEALEX White Logo-01.png" alt="Dealex Logo"
+                <img decoding="async" src="./images/DEALEX White Logo-01.webp" alt="Dealex Logo"
                     class="h-6 sm:h-7 md:h-8 lg:h-9 w-auto object-contain transition-transform duration-300 hover:scale-105">
             </a>
 
@@ -234,8 +225,8 @@
                     class="relative flex items-center justify-center lg:justify-end overflow-hidden lg:overflow-visible">
                     <div class="relative z-10 w-full flex items-center justify-center lg:justify-end">
                         <picture class="w-full flex justify-center lg:justify-end">
-                            <source media="(min-width: 1024px)" srcset="./images/truck_about.png">
-                            <img loading="lazy" id="about-truck" src="./images/truck_about -mobile.png"
+                            <source media="(min-width: 1024px)" srcset="./images/truck_about.webp">
+                            <img decoding="async" loading="lazy" id="about-truck" src="./images/truck_about -mobile.webp"
                                 alt="Logistics Truck"
                                 class="w-[90%] sm:w-[80%] max-w-[380px] lg:max-w-[560px] lg:w-full h-auto object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.3)] transform translate-x-[100%] transition-transform duration-[1200ms] ease-out">
                         </picture>
@@ -308,7 +299,7 @@
                 <!-- Image 1: Port Terminal (Large - spans 2 cols) -->
                 <div class="col-span-2 row-span-2 relative rounded-2xl overflow-hidden group cursor-pointer opacity-0 translate-y-10 transition-all duration-[1000ms] ease-out about-card"
                     style="transition-delay: 100ms;">
-                    <img loading="lazy" src="./images/logistics_port_terminal.png" alt="Container Port Terminal"
+                    <img decoding="async" loading="lazy" src="./images/logistics_port_terminal.webp" alt="Container Port Terminal"
                         class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                     <div
                         class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-500">
@@ -338,7 +329,7 @@
                 <!-- Image 2: Warehouse (Top Right) -->
                 <div class="col-span-1 relative rounded-2xl overflow-hidden group cursor-pointer opacity-0 translate-y-10 transition-all duration-[1000ms] ease-out about-card"
                     style="transition-delay: 200ms;">
-                    <img loading="lazy" src="./images/logistics_warehouse.png" alt="Logistics Warehouse"
+                    <img decoding="async" loading="lazy" src="./images/logistics_warehouse.webp" alt="Logistics Warehouse"
                         class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                     <div
                         class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent opacity-60 group-hover:opacity-90 transition-opacity duration-500">
@@ -359,7 +350,7 @@
                 <!-- Image 3: Truck Fleet (Top Far Right) -->
                 <div class="col-span-1 relative rounded-2xl overflow-hidden group cursor-pointer opacity-0 translate-y-10 transition-all duration-[1000ms] ease-out about-card"
                     style="transition-delay: 300ms;">
-                    <img loading="lazy" src="./images/fletnewwot-top" alt="Fleet Network"
+                    <img decoding="async" loading="lazy" src="./images/fletnewwot-top" alt="Fleet Network"
                         class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                     <div
                         class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent opacity-60 group-hover:opacity-90 transition-opacity duration-500">
@@ -380,7 +371,7 @@
                 <!-- Image 4: Cold Chain (Bottom Right - spans 2 cols) -->
                 <div class="col-span-2 relative rounded-2xl overflow-hidden group cursor-pointer opacity-0 translate-y-10 transition-all duration-[1000ms] ease-out about-card"
                     style="transition-delay: 400ms;">
-                    <img loading="lazy" src="./images/coldchai-etc.jpeg" alt="Cold Chain Reefer Storage"
+                    <img decoding="async" loading="lazy" src="./images/coldchai-etc.webp" alt="Cold Chain Reefer Storage"
                         class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                     <div
                         class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent opacity-60 group-hover:opacity-90 transition-opacity duration-500">
@@ -540,42 +531,42 @@
             <div class="flex flex-shrink-0 items-center justify-around min-w-full animate-marquee-forward">
                 <div
                     class="w-36 sm:w-44 h-16 sm:h-20 p-2 sm:p-2.5 mx-2.5 sm:mx-3.5 bg-white rounded-md flex items-center justify-center shadow-lg border border-white/20 flex-shrink-0 transition-transform duration-300 hover:scale-105">
-                    <img src="./partners/CMA-CGM-logo.png" alt="CMA CGM"
+                    <img decoding="async" src="./partners/CMA-CGM-logo.png" alt="CMA CGM"
                         class="max-h-[85%] max-w-[90%] w-auto object-contain">
                 </div>
                 <div
                     class="w-36 sm:w-44 h-16 sm:h-20 p-2 sm:p-2.5 mx-2.5 sm:mx-3.5 bg-white rounded-md flex items-center justify-center shadow-lg border border-white/20 flex-shrink-0 transition-transform duration-300 hover:scale-105">
-                    <img src="./partners/Cosco-logo.png" alt="COSCO"
+                    <img decoding="async" src="./partners/Cosco-logo.png" alt="COSCO"
                         class="max-h-[85%] max-w-[90%] w-auto object-contain">
                 </div>
                 <div
                     class="w-36 sm:w-44 h-16 sm:h-20 p-2 sm:p-2.5 mx-2.5 sm:mx-3.5 bg-white rounded-md flex items-center justify-center shadow-lg border border-white/20 flex-shrink-0 transition-transform duration-300 hover:scale-105">
-                    <img src="./partners/Feeder-logo.jpg" alt="Feeder"
+                    <img decoding="async" src="./partners/Feeder-logo.jpg" alt="Feeder"
                         class="max-h-[85%] max-w-[90%] w-auto object-contain">
                 </div>
                 <div
                     class="w-36 sm:w-44 h-16 sm:h-20 p-2 sm:p-2.5 mx-2.5 sm:mx-3.5 bg-white rounded-md flex items-center justify-center shadow-lg border border-white/20 flex-shrink-0 transition-transform duration-300 hover:scale-105">
-                    <img src="./partners/Hapag LIoyd-logo" alt="Hapag-Lloyd"
+                    <img decoding="async" src="./partners/Hapag LIoyd-logo" alt="Hapag-Lloyd"
                         class="max-h-[85%] max-w-[90%] w-auto object-contain">
                 </div>
                 <div
                     class="w-36 sm:w-44 h-16 sm:h-20 p-2 sm:p-2.5 mx-2.5 sm:mx-3.5 bg-white rounded-md flex items-center justify-center shadow-lg border border-white/20 flex-shrink-0 transition-transform duration-300 hover:scale-105">
-                    <img src="./partners/Maersk-logo.png" alt="Maersk"
+                    <img decoding="async" src="./partners/Maersk-logo.png" alt="Maersk"
                         class="max-h-[85%] max-w-[90%] w-auto object-contain">
                 </div>
                 <div
                     class="w-36 sm:w-44 h-16 sm:h-20 p-2 sm:p-2.5 mx-2.5 sm:mx-3.5 bg-white rounded-md flex items-center justify-center shadow-lg border border-white/20 flex-shrink-0 transition-transform duration-300 hover:scale-105">
-                    <img src="./partners/OOCL-logo.png" alt="OOCL"
+                    <img decoding="async" src="./partners/OOCL-logo.png" alt="OOCL"
                         class="max-h-[85%] max-w-[90%] w-auto object-contain">
                 </div>
                 <div
                     class="w-36 sm:w-44 h-16 sm:h-20 p-2 sm:p-2.5 mx-2.5 sm:mx-3.5 bg-white rounded-md flex items-center justify-center shadow-lg border border-white/20 flex-shrink-0 transition-transform duration-300 hover:scale-105">
-                    <img src="./partners/Unifeeder-logo.jpg" alt="Unifeeder"
+                    <img decoding="async" src="./partners/Unifeeder-logo.jpg" alt="Unifeeder"
                         class="max-h-[85%] max-w-[90%] w-auto object-contain">
                 </div>
                 <div
                     class="w-36 sm:w-44 h-16 sm:h-20 p-2 sm:p-2.5 mx-2.5 sm:mx-3.5 bg-white rounded-md flex items-center justify-center shadow-lg border border-white/20 flex-shrink-0 transition-transform duration-300 hover:scale-105">
-                    <img src="./partners/Wan Hai Lines lt-logo.png" alt="Wan Hai Lines"
+                    <img decoding="async" src="./partners/Wan Hai Lines lt-logo.png" alt="Wan Hai Lines"
                         class="max-h-[85%] max-w-[90%] w-auto object-contain">
                 </div>
             </div>
@@ -585,42 +576,42 @@
                 aria-hidden="true">
                 <div
                     class="w-36 sm:w-44 h-16 sm:h-20 p-2 sm:p-2.5 mx-2.5 sm:mx-3.5 bg-white rounded-md flex items-center justify-center shadow-lg border border-white/20 flex-shrink-0 transition-transform duration-300 hover:scale-105">
-                    <img src="./partners/CMA-CGM-logo.png" alt="CMA CGM"
+                    <img decoding="async" src="./partners/CMA-CGM-logo.png" alt="CMA CGM"
                         class="max-h-[85%] max-w-[90%] w-auto object-contain">
                 </div>
                 <div
                     class="w-36 sm:w-44 h-16 sm:h-20 p-2 sm:p-2.5 mx-2.5 sm:mx-3.5 bg-white rounded-md flex items-center justify-center shadow-lg border border-white/20 flex-shrink-0 transition-transform duration-300 hover:scale-105">
-                    <img src="./partners/Cosco-logo.png" alt="COSCO"
+                    <img decoding="async" src="./partners/Cosco-logo.png" alt="COSCO"
                         class="max-h-[85%] max-w-[90%] w-auto object-contain">
                 </div>
                 <div
                     class="w-36 sm:w-44 h-16 sm:h-20 p-2 sm:p-2.5 mx-2.5 sm:mx-3.5 bg-white rounded-md flex items-center justify-center shadow-lg border border-white/20 flex-shrink-0 transition-transform duration-300 hover:scale-105">
-                    <img src="./partners/Feeder-logo.jpg" alt="Feeder"
+                    <img decoding="async" src="./partners/Feeder-logo.jpg" alt="Feeder"
                         class="max-h-[85%] max-w-[90%] w-auto object-contain">
                 </div>
                 <div
                     class="w-36 sm:w-44 h-16 sm:h-20 p-2 sm:p-2.5 mx-2.5 sm:mx-3.5 bg-white rounded-md flex items-center justify-center shadow-lg border border-white/20 flex-shrink-0 transition-transform duration-300 hover:scale-105">
-                    <img src="./partners/Hapag LIoyd-logo" alt="Hapag-Lloyd"
+                    <img decoding="async" src="./partners/Hapag LIoyd-logo" alt="Hapag-Lloyd"
                         class="max-h-[85%] max-w-[90%] w-auto object-contain">
                 </div>
                 <div
                     class="w-36 sm:w-44 h-16 sm:h-20 p-2 sm:p-2.5 mx-2.5 sm:mx-3.5 bg-white rounded-md flex items-center justify-center shadow-lg border border-white/20 flex-shrink-0 transition-transform duration-300 hover:scale-105">
-                    <img src="./partners/Maersk-logo.png" alt="Maersk"
+                    <img decoding="async" src="./partners/Maersk-logo.png" alt="Maersk"
                         class="max-h-[85%] max-w-[90%] w-auto object-contain">
                 </div>
                 <div
                     class="w-36 sm:w-44 h-16 sm:h-20 p-2 sm:p-2.5 mx-2.5 sm:mx-3.5 bg-white rounded-md flex items-center justify-center shadow-lg border border-white/20 flex-shrink-0 transition-transform duration-300 hover:scale-105">
-                    <img src="./partners/OOCL-logo.png" alt="OOCL"
+                    <img decoding="async" src="./partners/OOCL-logo.png" alt="OOCL"
                         class="max-h-[85%] max-w-[90%] w-auto object-contain">
                 </div>
                 <div
                     class="w-36 sm:w-44 h-16 sm:h-20 p-2 sm:p-2.5 mx-2.5 sm:mx-3.5 bg-white rounded-md flex items-center justify-center shadow-lg border border-white/20 flex-shrink-0 transition-transform duration-300 hover:scale-105">
-                    <img src="./partners/Unifeeder-logo.jpg" alt="Unifeeder"
+                    <img decoding="async" src="./partners/Unifeeder-logo.jpg" alt="Unifeeder"
                         class="max-h-[85%] max-w-[90%] w-auto object-contain">
                 </div>
                 <div
                     class="w-36 sm:w-44 h-16 sm:h-20 p-2 sm:p-2.5 mx-2.5 sm:mx-3.5 bg-white rounded-md flex items-center justify-center shadow-lg border border-white/20 flex-shrink-0 transition-transform duration-300 hover:scale-105">
-                    <img src="./partners/Wan Hai Lines lt-logo.png" alt="Wan Hai Lines"
+                    <img decoding="async" src="./partners/Wan Hai Lines lt-logo.png" alt="Wan Hai Lines"
                         class="max-h-[85%] max-w-[90%] w-auto object-contain">
                 </div>
             </div>
@@ -751,7 +742,7 @@
                     </div>
                     <div
                         class="w-full md:w-[280px] lg:w-[320px] h-[160px] sm:h-[180px] shrink-0 rounded-[12px] overflow-hidden relative">
-                        <img loading="lazy" src="./images/QICT.jpg" alt="QICT Terminal"
+                        <img decoding="async" loading="lazy" src="./images/QICT.webp" alt="QICT Terminal"
                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                         <div class="absolute inset-0 bg-black/20"></div>
                         <div
@@ -784,7 +775,7 @@
                     </div>
                     <div
                         class="w-full md:w-[280px] lg:w-[320px] h-[160px] sm:h-[180px] shrink-0 rounded-[12px] overflow-hidden relative">
-                        <img loading="lazy" src="./images/KICT.jpeg" alt="KICT Terminal"
+                        <img decoding="async" loading="lazy" src="./images/KICT.webp" alt="KICT Terminal"
                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                         <div class="absolute inset-0 bg-black/20"></div>
                         <div
@@ -816,7 +807,7 @@
                     </div>
                     <div
                         class="w-full md:w-[280px] lg:w-[320px] h-[160px] sm:h-[180px] shrink-0 rounded-[12px] overflow-hidden relative">
-                        <img loading="lazy" src="./images/KGTL.jpg" alt="KGTL Terminal"
+                        <img decoding="async" loading="lazy" src="./images/KGTL.webp" alt="KGTL Terminal"
                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                         <div class="absolute inset-0 bg-black/20"></div>
                         <div
@@ -847,7 +838,7 @@
                     </div>
                     <div
                         class="w-full md:w-[280px] lg:w-[320px] h-[160px] sm:h-[180px] shrink-0 rounded-[12px] overflow-hidden relative">
-                        <img loading="lazy" src="./images/SAPT.jpg" alt="SAPT Terminal"
+                        <img decoding="async" loading="lazy" src="./images/SAPT.webp" alt="SAPT Terminal"
                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                         <div class="absolute inset-0 bg-black/20"></div>
                         <div
@@ -878,7 +869,7 @@
                     </div>
                     <div
                         class="w-full md:w-[280px] lg:w-[320px] h-[160px] sm:h-[180px] shrink-0 rounded-[12px] overflow-hidden relative">
-                        <img loading="lazy" src="./images/ICT.jpg" alt="ICT Terminal"
+                        <img decoding="async" loading="lazy" src="./images/ICT.webp" alt="ICT Terminal"
                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                         <div class="absolute bottom-3 left-4 text-white drop-shadow-md pr-3">
@@ -931,7 +922,7 @@
                 <div class="relative flex flex-col rounded-[12px] overflow-hidden cursor-pointer bg-[#242424] transition-all duration-700 ease-out opacity-0 translate-y-10 why-choose-card border border-white/5 group"
                     style="transition-delay: 100ms;">
                     <div class="relative w-full overflow-hidden" style="aspect-ratio: 16/10;">
-                        <img loading="lazy" src="./images/logistics_truck_fleet.png" alt="Specialized Fleet"
+                        <img decoding="async" loading="lazy" src="./images/logistics_truck_fleet.webp" alt="Specialized Fleet"
                             class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105">
                     </div>
                     <div
@@ -958,7 +949,7 @@
                 <div class="relative flex flex-col rounded-[12px] overflow-hidden cursor-pointer bg-[#242424] transition-all duration-700 ease-out opacity-0 translate-y-10 why-choose-card border border-white/5 group"
                     style="transition-delay: 200ms;">
                     <div class="relative w-full overflow-hidden" style="aspect-ratio: 16/10;">
-                        <img loading="lazy" src="./images/logistics_highway_coverage.png" alt="Nationwide Coverage"
+                        <img decoding="async" loading="lazy" src="./images/logistics_highway_coverage.webp" alt="Nationwide Coverage"
                             class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105">
                     </div>
                     <div
@@ -985,7 +976,7 @@
                 <div class="relative flex flex-col rounded-[12px] overflow-hidden cursor-pointer bg-[#242424] transition-all duration-700 ease-out opacity-0 translate-y-10 why-choose-card border border-white/5 group"
                     style="transition-delay: 300ms;">
                     <div class="relative w-full overflow-hidden" style="aspect-ratio: 16/10;">
-                        <img loading="lazy" src="./images/logistics_fast_delivery.png" alt="On-Time Delivery"
+                        <img decoding="async" loading="lazy" src="./images/logistics_fast_delivery.webp" alt="On-Time Delivery"
                             class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105">
                     </div>
                     <div
@@ -1012,7 +1003,7 @@
                 <div class="relative flex flex-col rounded-[12px] overflow-hidden cursor-pointer bg-[#242424] transition-all duration-700 ease-out opacity-0 translate-y-10 why-choose-card border border-white/5 group"
                     style="transition-delay: 400ms;">
                     <div class="relative w-full overflow-hidden" style="aspect-ratio: 16/10;">
-                        <img loading="lazy" src="./images/logistics_tracking.png" alt="Advanced Tracking"
+                        <img decoding="async" loading="lazy" src="./images/logistics_tracking.webp" alt="Advanced Tracking"
                             class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105">
                     </div>
                     <div
@@ -1039,7 +1030,7 @@
                 <div class="relative flex flex-col rounded-[12px] overflow-hidden cursor-pointer bg-[#242424] transition-all duration-700 ease-out opacity-0 translate-y-10 why-choose-card border border-white/5 group"
                     style="transition-delay: 500ms;">
                     <div class="relative w-full overflow-hidden" style="aspect-ratio: 16/10;">
-                        <img loading="lazy" src="./images/logistics_cost_effective.png" alt="Cost-Effective"
+                        <img decoding="async" loading="lazy" src="./images/logistics_cost_effective.webp" alt="Cost-Effective"
                             class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105">
                     </div>
                     <div
@@ -1066,7 +1057,7 @@
                 <div class="relative flex flex-col rounded-[12px] overflow-hidden cursor-pointer bg-[#242424] transition-all duration-700 ease-out opacity-0 translate-y-10 why-choose-card border border-white/5 group"
                     style="transition-delay: 600ms;">
                     <div class="relative w-full overflow-hidden" style="aspect-ratio: 16/10;">
-                        <img loading="lazy" src="./images/logistics_safety.png" alt="Safety & Compliance"
+                        <img decoding="async" loading="lazy" src="./images/logistics_safety.webp" alt="Safety & Compliance"
                             class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105">
                     </div>
                     <div
@@ -1093,7 +1084,7 @@
                 <div class="relative flex flex-col rounded-[12px] overflow-hidden cursor-pointer bg-[#242424] transition-all duration-700 ease-out opacity-0 translate-y-10 why-choose-card border border-white/5 group"
                     style="transition-delay: 700ms;">
                     <div class="relative w-full overflow-hidden" style="aspect-ratio: 16/10;">
-                        <img loading="lazy" src="./images/logistics_operations_team.png" alt="Experienced Team"
+                        <img decoding="async" loading="lazy" src="./images/logistics_operations_team.webp" alt="Experienced Team"
                             class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105">
                     </div>
                     <div
@@ -1120,7 +1111,7 @@
                 <div class="relative flex flex-col rounded-[12px] overflow-hidden cursor-pointer bg-[#242424] transition-all duration-700 ease-out opacity-0 translate-y-10 why-choose-card border border-white/5 group"
                     style="transition-delay: 800ms;">
                     <div class="relative w-full overflow-hidden" style="aspect-ratio: 16/10;">
-                        <img loading="lazy" src="./images/logistics_eco_friendly.png" alt="Eco-Friendly"
+                        <img decoding="async" loading="lazy" src="./images/logistics_eco_friendly.webp" alt="Eco-Friendly"
                             class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105">
                     </div>
                     <div
@@ -1412,7 +1403,7 @@
                 <div class="lg:col-span-3 flex flex-col space-y-4 w-full">
                     <div class="flex items-center self-start gap-4 w-full">
                         <a href="#" class="flex items-center shrink-0">
-                            <img loading="lazy" src="./images/logo.png" alt="Dealex Logo"
+                            <img decoding="async" loading="lazy" src="./images/logo.webp" alt="Dealex Logo"
                                 class="h-14 md:h-16 lg:h-20 w-auto object-contain transition-transform duration-300 hover:scale-105"
                                 style="filter: invert(1) hue-rotate(180deg);">
                         </a>

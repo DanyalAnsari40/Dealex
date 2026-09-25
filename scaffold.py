@@ -8,7 +8,7 @@ footer_content = '''
             <div class="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-8 relative z-10 pb-16">
                 <!-- Column 1 -->
                 <div class="col-span-1 md:col-span-12 lg:col-span-3 flex flex-col space-y-6">
-                    <img src="./images/logo.png" alt="Dealex Logo" class="w-32 h-auto opacity-90">
+                    <img src="./images/logo.webp" alt="Dealex Logo" class="w-32 h-auto opacity-90">
                     <p class="text-gray-400 text-xs sm:text-sm leading-relaxed max-w-sm">Leading the future of transport and logistics through innovation, reliability, and unparalleled service excellence.</p>
                 </div>
                 <!-- Column 2 -->
