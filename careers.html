@@ -134,22 +134,22 @@
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
                             <label for="applicant_name" class="block text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Your Name: <span class="text-[#00A1FF]">*</span></label>
-                            <input type="text" id="applicant_name" required placeholder="Enter your full name" class="w-full bg-[#111118] border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-[#00A1FF] transition-colors text-sm">
+                            <input type="text" id="applicant_name" name="applicant_name" required placeholder="Enter your full name" class="w-full bg-[#111118] border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-[#00A1FF] transition-colors text-sm">
                         </div>
                         <div>
                             <label for="applicant_email" class="block text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Email: <span class="text-[#00A1FF]">*</span></label>
-                            <input type="email" id="applicant_email" required placeholder="name@example.com" class="w-full bg-[#111118] border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-[#00A1FF] transition-colors text-sm">
+                            <input type="email" id="applicant_email" name="applicant_email" required placeholder="name@example.com" class="w-full bg-[#111118] border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-[#00A1FF] transition-colors text-sm">
                         </div>
                     </div>
 
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
                             <label for="applicant_phone" class="block text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Phone: <span class="text-[#00A1FF]">*</span></label>
-                            <input type="tel" id="applicant_phone" required placeholder="+92 300 0000000" class="w-full bg-[#111118] border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-[#00A1FF] transition-colors text-sm">
+                            <input type="tel" id="applicant_phone" name="applicant_phone" required placeholder="+92 300 0000000" class="w-full bg-[#111118] border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-[#00A1FF] transition-colors text-sm">
                         </div>
                         <div>
                             <label for="applicant_position" class="block text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Position Applied For: <span class="text-[#00A1FF]">*</span></label>
-                            <select id="applicant_position" required class="w-full bg-[#111118] border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[#00A1FF] transition-colors text-sm">
+                            <select id="applicant_position" name="applicant_position" required class="w-full bg-[#111118] border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[#00A1FF] transition-colors text-sm">
                                 <option value="" disabled selected>Select a position</option>
                                 <option value="Logistics Coordinator">Logistics Coordinator</option>
                                 <option value="Fleet Operations Manager">Fleet Operations Manager</option>
@@ -164,7 +164,7 @@
 
                     <div>
                         <label for="applicant_message" class="block text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Message: <span class="text-[#00A1FF]">*</span></label>
-                        <textarea id="applicant_message" rows="5" required placeholder="Tell us about your background, experience, and career goals..." class="w-full bg-[#111118] border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-[#00A1FF] transition-colors text-sm"></textarea>
+                        <textarea id="applicant_message" name="applicant_message" rows="5" required placeholder="Tell us about your background, experience, and career goals..." class="w-full bg-[#111118] border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-[#00A1FF] transition-colors text-sm"></textarea>
                     </div>
 
                     <!-- File Upload Section -->
@@ -174,7 +174,7 @@
                             <label for="cv_file" class="bg-[#1F1F2C] hover:bg-[#2A2A3D] text-white text-xs font-bold py-2.5 px-4 rounded-lg cursor-pointer border border-white/10 transition-colors flex items-center gap-2">
                                 📁 Choose File
                             </label>
-                            <input type="file" id="cv_file" accept=".pdf,.doc,.docx" required class="hidden">
+                            <input type="file" id="cv_file" name="cv_file" accept=".pdf,.doc,.docx" required class="hidden">
                             <span id="file-chosen" class="text-xs text-gray-400 truncate max-w-xs">No file chosen</span>
                         </div>
                         <p class="text-[11px] text-gray-500 mt-1">Accepted formats: PDF, DOC, DOCX (Max size: 10MB)</p>
