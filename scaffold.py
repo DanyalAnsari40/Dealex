@@ -16,7 +16,6 @@ footer_content = '''
                     <h4 class="text-[#00A1FF] font-extrabold text-sm tracking-wide">Useful Link</h4>
                     <div class="grid grid-cols-1 gap-x-4 gap-y-3.5">
                         <a href="about.html" class="text-gray-400 hover:text-white transition-colors text-xs font-semibold">About us</a>
-                        <a href="team.html" class="text-gray-400 hover:text-white transition-colors text-xs font-semibold">Our Team</a>
                         <a href="careers.html" class="text-gray-400 hover:text-white transition-colors text-xs font-semibold">Careers</a>
                         <a href="blog.html" class="text-gray-400 hover:text-white transition-colors text-xs font-semibold">Blog</a>
                         <a href="dot-terminal.html" class="text-gray-400 hover:text-white transition-colors text-xs font-semibold">DOT Terminal</a>
