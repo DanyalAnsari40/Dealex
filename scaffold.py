@@ -219,8 +219,8 @@ contact_content = '''
                     <h3 class="text-xl font-bold mb-4 flex items-center gap-3"><span class="text-[#00A1FF]">📍</span> Dealex Transport (HQ)</h3>
                     <p class="text-gray-400 leading-relaxed">Suite #309, 3rd Floor, Landmark Plaza,<br>I.I. Chundrigar Road, Karachi – 74200</p>
                     <div class="mt-4 space-y-2">
-                        <p class="text-sm text-gray-400"><strong class="text-white">Phone:</strong> +92 303 2555145</p>
-                        <p class="text-sm text-gray-400"><strong class="text-white">Email:</strong> logistics@dealex.pk</p>
+                        <p class="text-sm text-gray-400"><strong class="text-white">Phone:</strong> <a href="tel:+923032555145" class="hover:text-[#00A1FF] transition-colors">+92 303 2555145</a> | <a href="tel:+923032555142" class="hover:text-[#00A1FF] transition-colors">+92 303 2555142</a> | <a href="tel:+923028244428" class="hover:text-[#00A1FF] transition-colors">+92 302 8244428</a> | <a href="tel:+923038244428" class="hover:text-[#00A1FF] transition-colors">+92 303 8244428</a></p>
+                        <p class="text-sm text-gray-400"><strong class="text-white">Email:</strong> <a href="mailto:logistics@dealex.pk" class="hover:text-[#00A1FF] transition-colors underline underline-offset-2">logistics@dealex.pk</a></p>
                     </div>
                 </div>
                 <div class="w-full h-px bg-white/10"></div>
@@ -228,8 +228,8 @@ contact_content = '''
                     <h3 class="text-xl font-bold mb-4 flex items-center gap-3"><span class="text-[#00A1FF]">📍</span> Dealex Own Terminal (DOT)</h3>
                     <p class="text-gray-400 leading-relaxed">31-Km Sunder Stop,<br>Multan Road, Lahore, Pakistan</p>
                     <div class="mt-4 space-y-2">
-                        <p class="text-sm text-gray-400"><strong class="text-white">Phone:</strong> +92 302 8244428</p>
-                        <p class="text-sm text-gray-400"><strong class="text-white">Email:</strong> dot@dealex.pk</p>
+                        <p class="text-sm text-gray-400"><strong class="text-white">Phone:</strong> <a href="tel:+923098244428" class="hover:text-[#00A1FF] transition-colors">+92 309 8244428</a> | <a href="tel:+923038244428" class="hover:text-[#00A1FF] transition-colors">+92 303 8244428</a></p>
+                        <p class="text-sm text-gray-400"><strong class="text-white">Email:</strong> <a href="mailto:dot@dealex.pk" class="hover:text-[#00A1FF] transition-colors underline underline-offset-2">dot@dealex.pk</a></p>
                     </div>
                 </div>
             </div>
